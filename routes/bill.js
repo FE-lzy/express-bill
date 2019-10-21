@@ -8,7 +8,7 @@ const post_data = {
     appKey: 'd0a84cb2b65e42478a0f8b9cec178dd0',
     appSecret: 'bc7fb0fa-5670-402c-99e6-26e89abb368c'
 }
-
+const urlApi = 'https://open.leshui365.com';
 router.get('/', function (req, res, next) {
     console.log('123');
 });
@@ -16,7 +16,7 @@ router.get('/getToken', function (req, res, next) {
     console.log(req.body);
 
     var contents = querystring.stringify(post_data);
-    var url = 'https://open.leshui365.com/getToken?' + contents;
+    var url = urlApi + '/getToken?' + contents;
 
     request(url, function (error, response, body) {
         console.log(response.statusCode);
@@ -32,7 +32,39 @@ router.get('/getToken', function (req, res, next) {
     });
     
 });
+router.post('/queryBillByScan', function (req, res, next) {
+    console.log(req.body);
+    request({
+        url: urlApi + '/api/invoiceInfoByQRCode',
+        method: "POST",
+        json: true,
+        headers: {
+            "content-type": "application/json",
+        },
+        body: req.body
+    }, function (error, response, body) {
+        console.log(body);
+        return res.send(body)
+    });
+   
+});
 
+router.post('/queryBill', function (req, res, next) {
+    console.log(req.body);
+    request({
+        url: urlApi + '/api/invoiceInfoForCom',
+        method: "POST",
+        json: true,
+        headers: {
+            "content-type": "application/json",
+        },
+        body: req.body
+    }, function (error, response, body) {
+        console.log(body);
+        return res.send(body)
+    });
+   
+});
 
 // jwt获取token
 // var connect = { username: req.body.username };// 要生成token的主题信息
