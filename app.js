@@ -2,13 +2,14 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var fs = require('fs');
-var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var ejs = require('ejs');
 var indexRouter = require('./routes/index');
 var billRouter = require('./routes/bill');
 const userRouter = require('./routes/user')
-const session = require('express-session')
+const expressJwt = require('express-jwt');
+let secret = "jwt";
+
 var app = express();
 app.all("*", function (req, res, next) {
   //设置允许跨域的域名，*代表允许任意域名跨域
@@ -28,7 +29,7 @@ app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'pug');
 app.engine('html', ejs.__express);
 app.set('view engine', 'html');
-
+// 日志
 const ENV = process.env.NODE_ENV
 if (ENV !== 'production') {
   app.use(logger('dev'));
@@ -42,32 +43,24 @@ if (ENV !== 'production') {
     stream: writeSteam
   }))
 }
-app.use(logger('dev'));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/bill', billRouter);
+
 app.use('/user', userRouter);
 
-app.use(express.static('upload'));
-app.use(session({
-  secret: 'WJiol#23123_',
-  cookie: {
-    // path: '/',   // 默认配置
-    // httpOnly: true,  // 默认配置
-    maxAge: 24 * 60 * 60 * 1000
-  },
-  // store: sessionStore
-}))
+// 使用中间件验证
+app.use(expressJwt({
+  secret: secret
+}).unless({
+  path: ['/user/login']  //除了这些地址，其他的URL都需要验证
+}));
 
+app.use('/bill', billRouter);
 
-app.get('/upload/*', function (req, res) {
-  res.sendFile(__dirname + "/" + req.url);
-  console.log("Request for " + req.url + " received.");
-})
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
@@ -75,10 +68,14 @@ app.use(function (req, res, next) {
 
 // error handler
 app.use(function (err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
+  console.log(err);
+  if (err.name === 'UnauthorizedError') {
+    res.json({
+      message: 'token过期，请重新登录',
+      code: 400
+    })
+    return
+  }
   // render the error page
   res.status(err.status || 500);
   res.render('error');

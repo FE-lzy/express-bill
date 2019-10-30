@@ -3,15 +3,30 @@ var router = express.Router();
 var querystring = require('querystring');
 var request = require('request')
 var https = require("https");
-
-const post_data = {
-    appKey: 'd0a84cb2b65e42478a0f8b9cec178dd0',
-    appSecret: 'bc7fb0fa-5670-402c-99e6-26e89abb368c'
-}
+const { queryScanString } = require('../controller/ls')
+const { SuccessModel, ErrorModel } = require('../model/resModel')
 const urlApi = 'https://open.leshui365.com';
+
+
 router.get('/', function (req, res, next) {
-    console.log('123');
+    return 123;
 });
+
+// 根据二维码字符串查验
+router.post('/queryBillByScan', function (req, res, next) {
+    console.log(req.body);
+
+    if (!res.body) {
+        res.json(
+            ErrorModel('参数缺失')
+        )
+    }
+    queryScanString(req.body).then(data => {
+        console.log(data);
+    })
+});
+
+
 router.get('/getToken', function (req, res, next) {
     console.log(req.body);
 
@@ -24,30 +39,15 @@ router.get('/getToken', function (req, res, next) {
         let result = {}
         if (!error && response.statusCode == 200) {
             access_token = JSON.parse(body).token;
-             result = {code: 20000, data: { token: access_token } }
+            result = { code: 20000, data: { token: access_token } }
         } else {
-            result = {code: -1, msg:'获取失败' }
+            result = { code: -1, msg: '获取失败' }
         }
         return res.send(result);
     });
-    
+
 });
-router.post('/queryBillByScan', function (req, res, next) {
-    console.log(req.body);
-    request({
-        url: urlApi + '/api/invoiceInfoByQRCode',
-        method: "POST",
-        json: true,
-        headers: {
-            "content-type": "application/json",
-        },
-        body: req.body
-    }, function (error, response, body) {
-        console.log(body);
-        return res.send(body)
-    });
-   
-});
+
 
 router.post('/queryBill', function (req, res, next) {
     console.log(req.body);
@@ -63,7 +63,7 @@ router.post('/queryBill', function (req, res, next) {
         console.log(body);
         return res.send(body)
     });
-   
+
 });
 
 // jwt获取token
