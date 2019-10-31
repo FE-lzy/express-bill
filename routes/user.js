@@ -1,6 +1,6 @@
 var express = require('express')
 var router = express.Router();
-const { login , getUserToken} = require('../controller/user')
+const { login, getUserToken, userInfo } = require('../controller/user')
 const { getLsToken } = require('../controller/ls')
 const { SuccessModel, ErrorModel } = require('../model/resModel')
 
@@ -11,17 +11,18 @@ router.post('/login', function (req, res, next) {
     return result.then(data => {
         console.log(data);
         if (data.username) {
-            // req.session.username = data.username;
-            // req.session.uid = data.id; 
-            getLsToken().then(data => {
-                if(data){
+            getLsToken().then(lsToken => {
+                console.log(lsToken);
+                if (lsToken) {
                     let uToken = getUserToken(data.username)
+                    let roles = data.roles.slice('')
+                    console.log(roles);
                     res.json(
-                        new SuccessModel({token:data,uToken:uToken})
+                        new SuccessModel({ token: lsToken, uToken: uToken, username: data.username, uid: data.id, roles: roles })
                     )
                 }
             })
-            
+
             return
         }
         res.json(
@@ -30,13 +31,25 @@ router.post('/login', function (req, res, next) {
 
     })
 });
+router.post('/userInfo', function (req, res, next) {
+    const { id } = req.body;
+    const result = userInfo(id);
+    return result.then(res => {
+        console.log(res)
+        if (res) {
+            res.json(
+                new SuccessModel({ roles: [res.roles], name: res.username })
+            )
+            return
+        }
+        res.json(
+            new ErrorModel('获取用户信息失败')
+        )
 
-router.get('/login', function (req, res, next) {
 
-    res.json(
-        { code: 1 }
-    )
+    })
 
-});
+})
+
 
 module.exports = router;

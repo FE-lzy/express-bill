@@ -56,11 +56,9 @@ app.use('/user', userRouter);
 app.use(expressJwt({
   secret: secret
 }).unless({
-  path: ['/user/login']  //除了这些地址，其他的URL都需要验证
+  path: ['/', '/index', '/user/login']  //除了这些地址，其他的URL都需要验证
 }));
-
 app.use('/bill', billRouter);
-
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
@@ -68,8 +66,9 @@ app.use(function (req, res, next) {
 
 // error handler
 app.use(function (err, req, res, next) {
-  console.log(err);
+  // console.log(req);
   if (err.name === 'UnauthorizedError') {
+    console.error(req.path +',无效token');
     res.json({
       message: 'token过期，请重新登录',
       code: 400

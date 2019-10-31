@@ -14,6 +14,16 @@ const login = (username, password) => {
         return rows[0] || {}
     })
 }
+const userInfo = (uId) => {
+    
+    const sql = `
+        select  * from user where id=${uId}
+    `
+
+    return exec(sql).then(rows => {
+        return rows[0] || {}
+    })
+}
 
 const getUserToken = (usrename) => {
     // jwt获取token
@@ -27,5 +37,6 @@ const getUserToken = (usrename) => {
 
 module.exports = {
     login,
+    userInfo,
     getUserToken
 }

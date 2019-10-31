@@ -7,7 +7,6 @@ const { queryScanString } = require('../controller/ls')
 const { SuccessModel, ErrorModel } = require('../model/resModel')
 const urlApi = 'https://open.leshui365.com';
 
-
 router.get('/', function (req, res, next) {
     return 123;
 });
@@ -18,8 +17,9 @@ router.post('/queryBillByScan', function (req, res, next) {
 
     if (!res.body) {
         res.json(
-            ErrorModel('参数缺失')
+            new ErrorModel('参数缺失')
         )
+        return
     }
     queryScanString(req.body).then(data => {
         console.log(data);
