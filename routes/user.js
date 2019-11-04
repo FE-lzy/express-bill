@@ -34,11 +34,11 @@ router.post('/login', function (req, res, next) {
 router.post('/userInfo', function (req, res, next) {
     const { id } = req.body;
     const result = userInfo(id);
-    return result.then(res => {
-        console.log(res)
-        if (res) {
+    return result.then(data => {
+        console.log(data)
+        if (data) {
             res.json(
-                new SuccessModel({ roles: [res.roles], name: res.username })
+                new SuccessModel({ roles: [data.roles], name: data.username })
             )
             return
         }

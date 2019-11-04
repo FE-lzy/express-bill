@@ -6,7 +6,7 @@ const urlApi = 'https://open.leshui365.com';
 
 const postQueryParam = (url,body) =>{
     return {
-        url: url,
+        url: urlApi +　url,
         method: "POST",
         json: true,
         headers: {

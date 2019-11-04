@@ -25,8 +25,23 @@ function queryScanString(param){
     // get请求获取token
     var promise = new Promise(function (reslove, reject) {
         request(postQueryParam('/api/invoiceInfoByQRCode',param), function (error, response, body) {
+            
             if (!error && response.statusCode == 200) {
-                let body = JSON.parse(body);
+                let result = JSON.parse(body);
+                reslove(result)
+            } else {
+                reject(error)
+            }
+        });
+    });
+    return promise
+}
+// 根据发票代码和号码查验
+function queryScanByCode(param){
+    // get请求获取token
+    var promise = new Promise(function (reslove, reject) {
+        request(postQueryParam('/api/invoiceInfoForCom',param), function (error, response, body) {
+            if (!error && response.statusCode == 200) {
                 reslove(body)
             } else {
                 reject(error)
@@ -38,5 +53,6 @@ function queryScanString(param){
 
 module.exports = {
     getLsToken,
-    queryScanString
+    queryScanString,
+    queryScanByCode
 }

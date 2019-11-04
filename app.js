@@ -53,11 +53,11 @@ app.use('/', indexRouter);
 app.use('/user', userRouter);
 
 // 使用中间件验证
-app.use(expressJwt({
-  secret: secret
-}).unless({
-  path: ['/', '/index', '/user/login']  //除了这些地址，其他的URL都需要验证
-}));
+// app.use(expressJwt({
+//   secret: secret
+// }).unless({
+//   path: ['/', '/index', '/user/login']  //除了这些地址，其他的URL都需要验证
+// }));
 app.use('/bill', billRouter);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

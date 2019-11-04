@@ -3,7 +3,7 @@ var router = express.Router();
 var querystring = require('querystring');
 var request = require('request')
 var https = require("https");
-const { queryScanString } = require('../controller/ls')
+const { queryScanString, queryScanByCode } = require('../controller/ls')
 const { SuccessModel, ErrorModel } = require('../model/resModel')
 const urlApi = 'https://open.leshui365.com';
 
@@ -26,6 +26,23 @@ router.post('/queryBillByScan', function (req, res, next) {
     })
 });
 
+// 根据发票代码和发票号码查询
+router.post('/queryBillByCode', function (req, res, next) {
+    console.log(req.body);
+    queryScanByCode(req.body).then(data => {
+        if (data) {
+            res.json(
+                new SuccessModel(data)
+            )
+        }
+
+    }).catch(err => {
+        res.json(
+            new ErrorModel(err)
+        )
+    })
+
+});
 
 router.get('/getToken', function (req, res, next) {
     console.log(req.body);
@@ -49,22 +66,22 @@ router.get('/getToken', function (req, res, next) {
 });
 
 
-router.post('/queryBill', function (req, res, next) {
-    console.log(req.body);
-    request({
-        url: urlApi + '/api/invoiceInfoForCom',
-        method: "POST",
-        json: true,
-        headers: {
-            "content-type": "application/json",
-        },
-        body: req.body
-    }, function (error, response, body) {
-        console.log(body);
-        return res.send(body)
-    });
+// router.post('/queryBill', function (req, res, next) {
+//     console.log(req.body);
+//     request({
+//         url: urlApi + '/api/invoiceInfoForCom',
+//         method: "POST",
+//         json: true,
+//         headers: {
+//             "content-type": "application/json",
+//         },
+//         body: req.body
+//     }, function (error, response, body) {
+//         console.log(body);
+//         return res.send(body)
+//     });
 
-});
+// });
 
 // jwt获取token
 // var connect = { username: req.body.username };// 要生成token的主题信息
