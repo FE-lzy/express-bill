@@ -18,7 +18,7 @@ router.post('/login', function (req, res, next) {
                     let roles = data.roles.slice('')
                     console.log(roles);
                     res.json(
-                        new SuccessModel({ token: lsToken, uToken: uToken, username: data.username, uid: data.id, roles: roles })
+                        new SuccessModel({ token: lsToken, uToken: uToken, user: data, roles: roles })
                     )
                 }
             })

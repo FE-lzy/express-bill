@@ -25,10 +25,8 @@ function queryScanString(param) {
     // get请求获取token
     var promise = new Promise(function (reslove, reject) {
         request(postQueryParam('/api/invoiceInfoByQRCode', param), function (error, response, body) {
-
             if (!error && response.statusCode == 200) {
-                let result = JSON.parse(body);
-                reslove(result)
+                reslove(body)
             } else {
                 reject(error)
             }
@@ -50,24 +48,88 @@ function queryScanByCode(param) {
     });
     return promise
 }
-// 存储数据
-const saveMainBill = (data) => {
-
+// 查询是否存在
+const BillIsHave = (data) => {
+    console.log(data);
     const sql = `
-        insert  into fp_main (invoiceTypeCode,checkDate,checkNum,invoiceDataCode,invoiceNumber,billingTime,taxDiskCode) 
-        values 
-        ('${data.invoiceTypeCode}','${data.checkDate}','${data.checkNum}','${data.invoiceDataCode}','${data.invoiceNumber}','${data.billingTime}','${data.taxDiskCode}')
-    `   
-    console.log(sql);
-
+        select * from fp_main where invoiceDataCode = '${data.code}'
+    `
     return exec(sql).then(rows => {
         return rows[0] || {}
     })
 }
+// 修改
+// const BillIsHave = (data) => {
+//     console.log(data);
+//     const sql = `
+//         update * from fp_main where invoiceDataCode = '${data.code}'
+//     `
+//     return exec(sql).then(rows => {
+//         return rows[0] || {}
+//     })
+// }
+// 查询具体信息
+const getBillDetail = (data) => {
+    const sql = `
+        select * from fp_detail where fp_id = '${data.id}'
+    `
+    return exec(sql).then(rows => {
+        return rows[0] || {}
+    })
+}
+// 存储数据
+const saveMainBill = (data) => {
+
+    const sql = `
+        insert  into fp_main (invoiceTypeCode,checkDate,checkNum,invoiceDataCode,
+            invoiceNumber,billingTime,taxDiskCode) 
+        values 
+        ('${data.invoiceTypeCode}','${data.checkDate}','${data.checkNum}','${data.invoiceDataCode}','${data.invoiceNumber}',
+        '${data.billingTime}','${data.taxDiskCode}',)
+    `
+
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+
+const saveMainBillByScan = (data) => {
+    console.log(data);
+    const sql = `
+        insert  into fp_main 
+        (invoiceTypeCode,checkDate,checkNum,invoiceDataCode,invoiceNumber,billingTime,taxDiskCode,fp_checktype,fp_czy,fp_gsr,fp_gsbm,fp_gsdw,fp_bz) 
+        values ('${data.invoiceTypeCode}','${data.checkDate}','${data.checkNum}','${data.invoiceDataCode}','${data.invoiceNumber}',
+        '${data.billingTime}','${data.taxDiskCode}','${data.fp_checktype}','${data.fp_czy}',
+        '${data.fp_gsr}','${data.fp_gsbm}','${data.fp_gsdw}','${data.fp_bz}')
+    `
+    console.log(sql);
+
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+
+const saveBillDetail = (id, data) => {
+    console.log(data);
+    const sql = `
+        insert  into fp_detail 
+        (fp_id,fp_detail) 
+        values ('${id}','${data}')
+    `
+    console.log(sql);
+
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+
 
 module.exports = {
     getLsToken,
     queryScanString,
     queryScanByCode,
-    saveMainBill
+    saveMainBillByScan,
+    saveBillDetail,
+    BillIsHave,
+    getBillDetail
 }

@@ -6,7 +6,8 @@ var logger = require('morgan');
 var ejs = require('ejs');
 var indexRouter = require('./routes/index');
 var billRouter = require('./routes/bill');
-const userRouter = require('./routes/user')
+var userRouter = require('./routes/user')
+var manRouter = require('./routes/manager')
 const expressJwt = require('express-jwt');
 let secret = "jwt";
 
@@ -59,6 +60,7 @@ app.use('/user', userRouter);
 //   path: ['/', '/index', '/user/login']  //除了这些地址，其他的URL都需要验证
 // }));
 app.use('/bill', billRouter);
+app.use('/manager', manRouter);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));

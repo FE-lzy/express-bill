@@ -7,7 +7,7 @@ const login = (username, password) => {
     password = escape(genPassword(password))
 
     const sql = `
-        select  * from user where username=${username} and password=${password}
+        select  * from pub_user where username=${username} and password=${password}
     `
 
     return exec(sql).then(rows => {
@@ -17,7 +17,7 @@ const login = (username, password) => {
 const userInfo = (uId) => {
     
     const sql = `
-        select  * from user where id=${uId}
+        select  * from pub_user where id=${uId}
     `
 
     return exec(sql).then(rows => {

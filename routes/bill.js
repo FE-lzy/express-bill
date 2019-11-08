@@ -3,7 +3,7 @@ var router = express.Router();
 var querystring = require('querystring');
 var request = require('request')
 var https = require("https");
-const { queryScanString, queryScanByCode, saveMainBill } = require('../controller/ls')
+const { getBillDetail, BillIsHave, queryScanString, queryScanByCode, saveMainBill, saveMainBillByScan, saveBillDetail } = require('../controller/ls')
 const { SuccessModel, ErrorModel } = require('../model/resModel')
 const urlApi = 'https://open.leshui365.com';
 
@@ -15,14 +15,23 @@ router.get('/', function (req, res, next) {
 router.post('/queryBillByScan', function (req, res, next) {
     console.log(req.body);
 
-    if (!res.body) {
+    if (!req.body) {
         res.json(
             new ErrorModel('参数缺失')
         )
-        return
     }
     queryScanString(req.body).then(data => {
-        console.log(data);
+        // console.log(data);
+        if (data) {
+            res.json(
+                new SuccessModel(data)
+            )
+        }
+
+    }).catch(err => {
+        res.json(
+            new ErrorModel(err)
+        )
     })
 });
 
@@ -59,31 +68,53 @@ router.post('/queryBillByCode', function (req, res, next) {
     }
 
 
-    // queryScanByCode(req.body).then(data => {
-    //     console.log(data);
-    //     if (data) {
-    //         if (data.resultCode == '1000') {
-    //             // 加日志
-    //             let resDetail = JSON.parse(data.invoiceResult);
-    //             saveMainBill(resDetail).then(result => {
-    //                 if(result){
-    //                     res.json(
-    //                         new SuccessModel(data)
-    //                     )
-    //                 }
-    //             })
-    //         }
-
-
-    //     }
-
-    // }).catch(err => {
-    //     res.json(
-    //         new ErrorModel(err)
-    //     )
-    // })
 
 });
+router.post('/saveBill', function (req, res, next) {
+    console.log(req.body);
+    let info = req.body;
+    //存储发票基本信息
+    let billInfo = JSON.parse(info.billInfo);
+    //存储基本信息
+    billInfo.fp_checktype = 'ByQRCode';
+    billInfo.fp_czy = info.uid;
+    billInfo.fp_gsdw = 1;
+    billInfo.fp_gsr = info.fp_gsr;
+    billInfo.fp_gsbm = info.fp_gsbm;
+    billInfo.fp_bz = info.fp_bz;
+
+    BillIsHave({ code: billInfo.invoiceDataCode }).then(fpInfo => {
+        if (fpInfo.id) {
+            res.json(
+                new ErrorModel('记录已存在，请勿重复录入')
+            )
+            return
+        }
+
+        saveMainBillByScan(billInfo).then(insertRes => {
+            console.log('123：', insertRes);
+            if (insertRes.insertId) {
+                saveBillDetail(insertRes.insertId, info.billInfo).then(result => {
+                    console.log(result);
+                    if (result.insertId) {
+                        res.json(
+                            new SuccessModel(result.insertId)
+                        )
+                    }
+                }).catch(err => {
+                    new ErrorModel(err)
+                });
+            }
+        }).catch(err => {
+            new ErrorModel(err)
+        });
+
+
+    });
+
+
+});
+
 
 router.get('/getToken', function (req, res, next) {
     console.log(req.body);
@@ -106,7 +137,35 @@ router.get('/getToken', function (req, res, next) {
 
 });
 
-
+// 验证是否存在
+router.post('/getBillInfo', function (req, res, next) {
+    console.log('请求', req.body);
+    BillIsHave(req.body).then(fpInfo => {
+        console.log(fpInfo);
+        if (fpInfo.id) {
+            getBillDetail(fpInfo).then(info => {
+                console.log(info);
+                fpInfo.fp_detail = info;
+                console.log(fpInfo);
+                res.json(
+                    new SuccessModel(fpInfo)
+                )
+            }).catch(err => {
+                res.json(
+                    new ErrorModel(err)
+                )
+            })
+        } else {
+            res.json(
+                new ErrorModel('不存在')
+            )
+        }
+    }).catch(err => {
+        res.json(
+            new ErrorModel(err)
+        )
+    })
+});
 // router.post('/queryBill', function (req, res, next) {
 //     console.log(req.body);
 //     request({
