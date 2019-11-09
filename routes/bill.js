@@ -37,37 +37,22 @@ router.post('/queryBillByScan', function (req, res, next) {
 
 // 根据发票代码和发票号码查询
 router.post('/queryBillByCode', function (req, res, next) {
-    // console.log(req.body);
-    const data = {
-        resultMsg: '查验结果成功',
-        invoiceName: '山东增值税（卷式普通发票）',
-        isFree: 'N',
-        RtnCode: '00',
-        resultCode: '1000',
-        invoiceResult:
-            '{"invoiceTypeName":"山东增值税（卷式普通发票）","invoiceTypeCode":"11","checkDate":"2019-11-04 11:36:24","checkNum":"1","invoiceDataCode":"037001851107","invoiceNumber":"01947559","machineNumber":"01947559","billingTime":"2019-10-04","purchaserName":"日照日科信息技术有限公司","taxpayerNumber":"91371102MA3C7J0X37","taxDiskCode":"661718079692","salesName":"中国石化销售有限公司山东日照石油分公司","salesTaxpayerNum":"91371100724291958M","salesTaxpayerAddress":" ","salesTaxpayerBankAccount":" ","totalAmount":"221.24","totalTaxNum":"28.76","totalTaxSum":"250.00","invoiceRemarks":" ","goodsClerk":"刘芳","checkCode":"85180770102055250185","voidMark":"0","isBillMark":"N","invoiceDetailData":[{"lineNum":"1","goodserviceName":"*汽油*92号车用汽油(Ⅵ)","model":" ","unit":" ","number":"37.2100000","price":"6.7200000","sum":"250.00","taxRate":" ","tax":" ","isBillLine":"N","zeroTaxRateSign":"","zeroTaxRateSignName":""}],"tollSign":"","tollSignName":""}'
-    }
-    if (data) {
-        if (data.resultCode == '1000') {
-            // 加日志
-            let resDetail = JSON.parse(data.invoiceResult);
-            saveMainBill(resDetail).then(result => {
-                if (result) {
+    queryScanByCode(req.body).then(data =>{
+        if (data) {
+            if (data.resultCode == '1000') {
+                // 加日志
+                if (data) {
                     res.json(
                         new SuccessModel(data)
                     )
                 }
-            })
-        } else {
-            res.json(
-                new ErrorModel('没有查询到票的信息')
-            )
+            } else {
+                res.json(
+                    new ErrorModel('没有查询到票的信息')
+                )
+            }
         }
-
-
-    }
-
-
+    });
 
 });
 router.post('/saveBill', function (req, res, next) {
