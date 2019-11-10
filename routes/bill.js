@@ -3,7 +3,7 @@ var router = express.Router();
 var querystring = require('querystring');
 var request = require('request')
 var https = require("https");
-const { getBillDetail, BillIsHave, queryScanString, queryScanByCode, saveMainBill, saveMainBillByScan, saveBillDetail } = require('../controller/ls')
+const { getBillDetail, BillIsHave, queryScanString, queryScanByCode, saveMainBill, updateMainBill, saveMainBillByScan, saveBillDetail } = require('../controller/ls')
 const { SuccessModel, ErrorModel } = require('../model/resModel')
 const urlApi = 'https://open.leshui365.com';
 
@@ -37,7 +37,7 @@ router.post('/queryBillByScan', function (req, res, next) {
 
 // 根据发票代码和发票号码查询
 router.post('/queryBillByCode', function (req, res, next) {
-    queryScanByCode(req.body).then(data =>{
+    queryScanByCode(req.body).then(data => {
         if (data) {
             if (data.resultCode == '1000') {
                 // 加日志
@@ -70,31 +70,46 @@ router.post('/saveBill', function (req, res, next) {
 
     BillIsHave({ code: billInfo.invoiceDataCode }).then(fpInfo => {
         if (fpInfo.id) {
-            res.json(
-                new ErrorModel('记录已存在，请勿重复录入')
-            )
-            return
-        }
-
-        saveMainBillByScan(billInfo).then(insertRes => {
-            console.log('123：', insertRes);
-            if (insertRes.insertId) {
-                saveBillDetail(insertRes.insertId, info.billInfo).then(result => {
-                    console.log(result);
-                    if (result.insertId) {
-                        res.json(
-                            new SuccessModel(result.insertId)
-                        )
-                    }
-                }).catch(err => {
+            // 更新操作
+            updateMainBill(fpInfo.id,billInfo).then(updateRow => {
+                if (updateRow.affectedRows) {
+                    res.json(
+                        new SuccessModel(updateRow.affectedRows)
+                    )
+                } else {
+                    res.json(
+                        new SuccessModel('重复数据')
+                    )
+                }
+            }).catch(err => {
+                res.json(
                     new ErrorModel(err)
-                });
-            }
-        }).catch(err => {
-            new ErrorModel(err)
-        });
+                )
+            });
 
-
+        } else {
+            saveMainBillByScan(billInfo).then(insertRes => {
+                console.log('123：', insertRes);
+                if (insertRes.insertId) {
+                    saveBillDetail(insertRes.insertId, info.billInfo).then(result => {
+                        console.log(result);
+                        if (result.insertId) {
+                            res.json(
+                                new SuccessModel(result.insertId)
+                            )
+                        }
+                    }).catch(err => {
+                        res.json(
+                            new ErrorModel(err)
+                        )
+                    });
+                }
+            }).catch(err => {
+                res.json(
+                    new ErrorModel(err)
+                )
+            });
+        }
     });
 
 

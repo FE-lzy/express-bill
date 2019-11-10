@@ -81,10 +81,10 @@ const getBillDetail = (data) => {
 const saveMainBill = (data) => {
 
     const sql = `
-        insert  into fp_main (invoiceTypeCode,checkDate,checkNum,invoiceDataCode,
+        insert  into fp_main (invoiceTypeCode,checkDate,checkNum,invoiceDataCode,invoiceTypeName
             invoiceNumber,billingTime,taxDiskCode) 
         values 
-        ('${data.invoiceTypeCode}','${data.checkDate}','${data.checkNum}','${data.invoiceDataCode}','${data.invoiceNumber}',
+        ('${data.invoiceTypeCode}','${data.checkDate}','${data.checkNum}','${data.invoiceDataCode}','${data.invoiceTypeName}','${data.invoiceNumber}',
         '${data.billingTime}','${data.taxDiskCode}',)
     `
 
@@ -94,13 +94,27 @@ const saveMainBill = (data) => {
 }
 
 const saveMainBillByScan = (data) => {
-    console.log(data);
+    // 获取当前时间
+    let entryDate = new Date().toLocaleString();
     const sql = `
         insert  into fp_main 
-        (invoiceTypeCode,checkDate,checkNum,invoiceDataCode,invoiceNumber,billingTime,taxDiskCode,fp_checktype,fp_czy,fp_gsr,fp_gsbm,fp_gsdw,fp_bz) 
-        values ('${data.invoiceTypeCode}','${data.checkDate}','${data.checkNum}','${data.invoiceDataCode}','${data.invoiceNumber}',
+        (invoiceTypeCode,invoiceTypeName,checkDate,checkNum,invoiceDataCode,invoiceNumber,billingTime,taxDiskCode,fp_checktype,fp_czy,fp_gsr,fp_gsbm,fp_gsdw,fp_bz,entryDate) 
+        values ('${data.invoiceTypeCode}','${data.invoiceTypeName}','${data.checkDate}','${data.checkNum}','${data.invoiceDataCode}','${data.invoiceNumber}',
         '${data.billingTime}','${data.taxDiskCode}','${data.fp_checktype}','${data.fp_czy}',
-        '${data.fp_gsr}','${data.fp_gsbm}','${data.fp_gsdw}','${data.fp_bz}')
+        '${data.fp_gsr}','${data.fp_gsbm}','${data.fp_gsdw}','${data.fp_bz}','${entryDate}')
+    `
+    console.log(sql);
+
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+// 修改发票信息
+const updateMainBill = (id,data) =>{
+    console.log(data);
+    const sql= `
+        update fp_main set fp_gsr =  '${data.fp_gsr}' ,fp_gsbm = '${data.fp_gsbm}',fp_bz = '${data.fp_bz}'
+        where id = '${id}'
     `
     console.log(sql);
 
@@ -131,5 +145,6 @@ module.exports = {
     saveMainBillByScan,
     saveBillDetail,
     BillIsHave,
-    getBillDetail
+    getBillDetail,
+    updateMainBill
 }
