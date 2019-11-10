@@ -52,7 +52,7 @@ function queryScanByCode(param) {
 const BillIsHave = (data) => {
     console.log(data);
     const sql = `
-        select * from fp_main where invoiceDataCode = '${data.code}'
+        select * from fp_main where invoiceNumber = '${data.code}'
     `
     return exec(sql).then(rows => {
         return rows[0] || {}
