@@ -49,9 +49,6 @@ const setToken = function (username) {
 const verToken = function (token) {
     console.log('12111s');
     return new Promise((resolve, reject) => {
-        let str = 'Bearer ' +token;
-
-        console.log('验证前  '+token)
         var info = jwt.verify(token, signkey ,(error, decoded) => {
            
             console.log('验证  '+token)

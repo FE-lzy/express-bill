@@ -71,7 +71,7 @@ app.use(function(req, res, next) {
 app.use(expressJwt({
   secret: 'mes_qdhd_mobile_xhykjyxgs'
 }).unless({
-  path: ['/', '/user/login', '/user/userInfo']//除了这个地址，其他的URL都需要验证
+  path: ['/', '/user/login']//除了这个地址，其他的URL都需要验证
 }));
 console.log("object");
 app.use(express.json());
