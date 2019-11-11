@@ -9,8 +9,8 @@ var billRouter = require('./routes/bill');
 var userRouter = require('./routes/user')
 var manRouter = require('./routes/manager')
 const expressJwt = require('express-jwt');
-let secret = "jwt";
-
+var vertoken = require('./controller/user.js');
+const jwt = require('jsonwebtoken');
 var app = express();
 app.all("*", function (req, res, next) {
   //设置允许跨域的域名，*代表允许任意域名跨域
@@ -44,18 +44,42 @@ if (ENV !== 'production') {
     stream: writeSteam
   }))
 }
+var signkey = 'mes_qdhd_mobile_xhykjyxgs';
+// 解析token获取用户信息
+app.use(function(req, res, next) {
+  var token = req.headers['authorization'];
+  console.log('获取到的：',token);
+	if(token == undefined){
+		return next();
+	}else{
+    console.log(jwt);
+    
+    // console.log(info);
 
+		vertoken.verToken(token).then((data)=> {
+      console.log('123',token);
+			req.data = data;
+			return next();
+		}).catch((error)=>{
+      console.log(error);
+			return next();
+		})
+	}
+});
+
+//验证token是否过期并规定哪些路由不用验证
+app.use(expressJwt({
+  secret: 'mes_qdhd_mobile_xhykjyxgs'
+}).unless({
+  path: ['/', '/user/login', '/user/userInfo']//除了这个地址，其他的URL都需要验证
+}));
+console.log("object");
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-
 app.use('/user', userRouter);
-
-// 使用中间件验证
-// 
-
 app.use('/bill', billRouter);
 app.use('/manager', manRouter);
 // catch 404 and forward to error handler
@@ -67,7 +91,7 @@ app.use(function (req, res, next) {
 app.use(function (err, req, res, next) {
   console.log(err);
   if (err.name === 'UnauthorizedError') {
-    console.error(req.path +',无效token');
+    console.error(req.path + ',无效token');
     res.json({
       message: 'token过期，请重新登录',
       code: 400

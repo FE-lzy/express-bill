@@ -1,6 +1,6 @@
 var express = require('express')
 var router = express.Router();
-const { login, getUserToken, userInfo } = require('../controller/user')
+const { login, getUserToken, userInfo,setToken } = require('../controller/user')
 const { getLsToken } = require('../controller/ls')
 const { SuccessModel, ErrorModel } = require('../model/resModel')
 
@@ -14,12 +14,16 @@ router.post('/login', function (req, res, next) {
             getLsToken().then(lsToken => {
                 console.log(lsToken);
                 if (lsToken) {
-                    let uToken = getUserToken(data.username)
-                    let roles = data.roles.slice('')
-                    console.log(roles);
-                    res.json(
-                        new SuccessModel({ token: lsToken, uToken: uToken, user: data, roles: roles })
-                    )
+                   setToken(data.username).then(token =>{
+                       console.log('user token',token);
+                        if(token){
+                            res.json(
+                                new SuccessModel({ token: lsToken, uToken: token, user: data })
+                            )
+                        }
+                    })
+                    
+                    
                 }
             })
 
