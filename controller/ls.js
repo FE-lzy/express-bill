@@ -39,7 +39,14 @@ function queryScanByCode(param) {
     // get请求获取token
     var promise = new Promise(function (reslove, reject) {
         request(postQueryParam('/api/invoiceInfoForCom', param), function (error, response, body) {
+            
             if (!error && response.statusCode == 200) {
+                if(!body.isFree){
+                    // 不免費
+                    queryLog(param.dwbm).then(insertId =>{
+                        console.log(insertId);
+                    })
+                }
                 reslove(body)
             } else {
                 reject(error)
@@ -47,6 +54,9 @@ function queryScanByCode(param) {
         });
     });
     return promise
+}
+const queryLog = (data) => {
+    return true
 }
 // 查询是否存在
 const BillIsHave = (data) => {
