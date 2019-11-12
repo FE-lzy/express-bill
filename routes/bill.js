@@ -3,7 +3,7 @@ var router = express.Router();
 var querystring = require('querystring');
 var request = require('request')
 var https = require("https");
-const { getBillDetail, BillIsHave, queryScanString, queryScanByCode, saveMainBill, updateMainBill, saveMainBillByScan, saveBillDetail } = require('../controller/ls')
+const { getBillType,getBillDetail, BillIsHave, queryScanString, queryScanByCode, saveMainBill, updateMainBill, saveMainBillByScan, saveBillDetail,getBillList } = require('../controller/ls')
 const { SuccessModel, ErrorModel } = require('../model/resModel')
 const urlApi = 'https://open.leshui365.com';
 
@@ -166,29 +166,35 @@ router.post('/getBillInfo', function (req, res, next) {
         )
     })
 });
-// router.post('/queryBill', function (req, res, next) {
-//     console.log(req.body);
-//     request({
-//         url: urlApi + '/api/invoiceInfoForCom',
-//         method: "POST",
-//         json: true,
-//         headers: {
-//             "content-type": "application/json",
-//         },
-//         body: req.body
-//     }, function (error, response, body) {
-//         console.log(body);
-//         return res.send(body)
-//     });
+// 查询发票列表
 
-// });
+router.post('/getBillList',function(req,res,next){
+    if(req.body.dwbm){
+        getBillList(req.body).then(data =>{
+            return res.json(
+                new SuccessModel(data)
+            )
+        })
+    } else {
+        return res.json(
+            new ErrorModel('参数缺失')
+        )
+    }
 
-// jwt获取token
-// var connect = { username: req.body.username };// 要生成token的主题信息
-// let secretOrPrivateKey = "jwt";// 这是加密的key（密钥）
-// let token = jwt.sign(connect, secretOrPrivateKey, {
-//     expiresIn: 60 * 60 * 3  //三个小时失效
-// })
-// console.log(token);
+});
+router.post('/getBillType',function(req,res,next){
+        getBillType().then(data =>{
+            return res.json(
+                new SuccessModel(data)
+            )
+        }).catch(err =>{
+            return res.json(
+                new ErrorModel(err)
+            )
+        })
+    
+
+});
+
 // 保存列表
 module.exports = router;
