@@ -1,0 +1,1635 @@
+2019-11-13 09:39:35: 请求： 
+2019-11-13 09:39:35:         select  * from pub_user where username='admin' and password='4d4994bde299f6168c65f24c852897b7'
+2019-11-13 09:39:35:     
+2019-11-13 09:39:36: 结果 [ RowDataPacket {
+2019-11-13 09:39:36:     id: 2,
+2019-11-13 09:39:36:     username: 'admin',
+2019-11-13 09:39:36:     password: '4d4994bde299f6168c65f24c852897b7',
+2019-11-13 09:39:36:     roles: 'admin',
+2019-11-13 09:39:36:     dwbm: 1,
+2019-11-13 09:39:36:     bmid: 1001,
+2019-11-13 09:39:36:     tel: null,
+2019-11-13 09:39:36:     bz: null } ]
+2019-11-13 09:39:36: RowDataPacket {
+2019-11-13 09:39:36:   id: 2,
+2019-11-13 09:39:36:   username: 'admin',
+2019-11-13 09:39:36:   password: '4d4994bde299f6168c65f24c852897b7',
+2019-11-13 09:39:36:   roles: 'admin',
+2019-11-13 09:39:36:   dwbm: 1,
+2019-11-13 09:39:36:   bmid: 1001,
+2019-11-13 09:39:36:   tel: null,
+2019-11-13 09:39:36:   bz: null }
+2019-11-13 09:39:40: 75077070-05b6-11ea-9313-edd2797f83b7
+2019-11-13 09:39:40: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjA5MTgwLCJleHAiOjE1NzM4NjgzODB9.pxgh7EkZnM9TN6pt_iy3wOvJa8Tnr_xLYSoPOy_glwQ
+2019-11-13 09:39:40: user token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjA5MTgwLCJleHAiOjE1NzM4NjgzODB9.pxgh7EkZnM9TN6pt_iy3wOvJa8Tnr_xLYSoPOy_glwQ
+2019-11-13 09:41:03: IncomingMessage {
+2019-11-13 09:41:03:   _readableState:
+2019-11-13 09:41:03:    ReadableState {
+2019-11-13 09:41:03:      objectMode: false,
+2019-11-13 09:41:03:      highWaterMark: 16384,
+2019-11-13 09:41:03:      buffer: BufferList { head: null, tail: null, length: 0 },
+2019-11-13 09:41:03:      length: 0,
+2019-11-13 09:41:03:      pipes: null,
+2019-11-13 09:41:03:      pipesCount: 0,
+2019-11-13 09:41:03:      flowing: true,
+2019-11-13 09:41:03:      ended: true,
+2019-11-13 09:41:03:      endEmitted: true,
+2019-11-13 09:41:03:      reading: false,
+2019-11-13 09:41:03:      sync: false,
+2019-11-13 09:41:03:      needReadable: false,
+2019-11-13 09:41:03:      emittedReadable: false,
+2019-11-13 09:41:03:      readableListening: false,
+2019-11-13 09:41:03:      resumeScheduled: false,
+2019-11-13 09:41:03:      paused: false,
+2019-11-13 09:41:03:      emitClose: true,
+2019-11-13 09:41:03:      autoDestroy: false,
+2019-11-13 09:41:03:      destroyed: false,
+2019-11-13 09:41:03:      defaultEncoding: 'utf8',
+2019-11-13 09:41:03:      awaitDrain: 0,
+2019-11-13 09:41:03:      readingMore: false,
+2019-11-13 09:41:03:      decoder: null,
+2019-11-13 09:41:03:      encoding: null },
+2019-11-13 09:41:03:   readable: false,
+2019-11-13 09:41:03:   _events:
+2019-11-13 09:41:03:    [Object: null prototype] { end: [Function: resetHeadersTimeoutOnReqEnd] },
+2019-11-13 09:41:03:   _eventsCount: 1,
+2019-11-13 09:41:03:   _maxListeners: undefined,
+2019-11-13 09:41:03:   socket:
+2019-11-13 09:41:03:    Socket {
+2019-11-13 09:41:03:      connecting: false,
+2019-11-13 09:41:03:      _hadError: false,
+2019-11-13 09:41:03:      _handle:
+2019-11-13 09:41:03:       TCP {
+2019-11-13 09:41:03:         reading: true,
+2019-11-13 09:41:03:         onread: [Function: onStreamRead],
+2019-11-13 09:41:03:         onconnection: null,
+2019-11-13 09:41:03:         _consumed: true,
+2019-11-13 09:41:03:         [Symbol(owner)]: [Circular] },
+2019-11-13 09:41:03:      _parent: null,
+2019-11-13 09:41:03:      _host: null,
+2019-11-13 09:41:03:      _readableState:
+2019-11-13 09:41:03:       ReadableState {
+2019-11-13 09:41:03:         objectMode: false,
+2019-11-13 09:41:03:         highWaterMark: 16384,
+2019-11-13 09:41:03:         buffer: BufferList { head: null, tail: null, length: 0 },
+2019-11-13 09:41:03:         length: 0,
+2019-11-13 09:41:03:         pipes: null,
+2019-11-13 09:41:03:         pipesCount: 0,
+2019-11-13 09:41:03:         flowing: true,
+2019-11-13 09:41:03:         ended: false,
+2019-11-13 09:41:03:         endEmitted: false,
+2019-11-13 09:41:03:         reading: true,
+2019-11-13 09:41:03:         sync: false,
+2019-11-13 09:41:03:         needReadable: true,
+2019-11-13 09:41:03:         emittedReadable: false,
+2019-11-13 09:41:03:         readableListening: false,
+2019-11-13 09:41:03:         resumeScheduled: false,
+2019-11-13 09:41:03:         paused: false,
+2019-11-13 09:41:03:         emitClose: false,
+2019-11-13 09:41:03:         autoDestroy: false,
+2019-11-13 09:41:03:         destroyed: false,
+2019-11-13 09:41:03:         defaultEncoding: 'utf8',
+2019-11-13 09:41:03:         awaitDrain: 0,
+2019-11-13 09:41:03:         readingMore: false,
+2019-11-13 09:41:03:         decoder: null,
+2019-11-13 09:41:03:         encoding: null },
+2019-11-13 09:41:03:      readable: true,
+2019-11-13 09:41:03:      _events:
+2019-11-13 09:41:03:       [Object: null prototype] {
+2019-11-13 09:41:03:         end: [Array],
+2019-11-13 09:41:03:         drain: [Array],
+2019-11-13 09:41:03:         timeout: [Function: socketOnTimeout],
+2019-11-13 09:41:03:         data: [Function: bound socketOnData],
+2019-11-13 09:41:03:         error: [Array],
+2019-11-13 09:41:03:         close: [Array],
+2019-11-13 09:41:03:         resume: [Function: onSocketResume],
+2019-11-13 09:41:03:         pause: [Function: onSocketPause] },
+2019-11-13 09:41:03:      _eventsCount: 8,
+2019-11-13 09:41:03:      _maxListeners: undefined,
+2019-11-13 09:41:03:      _writableState:
+2019-11-13 09:41:03:       WritableState {
+2019-11-13 09:41:03:         objectMode: false,
+2019-11-13 09:41:03:         highWaterMark: 16384,
+2019-11-13 09:41:03:         finalCalled: false,
+2019-11-13 09:41:03:         needDrain: false,
+2019-11-13 09:41:03:         ending: false,
+2019-11-13 09:41:03:         ended: false,
+2019-11-13 09:41:03:         finished: false,
+2019-11-13 09:41:03:         destroyed: false,
+2019-11-13 09:41:03:         decodeStrings: false,
+2019-11-13 09:41:03:         defaultEncoding: 'utf8',
+2019-11-13 09:41:03:         length: 0,
+2019-11-13 09:41:03:         writing: false,
+2019-11-13 09:41:03:         corked: 0,
+2019-11-13 09:41:03:         sync: true,
+2019-11-13 09:41:03:         bufferProcessing: false,
+2019-11-13 09:41:03:         onwrite: [Function: bound onwrite],
+2019-11-13 09:41:03:         writecb: null,
+2019-11-13 09:41:03:         writelen: 0,
+2019-11-13 09:41:03:         bufferedRequest: null,
+2019-11-13 09:41:03:         lastBufferedRequest: null,
+2019-11-13 09:41:03:         pendingcb: 0,
+2019-11-13 09:41:03:         prefinished: false,
+2019-11-13 09:41:03:         errorEmitted: false,
+2019-11-13 09:41:03:         emitClose: false,
+2019-11-13 09:41:03:         autoDestroy: false,
+2019-11-13 09:41:03:         bufferedRequestCount: 0,
+2019-11-13 09:41:03:         corkedRequestsFree: [Object] },
+2019-11-13 09:41:03:      writable: true,
+2019-11-13 09:41:03:      allowHalfOpen: true,
+2019-11-13 09:41:03:      _sockname: null,
+2019-11-13 09:41:03:      _pendingData: null,
+2019-11-13 09:41:03:      _pendingEncoding: '',
+2019-11-13 09:41:03:      server:
+2019-11-13 09:41:03:       Server {
+2019-11-13 09:41:03:         _events: [Object],
+2019-11-13 09:41:03:         _eventsCount: 4,
+2019-11-13 09:41:03:         _maxListeners: undefined,
+2019-11-13 09:41:03:         _connections: 1,
+2019-11-13 09:41:03:         _handle: [TCP],
+2019-11-13 09:41:03:         _usingWorkers: false,
+2019-11-13 09:41:03:         _workers: [],
+2019-11-13 09:41:03:         _unref: false,
+2019-11-13 09:41:03:         allowHalfOpen: true,
+2019-11-13 09:41:03:         pauseOnConnect: false,
+2019-11-13 09:41:03:         httpAllowHalfOpen: false,
+2019-11-13 09:41:03:         timeout: 120000,
+2019-11-13 09:41:03:         keepAliveTimeout: 5000,
+2019-11-13 09:41:03:         maxHeadersCount: null,
+2019-11-13 09:41:03:         headersTimeout: 40000,
+2019-11-13 09:41:03:         _connectionKey: '6::::3000',
+2019-11-13 09:41:03:         [Symbol(IncomingMessage)]: [Function],
+2019-11-13 09:41:03:         [Symbol(ServerResponse)]: [Function],
+2019-11-13 09:41:03:         [Symbol(asyncId)]: 42 },
+2019-11-13 09:41:03:      _server:
+2019-11-13 09:41:03:       Server {
+2019-11-13 09:41:03:         _events: [Object],
+2019-11-13 09:41:03:         _eventsCount: 4,
+2019-11-13 09:41:03:         _maxListeners: undefined,
+2019-11-13 09:41:03:         _connections: 1,
+2019-11-13 09:41:03:         _handle: [TCP],
+2019-11-13 09:41:03:         _usingWorkers: false,
+2019-11-13 09:41:03:         _workers: [],
+2019-11-13 09:41:03:         _unref: false,
+2019-11-13 09:41:03:         allowHalfOpen: true,
+2019-11-13 09:41:03:         pauseOnConnect: false,
+2019-11-13 09:41:03:         httpAllowHalfOpen: false,
+2019-11-13 09:41:03:         timeout: 120000,
+2019-11-13 09:41:03:         keepAliveTimeout: 5000,
+2019-11-13 09:41:03:         maxHeadersCount: null,
+2019-11-13 09:41:03:         headersTimeout: 40000,
+2019-11-13 09:41:03:         _connectionKey: '6::::3000',
+2019-11-13 09:41:03:         [Symbol(IncomingMessage)]: [Function],
+2019-11-13 09:41:03:         [Symbol(ServerResponse)]: [Function],
+2019-11-13 09:41:03:         [Symbol(asyncId)]: 42 },
+2019-11-13 09:41:03:      timeout: 120000,
+2019-11-13 09:41:03:      parser:
+2019-11-13 09:41:03:       HTTPParser {
+2019-11-13 09:41:03:         '0': [Function: parserOnHeaders],
+2019-11-13 09:41:03:         '1': [Function: parserOnHeadersComplete],
+2019-11-13 09:41:03:         '2': [Function: parserOnBody],
+2019-11-13 09:41:03:         '3': [Function: parserOnMessageComplete],
+2019-11-13 09:41:03:         '4': [Function: bound onParserExecute],
+2019-11-13 09:41:03:         _headers: [],
+2019-11-13 09:41:03:         _url: '',
+2019-11-13 09:41:03:         socket: [Circular],
+2019-11-13 09:41:03:         incoming: [Circular],
+2019-11-13 09:41:03:         outgoing: null,
+2019-11-13 09:41:03:         maxHeaderPairs: 2000,
+2019-11-13 09:41:03:         _consumed: true,
+2019-11-13 09:41:03:         onIncoming: [Function: bound parserOnIncoming],
+2019-11-13 09:41:03:         parsingHeadersStart: 1573609263105,
+2019-11-13 09:41:03:         [Symbol(isReused)]: false },
+2019-11-13 09:41:03:      on: [Function: socketOnWrap],
+2019-11-13 09:41:03:      _paused: false,
+2019-11-13 09:41:03:      _httpMessage:
+2019-11-13 09:41:03:       ServerResponse {
+2019-11-13 09:41:03:         _events: [Object],
+2019-11-13 09:41:03:         _eventsCount: 2,
+2019-11-13 09:41:03:         _maxListeners: undefined,
+2019-11-13 09:41:03:         output: [],
+2019-11-13 09:41:03:         outputEncodings: [],
+2019-11-13 09:41:03:         outputCallbacks: [],
+2019-11-13 09:41:03:         outputSize: 0,
+2019-11-13 09:41:03:         writable: true,
+2019-11-13 09:41:03:         _last: false,
+2019-11-13 09:41:03:         chunkedEncoding: false,
+2019-11-13 09:41:03:         shouldKeepAlive: true,
+2019-11-13 09:41:03:         useChunkedEncodingByDefault: true,
+2019-11-13 09:41:03:         sendDate: true,
+2019-11-13 09:41:03:         _removedConnection: false,
+2019-11-13 09:41:03:         _removedContLen: false,
+2019-11-13 09:41:03:         _removedTE: false,
+2019-11-13 09:41:03:         _contentLength: null,
+2019-11-13 09:41:03:         _hasBody: true,
+2019-11-13 09:41:03:         _trailer: '',
+2019-11-13 09:41:03:         finished: false,
+2019-11-13 09:41:03:         _headerSent: false,
+2019-11-13 09:41:03:         socket: [Circular],
+2019-11-13 09:41:03:         connection: [Circular],
+2019-11-13 09:41:03:         _header: null,
+2019-11-13 09:41:03:         _onPendingData: [Function: bound updateOutgoingData],
+2019-11-13 09:41:03:         _sent100: false,
+2019-11-13 09:41:03:         _expect_continue: false,
+2019-11-13 09:41:03:         req: [Circular],
+2019-11-13 09:41:03:         locals: [Object: null prototype] {},
+2019-11-13 09:41:03:         _startAt: undefined,
+2019-11-13 09:41:03:         _startTime: undefined,
+2019-11-13 09:41:03:         writeHead: [Function: writeHead],
+2019-11-13 09:41:03:         __onFinished: [Function],
+2019-11-13 09:41:03:         [Symbol(isCorked)]: false,
+2019-11-13 09:41:03:         [Symbol(outHeadersKey)]: [Object] },
+2019-11-13 09:41:03:      _peername: { address: '::1', family: 'IPv6', port: 54209 },
+2019-11-13 09:41:03:      [Symbol(asyncId)]: 60,
+2019-11-13 09:41:03:      [Symbol(lastWriteQueueSize)]: 0,
+2019-11-13 09:41:03:      [Symbol(timeout)]:
+2019-11-13 09:41:03:       Timeout {
+2019-11-13 09:41:03:         _called: false,
+2019-11-13 09:41:03:         _idleTimeout: 120000,
+2019-11-13 09:41:03:         _idlePrev: [TimersList],
+2019-11-13 09:41:03:         _idleNext: [TimersList],
+2019-11-13 09:41:03:         _idleStart: 1477,
+2019-11-13 09:41:03:         _onTimeout: [Function: bound ],
+2019-11-13 09:41:03:         _timerArgs: undefined,
+2019-11-13 09:41:03:         _repeat: null,
+2019-11-13 09:41:03:         _destroyed: false,
+2019-11-13 09:41:03:         [Symbol(unrefed)]: true,
+2019-11-13 09:41:03:         [Symbol(asyncId)]: 61,
+2019-11-13 09:41:03:         [Symbol(triggerId)]: 60 },
+2019-11-13 09:41:03:      [Symbol(kBytesRead)]: 0,
+2019-11-13 09:41:03:      [Symbol(kBytesWritten)]: 0 },
+2019-11-13 09:41:03:   connection:
+2019-11-13 09:41:03:    Socket {
+2019-11-13 09:41:03:      connecting: false,
+2019-11-13 09:41:03:      _hadError: false,
+2019-11-13 09:41:03:      _handle:
+2019-11-13 09:41:03:       TCP {
+2019-11-13 09:41:03:         reading: true,
+2019-11-13 09:41:03:         onread: [Function: onStreamRead],
+2019-11-13 09:41:03:         onconnection: null,
+2019-11-13 09:41:03:         _consumed: true,
+2019-11-13 09:41:03:         [Symbol(owner)]: [Circular] },
+2019-11-13 09:41:03:      _parent: null,
+2019-11-13 09:41:03:      _host: null,
+2019-11-13 09:41:03:      _readableState:
+2019-11-13 09:41:03:       ReadableState {
+2019-11-13 09:41:03:         objectMode: false,
+2019-11-13 09:41:03:         highWaterMark: 16384,
+2019-11-13 09:41:03:         buffer: BufferList { head: null, tail: null, length: 0 },
+2019-11-13 09:41:03:         length: 0,
+2019-11-13 09:41:03:         pipes: null,
+2019-11-13 09:41:03:         pipesCount: 0,
+2019-11-13 09:41:03:         flowing: true,
+2019-11-13 09:41:03:         ended: false,
+2019-11-13 09:41:03:         endEmitted: false,
+2019-11-13 09:41:03:         reading: true,
+2019-11-13 09:41:03:         sync: false,
+2019-11-13 09:41:03:         needReadable: true,
+2019-11-13 09:41:03:         emittedReadable: false,
+2019-11-13 09:41:03:         readableListening: false,
+2019-11-13 09:41:03:         resumeScheduled: false,
+2019-11-13 09:41:03:         paused: false,
+2019-11-13 09:41:03:         emitClose: false,
+2019-11-13 09:41:03:         autoDestroy: false,
+2019-11-13 09:41:03:         destroyed: false,
+2019-11-13 09:41:03:         defaultEncoding: 'utf8',
+2019-11-13 09:41:03:         awaitDrain: 0,
+2019-11-13 09:41:03:         readingMore: false,
+2019-11-13 09:41:03:         decoder: null,
+2019-11-13 09:41:03:         encoding: null },
+2019-11-13 09:41:03:      readable: true,
+2019-11-13 09:41:03:      _events:
+2019-11-13 09:41:03:       [Object: null prototype] {
+2019-11-13 09:41:03:         end: [Array],
+2019-11-13 09:41:03:         drain: [Array],
+2019-11-13 09:41:03:         timeout: [Function: socketOnTimeout],
+2019-11-13 09:41:03:         data: [Function: bound socketOnData],
+2019-11-13 09:41:03:         error: [Array],
+2019-11-13 09:41:03:         close: [Array],
+2019-11-13 09:41:03:         resume: [Function: onSocketResume],
+2019-11-13 09:41:03:         pause: [Function: onSocketPause] },
+2019-11-13 09:41:03:      _eventsCount: 8,
+2019-11-13 09:41:03:      _maxListeners: undefined,
+2019-11-13 09:41:03:      _writableState:
+2019-11-13 09:41:03:       WritableState {
+2019-11-13 09:41:03:         objectMode: false,
+2019-11-13 09:41:03:         highWaterMark: 16384,
+2019-11-13 09:41:03:         finalCalled: false,
+2019-11-13 09:41:03:         needDrain: false,
+2019-11-13 09:41:03:         ending: false,
+2019-11-13 09:41:03:         ended: false,
+2019-11-13 09:41:03:         finished: false,
+2019-11-13 09:41:03:         destroyed: false,
+2019-11-13 09:41:03:         decodeStrings: false,
+2019-11-13 09:41:03:         defaultEncoding: 'utf8',
+2019-11-13 09:41:03:         length: 0,
+2019-11-13 09:41:03:         writing: false,
+2019-11-13 09:41:03:         corked: 0,
+2019-11-13 09:41:03:         sync: true,
+2019-11-13 09:41:03:         bufferProcessing: false,
+2019-11-13 09:41:03:         onwrite: [Function: bound onwrite],
+2019-11-13 09:41:03:         writecb: null,
+2019-11-13 09:41:03:         writelen: 0,
+2019-11-13 09:41:03:         bufferedRequest: null,
+2019-11-13 09:41:03:         lastBufferedRequest: null,
+2019-11-13 09:41:03:         pendingcb: 0,
+2019-11-13 09:41:03:         prefinished: false,
+2019-11-13 09:41:03:         errorEmitted: false,
+2019-11-13 09:41:03:         emitClose: false,
+2019-11-13 09:41:03:         autoDestroy: false,
+2019-11-13 09:41:03:         bufferedRequestCount: 0,
+2019-11-13 09:41:03:         corkedRequestsFree: [Object] },
+2019-11-13 09:41:03:      writable: true,
+2019-11-13 09:41:03:      allowHalfOpen: true,
+2019-11-13 09:41:03:      _sockname: null,
+2019-11-13 09:41:03:      _pendingData: null,
+2019-11-13 09:41:03:      _pendingEncoding: '',
+2019-11-13 09:41:03:      server:
+2019-11-13 09:41:03:       Server {
+2019-11-13 09:41:03:         _events: [Object],
+2019-11-13 09:41:03:         _eventsCount: 4,
+2019-11-13 09:41:03:         _maxListeners: undefined,
+2019-11-13 09:41:03:         _connections: 1,
+2019-11-13 09:41:03:         _handle: [TCP],
+2019-11-13 09:41:03:         _usingWorkers: false,
+2019-11-13 09:41:03:         _workers: [],
+2019-11-13 09:41:03:         _unref: false,
+2019-11-13 09:41:03:         allowHalfOpen: true,
+2019-11-13 09:41:03:         pauseOnConnect: false,
+2019-11-13 09:41:03:         httpAllowHalfOpen: false,
+2019-11-13 09:41:03:         timeout: 120000,
+2019-11-13 09:41:03:         keepAliveTimeout: 5000,
+2019-11-13 09:41:03:         maxHeadersCount: null,
+2019-11-13 09:41:03:         headersTimeout: 40000,
+2019-11-13 09:41:03:         _connectionKey: '6::::3000',
+2019-11-13 09:41:03:         [Symbol(IncomingMessage)]: [Function],
+2019-11-13 09:41:03:         [Symbol(ServerResponse)]: [Function],
+2019-11-13 09:41:03:         [Symbol(asyncId)]: 42 },
+2019-11-13 09:41:03:      _server:
+2019-11-13 09:41:03:       Server {
+2019-11-13 09:41:03:         _events: [Object],
+2019-11-13 09:41:03:         _eventsCount: 4,
+2019-11-13 09:41:03:         _maxListeners: undefined,
+2019-11-13 09:41:03:         _connections: 1,
+2019-11-13 09:41:03:         _handle: [TCP],
+2019-11-13 09:41:03:         _usingWorkers: false,
+2019-11-13 09:41:03:         _workers: [],
+2019-11-13 09:41:03:         _unref: false,
+2019-11-13 09:41:03:         allowHalfOpen: true,
+2019-11-13 09:41:03:         pauseOnConnect: false,
+2019-11-13 09:41:03:         httpAllowHalfOpen: false,
+2019-11-13 09:41:03:         timeout: 120000,
+2019-11-13 09:41:03:         keepAliveTimeout: 5000,
+2019-11-13 09:41:03:         maxHeadersCount: null,
+2019-11-13 09:41:03:         headersTimeout: 40000,
+2019-11-13 09:41:03:         _connectionKey: '6::::3000',
+2019-11-13 09:41:03:         [Symbol(IncomingMessage)]: [Function],
+2019-11-13 09:41:03:         [Symbol(ServerResponse)]: [Function],
+2019-11-13 09:41:03:         [Symbol(asyncId)]: 42 },
+2019-11-13 09:41:03:      timeout: 120000,
+2019-11-13 09:41:03:      parser:
+2019-11-13 09:41:03:       HTTPParser {
+2019-11-13 09:41:03:         '0': [Function: parserOnHeaders],
+2019-11-13 09:41:03:         '1': [Function: parserOnHeadersComplete],
+2019-11-13 09:41:03:         '2': [Function: parserOnBody],
+2019-11-13 09:41:03:         '3': [Function: parserOnMessageComplete],
+2019-11-13 09:41:03:         '4': [Function: bound onParserExecute],
+2019-11-13 09:41:03:         _headers: [],
+2019-11-13 09:41:03:         _url: '',
+2019-11-13 09:41:03:         socket: [Circular],
+2019-11-13 09:41:03:         incoming: [Circular],
+2019-11-13 09:41:03:         outgoing: null,
+2019-11-13 09:41:03:         maxHeaderPairs: 2000,
+2019-11-13 09:41:03:         _consumed: true,
+2019-11-13 09:41:03:         onIncoming: [Function: bound parserOnIncoming],
+2019-11-13 09:41:03:         parsingHeadersStart: 1573609263105,
+2019-11-13 09:41:03:         [Symbol(isReused)]: false },
+2019-11-13 09:41:03:      on: [Function: socketOnWrap],
+2019-11-13 09:41:03:      _paused: false,
+2019-11-13 09:41:03:      _httpMessage:
+2019-11-13 09:41:03:       ServerResponse {
+2019-11-13 09:41:03:         _events: [Object],
+2019-11-13 09:41:03:         _eventsCount: 2,
+2019-11-13 09:41:03:         _maxListeners: undefined,
+2019-11-13 09:41:03:         output: [],
+2019-11-13 09:41:03:         outputEncodings: [],
+2019-11-13 09:41:03:         outputCallbacks: [],
+2019-11-13 09:41:03:         outputSize: 0,
+2019-11-13 09:41:03:         writable: true,
+2019-11-13 09:41:03:         _last: false,
+2019-11-13 09:41:03:         chunkedEncoding: false,
+2019-11-13 09:41:03:         shouldKeepAlive: true,
+2019-11-13 09:41:03:         useChunkedEncodingByDefault: true,
+2019-11-13 09:41:03:         sendDate: true,
+2019-11-13 09:41:03:         _removedConnection: false,
+2019-11-13 09:41:03:         _removedContLen: false,
+2019-11-13 09:41:03:         _removedTE: false,
+2019-11-13 09:41:03:         _contentLength: null,
+2019-11-13 09:41:03:         _hasBody: true,
+2019-11-13 09:41:03:         _trailer: '',
+2019-11-13 09:41:03:         finished: false,
+2019-11-13 09:41:03:         _headerSent: false,
+2019-11-13 09:41:03:         socket: [Circular],
+2019-11-13 09:41:03:         connection: [Circular],
+2019-11-13 09:41:03:         _header: null,
+2019-11-13 09:41:03:         _onPendingData: [Function: bound updateOutgoingData],
+2019-11-13 09:41:03:         _sent100: false,
+2019-11-13 09:41:03:         _expect_continue: false,
+2019-11-13 09:41:03:         req: [Circular],
+2019-11-13 09:41:03:         locals: [Object: null prototype] {},
+2019-11-13 09:41:03:         _startAt: undefined,
+2019-11-13 09:41:03:         _startTime: undefined,
+2019-11-13 09:41:03:         writeHead: [Function: writeHead],
+2019-11-13 09:41:03:         __onFinished: [Function],
+2019-11-13 09:41:03:         [Symbol(isCorked)]: false,
+2019-11-13 09:41:03:         [Symbol(outHeadersKey)]: [Object] },
+2019-11-13 09:41:03:      _peername: { address: '::1', family: 'IPv6', port: 54209 },
+2019-11-13 09:41:03:      [Symbol(asyncId)]: 60,
+2019-11-13 09:41:03:      [Symbol(lastWriteQueueSize)]: 0,
+2019-11-13 09:41:03:      [Symbol(timeout)]:
+2019-11-13 09:41:03:       Timeout {
+2019-11-13 09:41:03:         _called: false,
+2019-11-13 09:41:03:         _idleTimeout: 120000,
+2019-11-13 09:41:03:         _idlePrev: [TimersList],
+2019-11-13 09:41:03:         _idleNext: [TimersList],
+2019-11-13 09:41:03:         _idleStart: 1477,
+2019-11-13 09:41:03:         _onTimeout: [Function: bound ],
+2019-11-13 09:41:03:         _timerArgs: undefined,
+2019-11-13 09:41:03:         _repeat: null,
+2019-11-13 09:41:03:         _destroyed: false,
+2019-11-13 09:41:03:         [Symbol(unrefed)]: true,
+2019-11-13 09:41:03:         [Symbol(asyncId)]: 61,
+2019-11-13 09:41:03:         [Symbol(triggerId)]: 60 },
+2019-11-13 09:41:03:      [Symbol(kBytesRead)]: 0,
+2019-11-13 09:41:03:      [Symbol(kBytesWritten)]: 0 },
+2019-11-13 09:41:03:   httpVersionMajor: 1,
+2019-11-13 09:41:03:   httpVersionMinor: 1,
+2019-11-13 09:41:03:   httpVersion: '1.1',
+2019-11-13 09:41:03:   complete: true,
+2019-11-13 09:41:03:   headers:
+2019-11-13 09:41:03:    { 'content-type': 'application/json',
+2019-11-13 09:41:03:      'user-agent': 'PostmanRuntime/7.19.0',
+2019-11-13 09:41:03:      accept: '*/*',
+2019-11-13 09:41:03:      'cache-control': 'no-cache',
+2019-11-13 09:41:03:      'postman-token': 'e60d64da-9fb3-4684-ad23-eb3db927aed3',
+2019-11-13 09:41:03:      host: 'localhost:3000',
+2019-11-13 09:41:03:      'accept-encoding': 'gzip, deflate',
+2019-11-13 09:41:03:      'content-length': '45',
+2019-11-13 09:41:03:      connection: 'keep-alive' },
+2019-11-13 09:41:03:   rawHeaders:
+2019-11-13 09:41:03:    [ 'Content-Type',
+2019-11-13 09:41:03:      'application/json',
+2019-11-13 09:41:03:      'User-Agent',
+2019-11-13 09:41:03:      'PostmanRuntime/7.19.0',
+2019-11-13 09:41:03:      'Accept',
+2019-11-13 09:41:03:      '*/*',
+2019-11-13 09:41:03:      'Cache-Control',
+2019-11-13 09:41:03:      'no-cache',
+2019-11-13 09:41:03:      'Postman-Token',
+2019-11-13 09:41:03:      'e60d64da-9fb3-4684-ad23-eb3db927aed3',
+2019-11-13 09:41:03:      'Host',
+2019-11-13 09:41:03:      'localhost:3000',
+2019-11-13 09:41:03:      'Accept-Encoding',
+2019-11-13 09:41:03:      'gzip, deflate',
+2019-11-13 09:41:03:      'Content-Length',
+2019-11-13 09:41:03:      '45',
+2019-11-13 09:41:03:      'Connection',
+2019-11-13 09:41:03:      'keep-alive' ],
+2019-11-13 09:41:03:   trailers: {},
+2019-11-13 09:41:03:   rawTrailers: [],
+2019-11-13 09:41:03:   aborted: false,
+2019-11-13 09:41:03:   upgrade: false,
+2019-11-13 09:41:03:   url: '/login',
+2019-11-13 09:41:03:   method: 'POST',
+2019-11-13 09:41:03:   statusCode: null,
+2019-11-13 09:41:03:   statusMessage: null,
+2019-11-13 09:41:03:   client:
+2019-11-13 09:41:03:    Socket {
+2019-11-13 09:41:03:      connecting: false,
+2019-11-13 09:41:03:      _hadError: false,
+2019-11-13 09:41:03:      _handle:
+2019-11-13 09:41:03:       TCP {
+2019-11-13 09:41:03:         reading: true,
+2019-11-13 09:41:03:         onread: [Function: onStreamRead],
+2019-11-13 09:41:03:         onconnection: null,
+2019-11-13 09:41:03:         _consumed: true,
+2019-11-13 09:41:03:         [Symbol(owner)]: [Circular] },
+2019-11-13 09:41:03:      _parent: null,
+2019-11-13 09:41:03:      _host: null,
+2019-11-13 09:41:03:      _readableState:
+2019-11-13 09:41:03:       ReadableState {
+2019-11-13 09:41:03:         objectMode: false,
+2019-11-13 09:41:03:         highWaterMark: 16384,
+2019-11-13 09:41:03:         buffer: BufferList { head: null, tail: null, length: 0 },
+2019-11-13 09:41:03:         length: 0,
+2019-11-13 09:41:03:         pipes: null,
+2019-11-13 09:41:03:         pipesCount: 0,
+2019-11-13 09:41:03:         flowing: true,
+2019-11-13 09:41:03:         ended: false,
+2019-11-13 09:41:03:         endEmitted: false,
+2019-11-13 09:41:03:         reading: true,
+2019-11-13 09:41:03:         sync: false,
+2019-11-13 09:41:03:         needReadable: true,
+2019-11-13 09:41:03:         emittedReadable: false,
+2019-11-13 09:41:03:         readableListening: false,
+2019-11-13 09:41:03:         resumeScheduled: false,
+2019-11-13 09:41:03:         paused: false,
+2019-11-13 09:41:03:         emitClose: false,
+2019-11-13 09:41:03:         autoDestroy: false,
+2019-11-13 09:41:03:         destroyed: false,
+2019-11-13 09:41:03:         defaultEncoding: 'utf8',
+2019-11-13 09:41:03:         awaitDrain: 0,
+2019-11-13 09:41:03:         readingMore: false,
+2019-11-13 09:41:03:         decoder: null,
+2019-11-13 09:41:03:         encoding: null },
+2019-11-13 09:41:03:      readable: true,
+2019-11-13 09:41:03:      _events:
+2019-11-13 09:41:03:       [Object: null prototype] {
+2019-11-13 09:41:03:         end: [Array],
+2019-11-13 09:41:03:         drain: [Array],
+2019-11-13 09:41:03:         timeout: [Function: socketOnTimeout],
+2019-11-13 09:41:03:         data: [Function: bound socketOnData],
+2019-11-13 09:41:03:         error: [Array],
+2019-11-13 09:41:03:         close: [Array],
+2019-11-13 09:41:03:         resume: [Function: onSocketResume],
+2019-11-13 09:41:03:         pause: [Function: onSocketPause] },
+2019-11-13 09:41:03:      _eventsCount: 8,
+2019-11-13 09:41:03:      _maxListeners: undefined,
+2019-11-13 09:41:03:      _writableState:
+2019-11-13 09:41:03:       WritableState {
+2019-11-13 09:41:03:         objectMode: false,
+2019-11-13 09:41:03:         highWaterMark: 16384,
+2019-11-13 09:41:03:         finalCalled: false,
+2019-11-13 09:41:03:         needDrain: false,
+2019-11-13 09:41:03:         ending: false,
+2019-11-13 09:41:03:         ended: false,
+2019-11-13 09:41:03:         finished: false,
+2019-11-13 09:41:03:         destroyed: false,
+2019-11-13 09:41:03:         decodeStrings: false,
+2019-11-13 09:41:03:         defaultEncoding: 'utf8',
+2019-11-13 09:41:03:         length: 0,
+2019-11-13 09:41:03:         writing: false,
+2019-11-13 09:41:03:         corked: 0,
+2019-11-13 09:41:03:         sync: true,
+2019-11-13 09:41:03:         bufferProcessing: false,
+2019-11-13 09:41:03:         onwrite: [Function: bound onwrite],
+2019-11-13 09:41:03:         writecb: null,
+2019-11-13 09:41:03:         writelen: 0,
+2019-11-13 09:41:03:         bufferedRequest: null,
+2019-11-13 09:41:03:         lastBufferedRequest: null,
+2019-11-13 09:41:03:         pendingcb: 0,
+2019-11-13 09:41:03:         prefinished: false,
+2019-11-13 09:41:03:         errorEmitted: false,
+2019-11-13 09:41:03:         emitClose: false,
+2019-11-13 09:41:03:         autoDestroy: false,
+2019-11-13 09:41:03:         bufferedRequestCount: 0,
+2019-11-13 09:41:03:         corkedRequestsFree: [Object] },
+2019-11-13 09:41:03:      writable: true,
+2019-11-13 09:41:03:      allowHalfOpen: true,
+2019-11-13 09:41:03:      _sockname: null,
+2019-11-13 09:41:03:      _pendingData: null,
+2019-11-13 09:41:03:      _pendingEncoding: '',
+2019-11-13 09:41:03:      server:
+2019-11-13 09:41:03:       Server {
+2019-11-13 09:41:03:         _events: [Object],
+2019-11-13 09:41:03:         _eventsCount: 4,
+2019-11-13 09:41:03:         _maxListeners: undefined,
+2019-11-13 09:41:03:         _connections: 1,
+2019-11-13 09:41:03:         _handle: [TCP],
+2019-11-13 09:41:03:         _usingWorkers: false,
+2019-11-13 09:41:03:         _workers: [],
+2019-11-13 09:41:03:         _unref: false,
+2019-11-13 09:41:03:         allowHalfOpen: true,
+2019-11-13 09:41:03:         pauseOnConnect: false,
+2019-11-13 09:41:03:         httpAllowHalfOpen: false,
+2019-11-13 09:41:03:         timeout: 120000,
+2019-11-13 09:41:03:         keepAliveTimeout: 5000,
+2019-11-13 09:41:03:         maxHeadersCount: null,
+2019-11-13 09:41:03:         headersTimeout: 40000,
+2019-11-13 09:41:03:         _connectionKey: '6::::3000',
+2019-11-13 09:41:03:         [Symbol(IncomingMessage)]: [Function],
+2019-11-13 09:41:03:         [Symbol(ServerResponse)]: [Function],
+2019-11-13 09:41:03:         [Symbol(asyncId)]: 42 },
+2019-11-13 09:41:03:      _server:
+2019-11-13 09:41:03:       Server {
+2019-11-13 09:41:03:         _events: [Object],
+2019-11-13 09:41:03:         _eventsCount: 4,
+2019-11-13 09:41:03:         _maxListeners: undefined,
+2019-11-13 09:41:03:         _connections: 1,
+2019-11-13 09:41:03:         _handle: [TCP],
+2019-11-13 09:41:03:         _usingWorkers: false,
+2019-11-13 09:41:03:         _workers: [],
+2019-11-13 09:41:03:         _unref: false,
+2019-11-13 09:41:03:         allowHalfOpen: true,
+2019-11-13 09:41:03:         pauseOnConnect: false,
+2019-11-13 09:41:03:         httpAllowHalfOpen: false,
+2019-11-13 09:41:03:         timeout: 120000,
+2019-11-13 09:41:03:         keepAliveTimeout: 5000,
+2019-11-13 09:41:03:         maxHeadersCount: null,
+2019-11-13 09:41:03:         headersTimeout: 40000,
+2019-11-13 09:41:03:         _connectionKey: '6::::3000',
+2019-11-13 09:41:03:         [Symbol(IncomingMessage)]: [Function],
+2019-11-13 09:41:03:         [Symbol(ServerResponse)]: [Function],
+2019-11-13 09:41:03:         [Symbol(asyncId)]: 42 },
+2019-11-13 09:41:03:      timeout: 120000,
+2019-11-13 09:41:03:      parser:
+2019-11-13 09:41:03:       HTTPParser {
+2019-11-13 09:41:03:         '0': [Function: parserOnHeaders],
+2019-11-13 09:41:03:         '1': [Function: parserOnHeadersComplete],
+2019-11-13 09:41:03:         '2': [Function: parserOnBody],
+2019-11-13 09:41:03:         '3': [Function: parserOnMessageComplete],
+2019-11-13 09:41:03:         '4': [Function: bound onParserExecute],
+2019-11-13 09:41:03:         _headers: [],
+2019-11-13 09:41:03:         _url: '',
+2019-11-13 09:41:03:         socket: [Circular],
+2019-11-13 09:41:03:         incoming: [Circular],
+2019-11-13 09:41:03:         outgoing: null,
+2019-11-13 09:41:03:         maxHeaderPairs: 2000,
+2019-11-13 09:41:03:         _consumed: true,
+2019-11-13 09:41:03:         onIncoming: [Function: bound parserOnIncoming],
+2019-11-13 09:41:03:         parsingHeadersStart: 1573609263105,
+2019-11-13 09:41:03:         [Symbol(isReused)]: false },
+2019-11-13 09:41:03:      on: [Function: socketOnWrap],
+2019-11-13 09:41:03:      _paused: false,
+2019-11-13 09:41:03:      _httpMessage:
+2019-11-13 09:41:03:       ServerResponse {
+2019-11-13 09:41:03:         _events: [Object],
+2019-11-13 09:41:03:         _eventsCount: 2,
+2019-11-13 09:41:03:         _maxListeners: undefined,
+2019-11-13 09:41:03:         output: [],
+2019-11-13 09:41:03:         outputEncodings: [],
+2019-11-13 09:41:03:         outputCallbacks: [],
+2019-11-13 09:41:03:         outputSize: 0,
+2019-11-13 09:41:03:         writable: true,
+2019-11-13 09:41:03:         _last: false,
+2019-11-13 09:41:03:         chunkedEncoding: false,
+2019-11-13 09:41:03:         shouldKeepAlive: true,
+2019-11-13 09:41:03:         useChunkedEncodingByDefault: true,
+2019-11-13 09:41:03:         sendDate: true,
+2019-11-13 09:41:03:         _removedConnection: false,
+2019-11-13 09:41:03:         _removedContLen: false,
+2019-11-13 09:41:03:         _removedTE: false,
+2019-11-13 09:41:03:         _contentLength: null,
+2019-11-13 09:41:03:         _hasBody: true,
+2019-11-13 09:41:03:         _trailer: '',
+2019-11-13 09:41:03:         finished: false,
+2019-11-13 09:41:03:         _headerSent: false,
+2019-11-13 09:41:03:         socket: [Circular],
+2019-11-13 09:41:03:         connection: [Circular],
+2019-11-13 09:41:03:         _header: null,
+2019-11-13 09:41:03:         _onPendingData: [Function: bound updateOutgoingData],
+2019-11-13 09:41:03:         _sent100: false,
+2019-11-13 09:41:03:         _expect_continue: false,
+2019-11-13 09:41:03:         req: [Circular],
+2019-11-13 09:41:03:         locals: [Object: null prototype] {},
+2019-11-13 09:41:03:         _startAt: undefined,
+2019-11-13 09:41:03:         _startTime: undefined,
+2019-11-13 09:41:03:         writeHead: [Function: writeHead],
+2019-11-13 09:41:03:         __onFinished: [Function],
+2019-11-13 09:41:03:         [Symbol(isCorked)]: false,
+2019-11-13 09:41:03:         [Symbol(outHeadersKey)]: [Object] },
+2019-11-13 09:41:03:      _peername: { address: '::1', family: 'IPv6', port: 54209 },
+2019-11-13 09:41:03:      [Symbol(asyncId)]: 60,
+2019-11-13 09:41:03:      [Symbol(lastWriteQueueSize)]: 0,
+2019-11-13 09:41:03:      [Symbol(timeout)]:
+2019-11-13 09:41:03:       Timeout {
+2019-11-13 09:41:03:         _called: false,
+2019-11-13 09:41:03:         _idleTimeout: 120000,
+2019-11-13 09:41:03:         _idlePrev: [TimersList],
+2019-11-13 09:41:03:         _idleNext: [TimersList],
+2019-11-13 09:41:03:         _idleStart: 1477,
+2019-11-13 09:41:03:         _onTimeout: [Function: bound ],
+2019-11-13 09:41:03:         _timerArgs: undefined,
+2019-11-13 09:41:03:         _repeat: null,
+2019-11-13 09:41:03:         _destroyed: false,
+2019-11-13 09:41:03:         [Symbol(unrefed)]: true,
+2019-11-13 09:41:03:         [Symbol(asyncId)]: 61,
+2019-11-13 09:41:03:         [Symbol(triggerId)]: 60 },
+2019-11-13 09:41:03:      [Symbol(kBytesRead)]: 0,
+2019-11-13 09:41:03:      [Symbol(kBytesWritten)]: 0 },
+2019-11-13 09:41:03:   _consuming: true,
+2019-11-13 09:41:03:   _dumped: false,
+2019-11-13 09:41:03:   next: [Function: next],
+2019-11-13 09:41:03:   baseUrl: '/user',
+2019-11-13 09:41:03:   originalUrl: '/user/login',
+2019-11-13 09:41:03:   _parsedUrl:
+2019-11-13 09:41:03:    Url {
+2019-11-13 09:41:03:      protocol: null,
+2019-11-13 09:41:03:      slashes: null,
+2019-11-13 09:41:03:      auth: null,
+2019-11-13 09:41:03:      host: null,
+2019-11-13 09:41:03:      port: null,
+2019-11-13 09:41:03:      hostname: null,
+2019-11-13 09:41:03:      hash: null,
+2019-11-13 09:41:03:      search: null,
+2019-11-13 09:41:03:      query: null,
+2019-11-13 09:41:03:      pathname: '/login',
+2019-11-13 09:41:03:      path: '/login',
+2019-11-13 09:41:03:      href: '/login',
+2019-11-13 09:41:03:      _raw: '/login' },
+2019-11-13 09:41:03:   params: {},
+2019-11-13 09:41:03:   query: {},
+2019-11-13 09:41:03:   res:
+2019-11-13 09:41:03:    ServerResponse {
+2019-11-13 09:41:03:      _events:
+2019-11-13 09:41:03:       [Object: null prototype] { finish: [Array], end: [Function: onevent] },
+2019-11-13 09:41:03:      _eventsCount: 2,
+2019-11-13 09:41:03:      _maxListeners: undefined,
+2019-11-13 09:41:03:      output: [],
+2019-11-13 09:41:03:      outputEncodings: [],
+2019-11-13 09:41:03:      outputCallbacks: [],
+2019-11-13 09:41:03:      outputSize: 0,
+2019-11-13 09:41:03:      writable: true,
+2019-11-13 09:41:03:      _last: false,
+2019-11-13 09:41:03:      chunkedEncoding: false,
+2019-11-13 09:41:03:      shouldKeepAlive: true,
+2019-11-13 09:41:03:      useChunkedEncodingByDefault: true,
+2019-11-13 09:41:03:      sendDate: true,
+2019-11-13 09:41:03:      _removedConnection: false,
+2019-11-13 09:41:03:      _removedContLen: false,
+2019-11-13 09:41:03:      _removedTE: false,
+2019-11-13 09:41:03:      _contentLength: null,
+2019-11-13 09:41:03:      _hasBody: true,
+2019-11-13 09:41:03:      _trailer: '',
+2019-11-13 09:41:03:      finished: false,
+2019-11-13 09:41:03:      _headerSent: false,
+2019-11-13 09:41:03:      socket:
+2019-11-13 09:41:03:       Socket {
+2019-11-13 09:41:03:         connecting: false,
+2019-11-13 09:41:03:         _hadError: false,
+2019-11-13 09:41:03:         _handle: [TCP],
+2019-11-13 09:41:03:         _parent: null,
+2019-11-13 09:41:03:         _host: null,
+2019-11-13 09:41:03:         _readableState: [ReadableState],
+2019-11-13 09:41:03:         readable: true,
+2019-11-13 09:41:03:         _events: [Object],
+2019-11-13 09:41:03:         _eventsCount: 8,
+2019-11-13 09:41:03:         _maxListeners: undefined,
+2019-11-13 09:41:03:         _writableState: [WritableState],
+2019-11-13 09:41:03:         writable: true,
+2019-11-13 09:41:03:         allowHalfOpen: true,
+2019-11-13 09:41:03:         _sockname: null,
+2019-11-13 09:41:03:         _pendingData: null,
+2019-11-13 09:41:03:         _pendingEncoding: '',
+2019-11-13 09:41:03:         server: [Server],
+2019-11-13 09:41:03:         _server: [Server],
+2019-11-13 09:41:03:         timeout: 120000,
+2019-11-13 09:41:03:         parser: [HTTPParser],
+2019-11-13 09:41:03:         on: [Function: socketOnWrap],
+2019-11-13 09:41:03:         _paused: false,
+2019-11-13 09:41:03:         _httpMessage: [Circular],
+2019-11-13 09:41:03:         _peername: [Object],
+2019-11-13 09:41:03:         [Symbol(asyncId)]: 60,
+2019-11-13 09:41:03:         [Symbol(lastWriteQueueSize)]: 0,
+2019-11-13 09:41:03:         [Symbol(timeout)]:
+2019-11-13 09:41:03:          Timeout {
+2019-11-13 09:41:03:            _called: false,
+2019-11-13 09:41:03:            _idleTimeout: 120000,
+2019-11-13 09:41:03:            _idlePrev: [TimersList],
+2019-11-13 09:41:03:            _idleNext: [TimersList],
+2019-11-13 09:41:03:            _idleStart: 1477,
+2019-11-13 09:41:03:            _onTimeout: [Function: bound ],
+2019-11-13 09:41:03:            _timerArgs: undefined,
+2019-11-13 09:41:03:            _repeat: null,
+2019-11-13 09:41:03:            _destroyed: false,
+2019-11-13 09:41:03:            [Symbol(unrefed)]: true,
+2019-11-13 09:41:03:            [Symbol(asyncId)]: 61,
+2019-11-13 09:41:03:            [Symbol(triggerId)]: 60 },
+2019-11-13 09:41:03:         [Symbol(kBytesRead)]: 0,
+2019-11-13 09:41:03:         [Symbol(kBytesWritten)]: 0 },
+2019-11-13 09:41:03:      connection:
+2019-11-13 09:41:03:       Socket {
+2019-11-13 09:41:03:         connecting: false,
+2019-11-13 09:41:03:         _hadError: false,
+2019-11-13 09:41:03:         _handle: [TCP],
+2019-11-13 09:41:03:         _parent: null,
+2019-11-13 09:41:03:         _host: null,
+2019-11-13 09:41:03:         _readableState: [ReadableState],
+2019-11-13 09:41:03:         readable: true,
+2019-11-13 09:41:03:         _events: [Object],
+2019-11-13 09:41:03:         _eventsCount: 8,
+2019-11-13 09:41:03:         _maxListeners: undefined,
+2019-11-13 09:41:03:         _writableState: [WritableState],
+2019-11-13 09:41:03:         writable: true,
+2019-11-13 09:41:03:         allowHalfOpen: true,
+2019-11-13 09:41:03:         _sockname: null,
+2019-11-13 09:41:03:         _pendingData: null,
+2019-11-13 09:41:03:         _pendingEncoding: '',
+2019-11-13 09:41:03:         server: [Server],
+2019-11-13 09:41:03:         _server: [Server],
+2019-11-13 09:41:03:         timeout: 120000,
+2019-11-13 09:41:03:         parser: [HTTPParser],
+2019-11-13 09:41:03:         on: [Function: socketOnWrap],
+2019-11-13 09:41:03:         _paused: false,
+2019-11-13 09:41:03:         _httpMessage: [Circular],
+2019-11-13 09:41:03:         _peername: [Object],
+2019-11-13 09:41:03:         [Symbol(asyncId)]: 60,
+2019-11-13 09:41:03:         [Symbol(lastWriteQueueSize)]: 0,
+2019-11-13 09:41:03:         [Symbol(timeout)]:
+2019-11-13 09:41:03:          Timeout {
+2019-11-13 09:41:03:            _called: false,
+2019-11-13 09:41:03:            _idleTimeout: 120000,
+2019-11-13 09:41:03:            _idlePrev: [TimersList],
+2019-11-13 09:41:03:            _idleNext: [TimersList],
+2019-11-13 09:41:03:            _idleStart: 1477,
+2019-11-13 09:41:03:            _onTimeout: [Function: bound ],
+2019-11-13 09:41:03:            _timerArgs: undefined,
+2019-11-13 09:41:03:            _repeat: null,
+2019-11-13 09:41:03:            _destroyed: false,
+2019-11-13 09:41:03:            [Symbol(unrefed)]: true,
+2019-11-13 09:41:03:            [Symbol(asyncId)]: 61,
+2019-11-13 09:41:03:            [Symbol(triggerId)]: 60 },
+2019-11-13 09:41:03:         [Symbol(kBytesRead)]: 0,
+2019-11-13 09:41:03:         [Symbol(kBytesWritten)]: 0 },
+2019-11-13 09:41:03:      _header: null,
+2019-11-13 09:41:03:      _onPendingData: [Function: bound updateOutgoingData],
+2019-11-13 09:41:03:      _sent100: false,
+2019-11-13 09:41:03:      _expect_continue: false,
+2019-11-13 09:41:03:      req: [Circular],
+2019-11-13 09:41:03:      locals: [Object: null prototype] {},
+2019-11-13 09:41:03:      _startAt: undefined,
+2019-11-13 09:41:03:      _startTime: undefined,
+2019-11-13 09:41:03:      writeHead: [Function: writeHead],
+2019-11-13 09:41:03:      __onFinished: { [Function: listener] queue: [Array] },
+2019-11-13 09:41:03:      [Symbol(isCorked)]: false,
+2019-11-13 09:41:03:      [Symbol(outHeadersKey)]:
+2019-11-13 09:41:03:       [Object: null prototype] {
+2019-11-13 09:41:03:         'x-powered-by': [Array],
+2019-11-13 09:41:03:         'access-control-allow-origin': [Array],
+2019-11-13 09:41:03:         'access-control-allow-headers': [Array],
+2019-11-13 09:41:03:         'access-control-allow-credentials': [Array],
+2019-11-13 09:41:03:         'access-control-allow-methods': [Array] } },
+2019-11-13 09:41:03:   route:
+2019-11-13 09:41:03:    Route { path: '/login', stack: [ [Layer] ], methods: { post: true } },
+2019-11-13 09:41:03:   _startAt: [ 6141, 446949499 ],
+2019-11-13 09:41:03:   _startTime: 2019-11-13T01:41:03.114Z,
+2019-11-13 09:41:03:   _remoteAddress: '::1',
+2019-11-13 09:41:03:   body: { username: 'admin', password: '123456' },
+2019-11-13 09:41:03:   _body: true,
+2019-11-13 09:41:03:   length: undefined }
+2019-11-13 09:41:03: 请求： 
+2019-11-13 09:41:03:         select  * from pub_user where username='admin' and password='4d4994bde299f6168c65f24c852897b7'
+2019-11-13 09:41:03:     
+2019-11-13 09:41:03: 结果 [ RowDataPacket {
+2019-11-13 09:41:03:     id: 2,
+2019-11-13 09:41:03:     username: 'admin',
+2019-11-13 09:41:03:     password: '4d4994bde299f6168c65f24c852897b7',
+2019-11-13 09:41:03:     roles: 'admin',
+2019-11-13 09:41:03:     dwbm: 1,
+2019-11-13 09:41:03:     bmid: 1001,
+2019-11-13 09:41:03:     tel: null,
+2019-11-13 09:41:03:     bz: null } ]
+2019-11-13 09:41:03: RowDataPacket {
+2019-11-13 09:41:03:   id: 2,
+2019-11-13 09:41:03:   username: 'admin',
+2019-11-13 09:41:03:   password: '4d4994bde299f6168c65f24c852897b7',
+2019-11-13 09:41:03:   roles: 'admin',
+2019-11-13 09:41:03:   dwbm: 1,
+2019-11-13 09:41:03:   bmid: 1001,
+2019-11-13 09:41:03:   tel: null,
+2019-11-13 09:41:03:   bz: null }
+2019-11-13 09:41:03: lsToken
+2019-11-13 09:41:03: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjA5MjYzLCJleHAiOjE1NzM4Njg0NjN9.b12ZGD-4lF7_vgcL3kcAGqqLIc1UaG_xsN9JVSO9v6k
+2019-11-13 10:55:26: 请求： 
+2019-11-13 10:55:26:         select  * from pub_user where username='admin' and password='036d5eb64ca44eae6ab7f3ba561c0a5c'
+2019-11-13 10:55:26:     
+2019-11-13 10:55:26: 结果 []
+2019-11-13 11:06:25: { UnauthorizedError: No authorization token was found
+2019-11-13 11:06:25:     at middleware (F:\bill\express-bill\node_modules\express-jwt\lib\index.js:76:21)
+2019-11-13 11:06:25:     at F:\bill\express-bill\node_modules\express-unless\index.js:47:5
+2019-11-13 11:06:25:     at Layer.handle [as handle_request] (F:\bill\express-bill\node_modules\express\lib\router\layer.js:95:5)
+2019-11-13 11:06:25:     at trim_prefix (F:\bill\express-bill\node_modules\express\lib\router\index.js:317:13)
+2019-11-13 11:06:25:     at F:\bill\express-bill\node_modules\express\lib\router\index.js:284:7
+2019-11-13 11:06:25:     at Function.process_params (F:\bill\express-bill\node_modules\express\lib\router\index.js:335:12)
+2019-11-13 11:06:25:     at next (F:\bill\express-bill\node_modules\express\lib\router\index.js:275:10)
+2019-11-13 11:06:25:     at F:\bill\express-bill\app.js:51:10
+2019-11-13 11:06:25:     at Layer.handle [as handle_request] (F:\bill\express-bill\node_modules\express\lib\router\layer.js:95:5)
+2019-11-13 11:06:25:     at trim_prefix (F:\bill\express-bill\node_modules\express\lib\router\index.js:317:13)
+2019-11-13 11:06:25:   name: 'UnauthorizedError',
+2019-11-13 11:06:25:   message: 'No authorization token was found',
+2019-11-13 11:06:25:   code: 'credentials_required',
+2019-11-13 11:06:25:   status: 401,
+2019-11-13 11:06:25:   inner: { message: 'No authorization token was found' } }
+2019-11-13 11:06:36: 请求： 
+2019-11-13 11:06:36:         select  * from pub_user where username='admin' and password='4d4994bde299f6168c65f24c852897b7'
+2019-11-13 11:06:36:     
+2019-11-13 11:06:36: 结果 [ RowDataPacket {
+2019-11-13 11:06:36:     id: 2,
+2019-11-13 11:06:36:     username: 'admin',
+2019-11-13 11:06:36:     password: '4d4994bde299f6168c65f24c852897b7',
+2019-11-13 11:06:36:     roles: 'admin',
+2019-11-13 11:06:36:     dwbm: 1,
+2019-11-13 11:06:36:     bmid: 1001,
+2019-11-13 11:06:36:     tel: null,
+2019-11-13 11:06:36:     bz: null } ]
+2019-11-13 11:06:36: RowDataPacket {
+2019-11-13 11:06:36:   id: 2,
+2019-11-13 11:06:36:   username: 'admin',
+2019-11-13 11:06:36:   password: '4d4994bde299f6168c65f24c852897b7',
+2019-11-13 11:06:36:   roles: 'admin',
+2019-11-13 11:06:36:   dwbm: 1,
+2019-11-13 11:06:36:   bmid: 1001,
+2019-11-13 11:06:36:   tel: null,
+2019-11-13 11:06:36:   bz: null }
+2019-11-13 11:06:36: lsToken
+2019-11-13 11:06:36: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjE0Mzk2LCJleHAiOjE1NzM4NzM1OTZ9.Xa1P-UFKtEv7YCA_dtty9dtrTy2nFyc-p4O9eLC2jwM
+2019-11-13 11:07:02: 12111s
+2019-11-13 11:07:02: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjE0Mzk2LCJleHAiOjE1NzM4NzM1OTZ9.Xa1P-UFKtEv7YCA_dtty9dtrTy2nFyc-p4O9eLC2jwM
+2019-11-13 11:07:02: invalid token
+2019-11-13 11:07:02: undefined
+2019-11-13 11:07:02: 请求： 
+2019-11-13 11:07:02:         select  * from pub_user where id=2
+2019-11-13 11:07:02:     
+2019-11-13 11:07:02: 结果 [ RowDataPacket {
+2019-11-13 11:07:02:     id: 2,
+2019-11-13 11:07:02:     username: 'admin',
+2019-11-13 11:07:02:     password: '4d4994bde299f6168c65f24c852897b7',
+2019-11-13 11:07:02:     roles: 'admin',
+2019-11-13 11:07:02:     dwbm: 1,
+2019-11-13 11:07:02:     bmid: 1001,
+2019-11-13 11:07:02:     tel: null,
+2019-11-13 11:07:02:     bz: null } ]
+2019-11-13 11:07:02: RowDataPacket {
+2019-11-13 11:07:02:   id: 2,
+2019-11-13 11:07:02:   username: 'admin',
+2019-11-13 11:07:02:   password: '4d4994bde299f6168c65f24c852897b7',
+2019-11-13 11:07:02:   roles: 'admin',
+2019-11-13 11:07:02:   dwbm: 1,
+2019-11-13 11:07:02:   bmid: 1001,
+2019-11-13 11:07:02:   tel: null,
+2019-11-13 11:07:02:   bz: null }
+2019-11-13 11:07:14: 12111s
+2019-11-13 11:07:14: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjE0Mzk2LCJleHAiOjE1NzM4NzM1OTZ9.Xa1P-UFKtEv7YCA_dtty9dtrTy2nFyc-p4O9eLC2jwM
+2019-11-13 11:07:14: invalid token
+2019-11-13 11:07:14: undefined
+2019-11-13 11:07:14: 请求： 
+2019-11-13 11:07:14:         select  * from pub_user where id=2222
+2019-11-13 11:07:14:     
+2019-11-13 11:07:14: 结果 []
+2019-11-13 11:07:14: {}
+2019-11-13 11:09:09: 12111s
+2019-11-13 11:09:09: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjE0Mzk2LCJleHAiOjE1NzM4NzM1OTZ9.Xa1P-UFKtEv7YCA_dtty9dtrTy2nFyc-p4O9eLC2jwM
+2019-11-13 11:09:09: invalid token
+2019-11-13 11:09:09: undefined
+2019-11-13 11:09:09: 请求： 
+2019-11-13 11:09:09:         select  * from pub_user where id=2222
+2019-11-13 11:09:09:     
+2019-11-13 11:09:09: 结果 []
+2019-11-13 11:09:09: {}
+2019-11-13 11:12:09: 12111s
+2019-11-13 11:12:09: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjE0Mzk2LCJleHAiOjE1NzM4NzM1OTZ9.Xa1P-UFKtEv7YCA_dtty9dtrTy2nFyc-p4O9eLC2jwM
+2019-11-13 11:12:09: invalid token
+2019-11-13 11:12:09: undefined
+2019-11-13 11:12:09: 请求： 
+2019-11-13 11:12:09:         select  * from pub_user where id=2222
+2019-11-13 11:12:09:     
+2019-11-13 11:12:09: 结果 []
+2019-11-13 11:12:09: false
+2019-11-13 11:12:43: 12111s
+2019-11-13 11:12:43: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjE0Mzk2LCJleHAiOjE1NzM4NzM1OTZ9.Xa1P-UFKtEv7YCA_dtty9dtrTy2nFyc-p4O9eLC2jwM
+2019-11-13 11:12:43: invalid token
+2019-11-13 11:12:43: undefined
+2019-11-13 11:12:43: 请求： 
+2019-11-13 11:12:43:         select  * from pub_user where id=2222
+2019-11-13 11:12:43:     
+2019-11-13 11:12:43: 结果 []
+2019-11-13 11:12:43: false
+2019-11-13 11:13:44: 12111s
+2019-11-13 11:13:44: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjE0Mzk2LCJleHAiOjE1NzM4NzM1OTZ9.Xa1P-UFKtEv7YCA_dtty9dtrTy2nFyc-p4O9eLC2jwM
+2019-11-13 11:13:44: invalid token
+2019-11-13 11:13:44: undefined
+2019-11-13 11:13:44: 请求： 
+2019-11-13 11:13:44:         select  * from pub_user where id=2222
+2019-11-13 11:13:44:     
+2019-11-13 11:13:44: 结果 []
+2019-11-13 11:13:44: false
+2019-11-13 11:13:53: 12111s
+2019-11-13 11:13:53: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjE0Mzk2LCJleHAiOjE1NzM4NzM1OTZ9.Xa1P-UFKtEv7YCA_dtty9dtrTy2nFyc-p4O9eLC2jwM
+2019-11-13 11:13:53: invalid token
+2019-11-13 11:13:53: undefined
+2019-11-13 11:13:53: 请求： 
+2019-11-13 11:13:53:         select  * from pub_user where id=2
+2019-11-13 11:13:53:     
+2019-11-13 11:13:53: 结果 [ RowDataPacket {
+2019-11-13 11:13:53:     id: 2,
+2019-11-13 11:13:53:     username: 'admin',
+2019-11-13 11:13:53:     password: '4d4994bde299f6168c65f24c852897b7',
+2019-11-13 11:13:53:     roles: 'admin',
+2019-11-13 11:13:53:     dwbm: 1,
+2019-11-13 11:13:53:     bmid: 1001,
+2019-11-13 11:13:53:     tel: null,
+2019-11-13 11:13:53:     bz: null } ]
+2019-11-13 11:13:53: false
+2019-11-13 11:15:41: 12111s
+2019-11-13 11:15:41: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjE0Mzk2LCJleHAiOjE1NzM4NzM1OTZ9.Xa1P-UFKtEv7YCA_dtty9dtrTy2nFyc-p4O9eLC2jwM
+2019-11-13 11:15:41: invalid token
+2019-11-13 11:15:41: undefined
+2019-11-13 11:15:41: 请求： 
+2019-11-13 11:15:41:         select  * from pub_user where id=2
+2019-11-13 11:15:41:     
+2019-11-13 11:15:41: 结果 [ RowDataPacket {
+2019-11-13 11:15:41:     id: 2,
+2019-11-13 11:15:41:     username: 'admin',
+2019-11-13 11:15:41:     password: '4d4994bde299f6168c65f24c852897b7',
+2019-11-13 11:15:41:     roles: 'admin',
+2019-11-13 11:15:41:     dwbm: 1,
+2019-11-13 11:15:41:     bmid: 1001,
+2019-11-13 11:15:41:     tel: null,
+2019-11-13 11:15:41:     bz: null } ]
+2019-11-13 11:15:41: false
+2019-11-13 14:15:06: 12111s
+2019-11-13 14:15:06: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjE0Mzk2LCJleHAiOjE1NzM4NzM1OTZ9.Xa1P-UFKtEv7YCA_dtty9dtrTy2nFyc-p4O9eLC2jwM
+2019-11-13 14:15:06: invalid token
+2019-11-13 14:15:06: undefined
+2019-11-13 14:15:06: 请求： 
+2019-11-13 14:15:06:         select  * from pub_user where id=2
+2019-11-13 14:15:06:     
+2019-11-13 14:15:06: 结果 [ RowDataPacket {
+2019-11-13 14:15:06:     id: 2,
+2019-11-13 14:15:06:     username: 'admin',
+2019-11-13 14:15:06:     password: '4d4994bde299f6168c65f24c852897b7',
+2019-11-13 14:15:06:     roles: 'admin',
+2019-11-13 14:15:06:     dwbm: 1,
+2019-11-13 14:15:06:     bmid: 1001,
+2019-11-13 14:15:06:     tel: null,
+2019-11-13 14:15:06:     bz: null } ]
+2019-11-13 14:15:06: false
+2019-11-13 14:15:10: 12111s
+2019-11-13 14:15:10: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjE0Mzk2LCJleHAiOjE1NzM4NzM1OTZ9.Xa1P-UFKtEv7YCA_dtty9dtrTy2nFyc-p4O9eLC2jwM
+2019-11-13 14:15:10: invalid token
+2019-11-13 14:15:10: undefined
+2019-11-13 14:15:10: 请求： 
+2019-11-13 14:15:10:         select  * from pub_user where id=2
+2019-11-13 14:15:10:     
+2019-11-13 14:15:10: 结果 [ RowDataPacket {
+2019-11-13 14:15:10:     id: 2,
+2019-11-13 14:15:10:     username: 'admin',
+2019-11-13 14:15:10:     password: '4d4994bde299f6168c65f24c852897b7',
+2019-11-13 14:15:10:     roles: 'admin',
+2019-11-13 14:15:10:     dwbm: 1,
+2019-11-13 14:15:10:     bmid: 1001,
+2019-11-13 14:15:10:     tel: null,
+2019-11-13 14:15:10:     bz: null } ]
+2019-11-13 14:15:10: false
+2019-11-13 14:15:26: 请求： 
+2019-11-13 14:15:26:         select  * from pub_user where username='admin' and password='4d4994bde299f6168c65f24c852897b7'
+2019-11-13 14:15:26:     
+2019-11-13 14:15:26: 结果 [ RowDataPacket {
+2019-11-13 14:15:26:     id: 2,
+2019-11-13 14:15:26:     username: 'admin',
+2019-11-13 14:15:26:     password: '4d4994bde299f6168c65f24c852897b7',
+2019-11-13 14:15:26:     roles: 'admin',
+2019-11-13 14:15:26:     dwbm: 1,
+2019-11-13 14:15:26:     bmid: 1001,
+2019-11-13 14:15:26:     tel: null,
+2019-11-13 14:15:26:     bz: null } ]
+2019-11-13 14:15:26: RowDataPacket {
+2019-11-13 14:15:26:   id: 2,
+2019-11-13 14:15:26:   username: 'admin',
+2019-11-13 14:15:26:   password: '4d4994bde299f6168c65f24c852897b7',
+2019-11-13 14:15:26:   roles: 'admin',
+2019-11-13 14:15:26:   dwbm: 1,
+2019-11-13 14:15:26:   bmid: 1001,
+2019-11-13 14:15:26:   tel: null,
+2019-11-13 14:15:26:   bz: null }
+2019-11-13 14:15:26: lsToken
+2019-11-13 14:15:26: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1NzI2LCJleHAiOjE1NzM4ODQ5MjZ9.ljXToBjEC1BBLy1IlbeG6Fj_2vc9I5P2r6fYuRDuAUg
+2019-11-13 14:18:53: 请求： 
+2019-11-13 14:18:53:         select  * from pub_user where username='admin' and password='4d4994bde299f6168c65f24c852897b7'
+2019-11-13 14:18:53:     
+2019-11-13 14:18:53: 结果 [ RowDataPacket {
+2019-11-13 14:18:53:     id: 2,
+2019-11-13 14:18:53:     username: 'admin',
+2019-11-13 14:18:53:     password: '4d4994bde299f6168c65f24c852897b7',
+2019-11-13 14:18:53:     roles: 'admin',
+2019-11-13 14:18:53:     dwbm: 1,
+2019-11-13 14:18:53:     bmid: 1001,
+2019-11-13 14:18:53:     tel: null,
+2019-11-13 14:18:53:     bz: null } ]
+2019-11-13 14:18:53: RowDataPacket {
+2019-11-13 14:18:53:   id: 2,
+2019-11-13 14:18:53:   username: 'admin',
+2019-11-13 14:18:53:   password: '4d4994bde299f6168c65f24c852897b7',
+2019-11-13 14:18:53:   roles: 'admin',
+2019-11-13 14:18:53:   dwbm: 1,
+2019-11-13 14:18:53:   bmid: 1001,
+2019-11-13 14:18:53:   tel: null,
+2019-11-13 14:18:53:   bz: null }
+2019-11-13 14:18:54: lsToken
+2019-11-13 14:18:54: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:18:54: 12111s
+2019-11-13 14:18:54: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:18:54: invalid token
+2019-11-13 14:18:54: undefined
+2019-11-13 14:18:54: 请求： 
+2019-11-13 14:18:54:         select  * from pub_user where id=2
+2019-11-13 14:18:54:     
+2019-11-13 14:18:54: 结果 [ RowDataPacket {
+2019-11-13 14:18:54:     id: 2,
+2019-11-13 14:18:54:     username: 'admin',
+2019-11-13 14:18:54:     password: '4d4994bde299f6168c65f24c852897b7',
+2019-11-13 14:18:54:     roles: 'admin',
+2019-11-13 14:18:54:     dwbm: 1,
+2019-11-13 14:18:54:     bmid: 1001,
+2019-11-13 14:18:54:     tel: null,
+2019-11-13 14:18:54:     bz: null } ]
+2019-11-13 14:18:54: false
+2019-11-13 14:20:07: 12111s
+2019-11-13 14:20:07: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:20:07: invalid token
+2019-11-13 14:20:07: undefined
+2019-11-13 14:20:07: 请求 { code: '037001851107' }
+2019-11-13 14:20:07: { code: '037001851107' }
+2019-11-13 14:20:07: 请求： 
+2019-11-13 14:20:07:         select * from fp_main where invoiceNumber = '037001851107'
+2019-11-13 14:20:07:     
+2019-11-13 14:20:07: 结果 []
+2019-11-13 14:20:07: {}
+2019-11-13 14:20:07: 12111s
+2019-11-13 14:20:07: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:20:07: invalid token
+2019-11-13 14:20:07: undefined
+2019-11-13 14:20:09: 12111s
+2019-11-13 14:20:09: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:20:09: invalid token
+2019-11-13 14:20:09: undefined
+2019-11-13 14:22:54: 12111s
+2019-11-13 14:22:54: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:22:54: invalid token
+2019-11-13 14:22:54: undefined
+2019-11-13 14:22:54: 请求 { code: '037001851107' }
+2019-11-13 14:22:54: { code: '037001851107' }
+2019-11-13 14:22:54: 请求： 
+2019-11-13 14:22:54:         select * from fp_main where invoiceNumber = '037001851107'
+2019-11-13 14:22:54:     
+2019-11-13 14:22:54: 结果 []
+2019-11-13 14:22:54: {}
+2019-11-13 14:22:54: 12111s
+2019-11-13 14:22:54: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:22:54: invalid token
+2019-11-13 14:22:54: undefined
+2019-11-13 14:22:55: { [String: '1']
+2019-11-13 14:22:55:   resultMsg: '查验结果成功',
+2019-11-13 14:22:55:   invoiceName: '山东增值税（卷式普通发票）',
+2019-11-13 14:22:55:   isFree: 'N',
+2019-11-13 14:22:55:   RtnCode: '00',
+2019-11-13 14:22:55:   resultCode: '1000',
+2019-11-13 14:22:55:   invoiceResult:
+2019-11-13 14:22:55:    '{"invoiceDataCode":"037001851107","invoiceNumber":"00879927","invoiceTypeName":"山东增值税（卷式普通发票）","invoiceTypeCode":"11","checkDate":"2019-10-09 10:17:10","checkNum":"0","billingTime":"2019-04-04","salesName":"中国石化销售有限公司山东日照石油分公司","salesTaxpayerNum":"91371100724291958M","purchaserName":"日照日科信息技术有限公司","taxpayerNumber":"91371102MA3C7J0X37","taxDiskCode":"661718079895","totalTaxNum":"31.06","totalTaxSum":"270.00","invoiceRemarks":" ","checkCode":"56559926721335440055","totalAmount":"238.94","goodsClerk":"张艳","voidMark":"0","tollSign":"08","tollSignName":"成品油","machineNumber":"00879927","isBillMark":"N","invoiceDetailData":[{"lineNum":"1","goodserviceName":"*汽油*95号车用汽油(Ⅵ)","unit":"","number":"36.78000000","price":"7.34000000","zeroTaxRateSign":"","zeroTaxRateSignName":"非零税率","sum":"270","model":"","taxRate":"13%","tax":"31.06","isBillLine":"N"}]}' }
+2019-11-13 14:22:55: 请求： 
+2019-11-13 14:22:55:         insert into fp_record (resultCode,resultMsg,invoiceName,invoiceResult,dwbm,createTime) values 
+2019-11-13 14:22:55:         ('1000','查验结果成功','山东增值税（卷式普通发票）','{"invoiceDataCode":"037001851107","invoiceNumber":"00879927","invoiceTypeName":"山东增值税（卷式普通发票）","invoiceTypeCode":"11","checkDate":"2019-10-09 10:17:10","checkNum":"0","billingTime":"2019-04-04","salesName":"中国石化销售有限公司山东日照石油分公司","salesTaxpayerNum":"91371100724291958M","purchaserName":"日照日科信息技术有限公司","taxpayerNumber":"91371102MA3C7J0X37","taxDiskCode":"661718079895","totalTaxNum":"31.06","totalTaxSum":"270.00","invoiceRemarks":" ","checkCode":"56559926721335440055","totalAmount":"238.94","goodsClerk":"张艳","voidMark":"0","tollSign":"08","tollSignName":"成品油","machineNumber":"00879927","isBillMark":"N","invoiceDetailData":[{"lineNum":"1","goodserviceName":"*汽油*95号车用汽油(Ⅵ)","unit":"","number":"36.78000000","price":"7.34000000","zeroTaxRateSign":"","zeroTaxRateSignName":"非零税率","sum":"270","model":"","taxRate":"13%","tax":"31.06","isBillLine":"N"}]}',
+2019-11-13 14:22:55:         undefined,undefined,)
+2019-11-13 14:22:55:     
+2019-11-13 14:22:56: 12111s
+2019-11-13 14:22:56: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:22:56: invalid token
+2019-11-13 14:22:56: undefined
+2019-11-13 14:22:56: 请求： 
+2019-11-13 14:22:56:          select * from pub_zyxx where dwbm = 1 
+2019-11-13 14:22:56:     
+2019-11-13 14:22:56: 12111s
+2019-11-13 14:22:56: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:22:56: invalid token
+2019-11-13 14:22:56: undefined
+2019-11-13 14:22:56: { dwbm: '1' }
+2019-11-13 14:22:56: 请求： 
+2019-11-13 14:22:56:         select count(id) as total from pub_bmxx where dwbm = 1
+2019-11-13 14:22:56:     
+2019-11-13 14:22:56: 结果 [ RowDataPacket { id: 21, zymc: '张三', bmbm: 11, dwbm: 1, bz: '' },
+2019-11-13 14:22:56:   RowDataPacket { id: 22, zymc: '张三1', bmbm: 6, dwbm: 1, bz: '' },
+2019-11-13 14:22:56:   RowDataPacket { id: 23, zymc: '张三2', bmbm: 19, dwbm: 1, bz: '' } ]
+2019-11-13 14:22:56: 结果 [ RowDataPacket { total: 7 } ]
+2019-11-13 14:22:56: 7
+2019-11-13 14:22:56: 
+2019-11-13 14:22:56:         select b.id,b.bmmc,b.bz,d.dwmc from pub_bmxx as b 
+2019-11-13 14:22:56:         inner join pub_dwxx as d on d.id = b.dwbm
+2019-11-13 14:22:56:          where b.dwbm = 1
+2019-11-13 14:22:56:     
+2019-11-13 14:22:56: 请求： 
+2019-11-13 14:22:56:         select b.id,b.bmmc,b.bz,d.dwmc from pub_bmxx as b 
+2019-11-13 14:22:56:         inner join pub_dwxx as d on d.id = b.dwbm
+2019-11-13 14:22:56:          where b.dwbm = 1
+2019-11-13 14:22:56:     
+2019-11-13 14:22:56: 结果 [ RowDataPacket { id: 6, bmmc: '财务部', bz: '', dwmc: '中医院' },
+2019-11-13 14:22:56:   RowDataPacket { id: 7, bmmc: '财务部4', bz: '', dwmc: '中医院' },
+2019-11-13 14:22:56:   RowDataPacket { id: 8, bmmc: '财务部1', bz: '', dwmc: '中医院' },
+2019-11-13 14:22:56:   RowDataPacket { id: 9, bmmc: '财务部2', bz: '', dwmc: '中医院' },
+2019-11-13 14:22:56:   RowDataPacket { id: 10, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:22:56:   RowDataPacket { id: 11, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:22:56:   RowDataPacket { id: 19, bmmc: '12', bz: '12', dwmc: '中医院' } ]
+2019-11-13 14:22:56: [ RowDataPacket { id: 6, bmmc: '财务部', bz: '', dwmc: '中医院' },
+2019-11-13 14:22:56:   RowDataPacket { id: 7, bmmc: '财务部4', bz: '', dwmc: '中医院' },
+2019-11-13 14:22:56:   RowDataPacket { id: 8, bmmc: '财务部1', bz: '', dwmc: '中医院' },
+2019-11-13 14:22:56:   RowDataPacket { id: 9, bmmc: '财务部2', bz: '', dwmc: '中医院' },
+2019-11-13 14:22:56:   RowDataPacket { id: 10, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:22:56:   RowDataPacket { id: 11, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:22:56:   RowDataPacket { id: 19, bmmc: '12', bz: '12', dwmc: '中医院' } ]
+2019-11-13 14:23:30: 12111s
+2019-11-13 14:23:30: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:23:30: invalid token
+2019-11-13 14:23:30: undefined
+2019-11-13 14:23:30: 请求： 
+2019-11-13 14:23:30:         select  * from pub_user where id=2
+2019-11-13 14:23:30:     
+2019-11-13 14:23:30: 结果 [ RowDataPacket {
+2019-11-13 14:23:30:     id: 2,
+2019-11-13 14:23:30:     username: 'admin',
+2019-11-13 14:23:30:     password: '4d4994bde299f6168c65f24c852897b7',
+2019-11-13 14:23:30:     roles: 'admin',
+2019-11-13 14:23:30:     dwbm: 1,
+2019-11-13 14:23:30:     bmid: 1001,
+2019-11-13 14:23:30:     tel: null,
+2019-11-13 14:23:30:     bz: null } ]
+2019-11-13 14:23:30: false
+2019-11-13 14:23:33: 12111s
+2019-11-13 14:23:33: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:23:33: invalid token
+2019-11-13 14:23:33: undefined
+2019-11-13 14:23:33: 请求 { code: '037001851107' }
+2019-11-13 14:23:33: { code: '037001851107' }
+2019-11-13 14:23:33: 请求： 
+2019-11-13 14:23:33:         select * from fp_main where invoiceNumber = '037001851107'
+2019-11-13 14:23:33:     
+2019-11-13 14:23:33: 结果 []
+2019-11-13 14:23:33: {}
+2019-11-13 14:23:33: 12111s
+2019-11-13 14:23:33: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:23:33: invalid token
+2019-11-13 14:23:33: undefined
+2019-11-13 14:23:34: { [String: '1']
+2019-11-13 14:23:34:   resultMsg: '查验结果成功',
+2019-11-13 14:23:34:   invoiceName: '山东增值税（卷式普通发票）',
+2019-11-13 14:23:34:   isFree: 'N',
+2019-11-13 14:23:34:   RtnCode: '00',
+2019-11-13 14:23:34:   resultCode: '1000',
+2019-11-13 14:23:34:   invoiceResult:
+2019-11-13 14:23:34:    '{"invoiceTypeName":"山东增值税（卷式普通发票）","invoiceTypeCode":"11","checkDate":"2019-11-04 11:36:24","checkNum":"1","invoiceDataCode":"037001851107","invoiceNumber":"01947559","machineNumber":"01947559","billingTime":"2019-10-04","purchaserName":"日照日科信息技术有限公司","taxpayerNumber":"91371102MA3C7J0X37","taxDiskCode":"661718079692","salesName":"中国石化销售有限公司山东日照石油分公司","salesTaxpayerNum":"91371100724291958M","salesTaxpayerAddress":" ","salesTaxpayerBankAccount":" ","totalAmount":"221.24","totalTaxNum":"28.76","totalTaxSum":"250.00","invoiceRemarks":" ","goodsClerk":"刘芳","checkCode":"85180770102055250185","voidMark":"0","isBillMark":"N","invoiceDetailData":[{"lineNum":"1","goodserviceName":"*汽油*92号车用汽油(Ⅵ)","model":" ","unit":" ","number":"37.2100000","price":"6.7200000","sum":"250.00","taxRate":" ","tax":" ","isBillLine":"N","zeroTaxRateSign":"","zeroTaxRateSignName":""}],"tollSign":"","tollSignName":""}' }
+2019-11-13 14:23:34: 请求： 
+2019-11-13 14:23:34:         insert into fp_record (resultCode,resultMsg,invoiceName,invoiceResult,dwbm,createTime) values 
+2019-11-13 14:23:34:         ('1000','查验结果成功','山东增值税（卷式普通发票）','{"invoiceTypeName":"山东增值税（卷式普通发票）","invoiceTypeCode":"11","checkDate":"2019-11-04 11:36:24","checkNum":"1","invoiceDataCode":"037001851107","invoiceNumber":"01947559","machineNumber":"01947559","billingTime":"2019-10-04","purchaserName":"日照日科信息技术有限公司","taxpayerNumber":"91371102MA3C7J0X37","taxDiskCode":"661718079692","salesName":"中国石化销售有限公司山东日照石油分公司","salesTaxpayerNum":"91371100724291958M","salesTaxpayerAddress":" ","salesTaxpayerBankAccount":" ","totalAmount":"221.24","totalTaxNum":"28.76","totalTaxSum":"250.00","invoiceRemarks":" ","goodsClerk":"刘芳","checkCode":"85180770102055250185","voidMark":"0","isBillMark":"N","invoiceDetailData":[{"lineNum":"1","goodserviceName":"*汽油*92号车用汽油(Ⅵ)","model":" ","unit":" ","number":"37.2100000","price":"6.7200000","sum":"250.00","taxRate":" ","tax":" ","isBillLine":"N","zeroTaxRateSign":"","zeroTaxRateSignName":""}],"tollSign":"","tollSignName":""}',
+2019-11-13 14:23:34:         undefined,undefined,)
+2019-11-13 14:23:34:     
+2019-11-13 14:23:34: 12111s
+2019-11-13 14:23:34: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:23:34: invalid token
+2019-11-13 14:23:34: undefined
+2019-11-13 14:23:34: 请求： 
+2019-11-13 14:23:34:          select * from pub_zyxx where dwbm = 1 
+2019-11-13 14:23:34:     
+2019-11-13 14:23:34: 12111s
+2019-11-13 14:23:34: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:23:34: invalid token
+2019-11-13 14:23:34: undefined
+2019-11-13 14:23:34: 结果 [ RowDataPacket { id: 21, zymc: '张三', bmbm: 11, dwbm: 1, bz: '' },
+2019-11-13 14:23:34:   RowDataPacket { id: 22, zymc: '张三1', bmbm: 6, dwbm: 1, bz: '' },
+2019-11-13 14:23:34:   RowDataPacket { id: 23, zymc: '张三2', bmbm: 19, dwbm: 1, bz: '' } ]
+2019-11-13 14:23:34: { dwbm: '1' }
+2019-11-13 14:23:34: 请求： 
+2019-11-13 14:23:34:         select count(id) as total from pub_bmxx where dwbm = 1
+2019-11-13 14:23:34:     
+2019-11-13 14:23:34: 结果 [ RowDataPacket { total: 7 } ]
+2019-11-13 14:23:34: 7
+2019-11-13 14:23:34: 
+2019-11-13 14:23:34:         select b.id,b.bmmc,b.bz,d.dwmc from pub_bmxx as b 
+2019-11-13 14:23:34:         inner join pub_dwxx as d on d.id = b.dwbm
+2019-11-13 14:23:34:          where b.dwbm = 1
+2019-11-13 14:23:34:     
+2019-11-13 14:23:34: 请求： 
+2019-11-13 14:23:34:         select b.id,b.bmmc,b.bz,d.dwmc from pub_bmxx as b 
+2019-11-13 14:23:34:         inner join pub_dwxx as d on d.id = b.dwbm
+2019-11-13 14:23:34:          where b.dwbm = 1
+2019-11-13 14:23:34:     
+2019-11-13 14:23:34: 结果 [ RowDataPacket { id: 6, bmmc: '财务部', bz: '', dwmc: '中医院' },
+2019-11-13 14:23:34:   RowDataPacket { id: 7, bmmc: '财务部4', bz: '', dwmc: '中医院' },
+2019-11-13 14:23:34:   RowDataPacket { id: 8, bmmc: '财务部1', bz: '', dwmc: '中医院' },
+2019-11-13 14:23:34:   RowDataPacket { id: 9, bmmc: '财务部2', bz: '', dwmc: '中医院' },
+2019-11-13 14:23:34:   RowDataPacket { id: 10, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:23:34:   RowDataPacket { id: 11, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:23:34:   RowDataPacket { id: 19, bmmc: '12', bz: '12', dwmc: '中医院' } ]
+2019-11-13 14:23:34: [ RowDataPacket { id: 6, bmmc: '财务部', bz: '', dwmc: '中医院' },
+2019-11-13 14:23:34:   RowDataPacket { id: 7, bmmc: '财务部4', bz: '', dwmc: '中医院' },
+2019-11-13 14:23:34:   RowDataPacket { id: 8, bmmc: '财务部1', bz: '', dwmc: '中医院' },
+2019-11-13 14:23:34:   RowDataPacket { id: 9, bmmc: '财务部2', bz: '', dwmc: '中医院' },
+2019-11-13 14:23:34:   RowDataPacket { id: 10, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:23:34:   RowDataPacket { id: 11, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:23:34:   RowDataPacket { id: 19, bmmc: '12', bz: '12', dwmc: '中医院' } ]
+2019-11-13 14:27:12: 12111s
+2019-11-13 14:27:12: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:27:12: invalid token
+2019-11-13 14:27:12: undefined
+2019-11-13 14:27:12: 12111s
+2019-11-13 14:27:12: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:27:12: invalid token
+2019-11-13 14:27:12: undefined
+2019-11-13 14:27:12: 12111s
+2019-11-13 14:27:12: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:27:12: invalid token
+2019-11-13 14:27:12: undefined
+2019-11-13 14:27:12: 请求： 
+2019-11-13 14:27:12:         select m.id,m.invoiceDataCode,m.invoiceTypeCode,m.saleName,m.totalTaxSum,m.entryDate,
+2019-11-13 14:27:12:         z.zymc,b.bmmc,t.type_name from fp_main as m 
+2019-11-13 14:27:12:         inner join fp_detail as d on m.id = d.fp_id 
+2019-11-13 14:27:12:         inner join pub_zyxx as z on z.id = m.fp_gsr
+2019-11-13 14:27:12:         inner join pub_bmxx as b on b.id = m.fp_gsbm
+2019-11-13 14:27:12:         inner join fp_type  as t on m.invoiceTypeCode = t.type_id
+2019-11-13 14:27:12:         where fp_gsdw = '1'
+2019-11-13 14:27:12:     
+2019-11-13 14:27:12: 请求： 
+2019-11-13 14:27:12:         select * from fp_type where 1=1
+2019-11-13 14:27:12:     
+2019-11-13 14:27:12: { dwbm: '1' }
+2019-11-13 14:27:12: 请求： 
+2019-11-13 14:27:12:         select count(id) as total from pub_bmxx where dwbm = 1
+2019-11-13 14:27:12:     
+2019-11-13 14:27:12: 结果 [ RowDataPacket {
+2019-11-13 14:27:12:     id: 6,
+2019-11-13 14:27:12:     invoiceDataCode: '1100162350',
+2019-11-13 14:27:12:     invoiceTypeCode: '04',
+2019-11-13 14:27:12:     saleName: '新玛特',
+2019-11-13 14:27:12:     totalTaxSum: 12232,
+2019-11-13 14:27:12:     entryDate: 2019-07-09T16:00:00.000Z,
+2019-11-13 14:27:12:     zymc: '张三',
+2019-11-13 14:27:12:     bmmc: '财务部4',
+2019-11-13 14:27:12:     type_name: '增值税普通发票' },
+2019-11-13 14:27:12:   RowDataPacket {
+2019-11-13 14:27:12:     id: 6,
+2019-11-13 14:27:12:     invoiceDataCode: '1100162350',
+2019-11-13 14:27:12:     invoiceTypeCode: '04',
+2019-11-13 14:27:12:     saleName: '新玛特',
+2019-11-13 14:27:12:     totalTaxSum: 12232,
+2019-11-13 14:27:12:     entryDate: 2019-07-09T16:00:00.000Z,
+2019-11-13 14:27:12:     zymc: '张三',
+2019-11-13 14:27:12:     bmmc: '财务部4',
+2019-11-13 14:27:12:     type_name: '增值税普通发票' },
+2019-11-13 14:27:12:   RowDataPacket {
+2019-11-13 14:27:12:     id: 7,
+2019-11-13 14:27:12:     invoiceDataCode: '037001851107',
+2019-11-13 14:27:12:     invoiceTypeCode: '11',
+2019-11-13 14:27:12:     saleName: '万象汇',
+2019-11-13 14:27:12:     totalTaxSum: 112,
+2019-11-13 14:27:12:     entryDate: 2019-09-09T16:00:00.000Z,
+2019-11-13 14:27:12:     zymc: '张三1',
+2019-11-13 14:27:12:     bmmc: '财务部',
+2019-11-13 14:27:12:     type_name: '卷式普通发票' } ]
+2019-11-13 14:27:12: 结果 [ RowDataPacket { id: 1, type_id: '01', type_name: '增值税专票' },
+2019-11-13 14:27:12:   RowDataPacket { id: 2, type_id: '03', type_name: '机动车销售统一发票' },
+2019-11-13 14:27:12:   RowDataPacket { id: 3, type_id: '04', type_name: '增值税普通发票' },
+2019-11-13 14:27:12:   RowDataPacket { id: 4, type_id: '10', type_name: '电子发票' },
+2019-11-13 14:27:12:   RowDataPacket { id: 5, type_id: '11', type_name: '卷式普通发票' },
+2019-11-13 14:27:12:   RowDataPacket { id: 6, type_id: '14', type_name: '电子普通[通行费]发票' },
+2019-11-13 14:27:12:   RowDataPacket { id: 7, type_id: '15', type_name: '二手车统一发票' } ]
+2019-11-13 14:27:12: 结果 [ RowDataPacket { total: 7 } ]
+2019-11-13 14:27:12: 7
+2019-11-13 14:27:12: 
+2019-11-13 14:27:12:         select b.id,b.bmmc,b.bz,d.dwmc from pub_bmxx as b 
+2019-11-13 14:27:12:         inner join pub_dwxx as d on d.id = b.dwbm
+2019-11-13 14:27:12:          where b.dwbm = 1
+2019-11-13 14:27:12:     
+2019-11-13 14:27:12: 请求： 
+2019-11-13 14:27:12:         select b.id,b.bmmc,b.bz,d.dwmc from pub_bmxx as b 
+2019-11-13 14:27:12:         inner join pub_dwxx as d on d.id = b.dwbm
+2019-11-13 14:27:12:          where b.dwbm = 1
+2019-11-13 14:27:12:     
+2019-11-13 14:27:12: 结果 [ RowDataPacket { id: 6, bmmc: '财务部', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:12:   RowDataPacket { id: 7, bmmc: '财务部4', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:12:   RowDataPacket { id: 8, bmmc: '财务部1', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:12:   RowDataPacket { id: 9, bmmc: '财务部2', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:12:   RowDataPacket { id: 10, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:12:   RowDataPacket { id: 11, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:12:   RowDataPacket { id: 19, bmmc: '12', bz: '12', dwmc: '中医院' } ]
+2019-11-13 14:27:12: [ RowDataPacket { id: 6, bmmc: '财务部', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:12:   RowDataPacket { id: 7, bmmc: '财务部4', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:12:   RowDataPacket { id: 8, bmmc: '财务部1', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:12:   RowDataPacket { id: 9, bmmc: '财务部2', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:12:   RowDataPacket { id: 10, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:12:   RowDataPacket { id: 11, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:12:   RowDataPacket { id: 19, bmmc: '12', bz: '12', dwmc: '中医院' } ]
+2019-11-13 14:27:15: 12111s
+2019-11-13 14:27:15: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:27:15: invalid token
+2019-11-13 14:27:15: undefined
+2019-11-13 14:27:15: 请求 { code: '037001851107' }
+2019-11-13 14:27:15: { code: '037001851107' }
+2019-11-13 14:27:15: 请求： 
+2019-11-13 14:27:15:         select * from fp_main where invoiceNumber = '037001851107'
+2019-11-13 14:27:15:     
+2019-11-13 14:27:15: 结果 []
+2019-11-13 14:27:15: {}
+2019-11-13 14:27:15: 12111s
+2019-11-13 14:27:15: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:27:15: invalid token
+2019-11-13 14:27:15: undefined
+2019-11-13 14:27:15: { [String: '1']
+2019-11-13 14:27:15:   resultMsg: '查验结果成功',
+2019-11-13 14:27:15:   invoiceName: '山东增值税（卷式普通发票）',
+2019-11-13 14:27:15:   isFree: 'N',
+2019-11-13 14:27:15:   RtnCode: '00',
+2019-11-13 14:27:15:   resultCode: '1000',
+2019-11-13 14:27:15:   invoiceResult:
+2019-11-13 14:27:15:    '{"invoiceTypeName":"山东增值税（卷式普通发票）","invoiceTypeCode":"11","checkDate":"2019-11-04 11:36:24","checkNum":"1","invoiceDataCode":"037001851107","invoiceNumber":"01947559","machineNumber":"01947559","billingTime":"2019-10-04","purchaserName":"日照日科信息技术有限公司","taxpayerNumber":"91371102MA3C7J0X37","taxDiskCode":"661718079692","salesName":"中国石化销售有限公司山东日照石油分公司","salesTaxpayerNum":"91371100724291958M","salesTaxpayerAddress":" ","salesTaxpayerBankAccount":" ","totalAmount":"221.24","totalTaxNum":"28.76","totalTaxSum":"250.00","invoiceRemarks":" ","goodsClerk":"刘芳","checkCode":"85180770102055250185","voidMark":"0","isBillMark":"N","invoiceDetailData":[{"lineNum":"1","goodserviceName":"*汽油*92号车用汽油(Ⅵ)","model":" ","unit":" ","number":"37.2100000","price":"6.7200000","sum":"250.00","taxRate":" ","tax":" ","isBillLine":"N","zeroTaxRateSign":"","zeroTaxRateSignName":""}],"tollSign":"","tollSignName":""}' }
+2019-11-13 14:27:15: 请求： 
+2019-11-13 14:27:15:         insert into fp_record (resultCode,resultMsg,invoiceName,invoiceResult,dwbm,createTime) values 
+2019-11-13 14:27:15:         ('1000','查验结果成功','山东增值税（卷式普通发票）','{"invoiceTypeName":"山东增值税（卷式普通发票）","invoiceTypeCode":"11","checkDate":"2019-11-04 11:36:24","checkNum":"1","invoiceDataCode":"037001851107","invoiceNumber":"01947559","machineNumber":"01947559","billingTime":"2019-10-04","purchaserName":"日照日科信息技术有限公司","taxpayerNumber":"91371102MA3C7J0X37","taxDiskCode":"661718079692","salesName":"中国石化销售有限公司山东日照石油分公司","salesTaxpayerNum":"91371100724291958M","salesTaxpayerAddress":" ","salesTaxpayerBankAccount":" ","totalAmount":"221.24","totalTaxNum":"28.76","totalTaxSum":"250.00","invoiceRemarks":" ","goodsClerk":"刘芳","checkCode":"85180770102055250185","voidMark":"0","isBillMark":"N","invoiceDetailData":[{"lineNum":"1","goodserviceName":"*汽油*92号车用汽油(Ⅵ)","model":" ","unit":" ","number":"37.2100000","price":"6.7200000","sum":"250.00","taxRate":" ","tax":" ","isBillLine":"N","zeroTaxRateSign":"","zeroTaxRateSignName":""}],"tollSign":"","tollSignName":""}',
+2019-11-13 14:27:15:         undefined,'2019-11-13 2:27:15 PM')
+2019-11-13 14:27:15:     
+2019-11-13 14:27:16: 12111s
+2019-11-13 14:27:16: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:27:16: invalid token
+2019-11-13 14:27:16: undefined
+2019-11-13 14:27:16: { dwbm: '1' }
+2019-11-13 14:27:16: 请求： 
+2019-11-13 14:27:16:         select count(id) as total from pub_bmxx where dwbm = 1
+2019-11-13 14:27:16:     
+2019-11-13 14:27:16: 结果 [ RowDataPacket { total: 7 } ]
+2019-11-13 14:27:16: 7
+2019-11-13 14:27:16: 
+2019-11-13 14:27:16:         select b.id,b.bmmc,b.bz,d.dwmc from pub_bmxx as b 
+2019-11-13 14:27:16:         inner join pub_dwxx as d on d.id = b.dwbm
+2019-11-13 14:27:16:          where b.dwbm = 1
+2019-11-13 14:27:16:     
+2019-11-13 14:27:16: 请求： 
+2019-11-13 14:27:16:         select b.id,b.bmmc,b.bz,d.dwmc from pub_bmxx as b 
+2019-11-13 14:27:16:         inner join pub_dwxx as d on d.id = b.dwbm
+2019-11-13 14:27:16:          where b.dwbm = 1
+2019-11-13 14:27:16:     
+2019-11-13 14:27:16: 结果 [ RowDataPacket { id: 6, bmmc: '财务部', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:16:   RowDataPacket { id: 7, bmmc: '财务部4', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:16:   RowDataPacket { id: 8, bmmc: '财务部1', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:16:   RowDataPacket { id: 9, bmmc: '财务部2', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:16:   RowDataPacket { id: 10, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:16:   RowDataPacket { id: 11, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:16:   RowDataPacket { id: 19, bmmc: '12', bz: '12', dwmc: '中医院' } ]
+2019-11-13 14:27:16: [ RowDataPacket { id: 6, bmmc: '财务部', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:16:   RowDataPacket { id: 7, bmmc: '财务部4', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:16:   RowDataPacket { id: 8, bmmc: '财务部1', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:16:   RowDataPacket { id: 9, bmmc: '财务部2', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:16:   RowDataPacket { id: 10, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:16:   RowDataPacket { id: 11, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:16:   RowDataPacket { id: 19, bmmc: '12', bz: '12', dwmc: '中医院' } ]
+2019-11-13 14:27:16: 12111s
+2019-11-13 14:27:16: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:27:16: invalid token
+2019-11-13 14:27:16: undefined
+2019-11-13 14:27:16: 请求： 
+2019-11-13 14:27:16:          select * from pub_zyxx where dwbm = 1 
+2019-11-13 14:27:16:     
+2019-11-13 14:27:16: 结果 [ RowDataPacket { id: 21, zymc: '张三', bmbm: 11, dwbm: 1, bz: '' },
+2019-11-13 14:27:16:   RowDataPacket { id: 22, zymc: '张三1', bmbm: 6, dwbm: 1, bz: '' },
+2019-11-13 14:27:16:   RowDataPacket { id: 23, zymc: '张三2', bmbm: 19, dwbm: 1, bz: '' } ]
+2019-11-13 14:27:46: 12111s
+2019-11-13 14:27:46: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:27:46: invalid token
+2019-11-13 14:27:46: undefined
+2019-11-13 14:27:46: 请求 { code: '037001851107' }
+2019-11-13 14:27:46: { code: '037001851107' }
+2019-11-13 14:27:46: 请求： 
+2019-11-13 14:27:46:         select * from fp_main where invoiceNumber = '037001851107'
+2019-11-13 14:27:46:     
+2019-11-13 14:27:46: 结果 []
+2019-11-13 14:27:46: {}
+2019-11-13 14:27:46: 12111s
+2019-11-13 14:27:46: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:27:46: invalid token
+2019-11-13 14:27:46: undefined
+2019-11-13 14:27:46: { [String: '1']
+2019-11-13 14:27:46:   resultMsg: '查验结果成功',
+2019-11-13 14:27:46:   invoiceName: '山东增值税（卷式普通发票）',
+2019-11-13 14:27:46:   isFree: 'N',
+2019-11-13 14:27:46:   RtnCode: '00',
+2019-11-13 14:27:46:   resultCode: '1000',
+2019-11-13 14:27:46:   invoiceResult:
+2019-11-13 14:27:46:    '{"invoiceDataCode":"037001851107","invoiceNumber":"00879927","invoiceTypeName":"山东增值税（卷式普通发票）","invoiceTypeCode":"11","checkDate":"2019-10-09 10:17:10","checkNum":"0","billingTime":"2019-04-04","salesName":"中国石化销售有限公司山东日照石油分公司","salesTaxpayerNum":"91371100724291958M","purchaserName":"日照日科信息技术有限公司","taxpayerNumber":"91371102MA3C7J0X37","taxDiskCode":"661718079895","totalTaxNum":"31.06","totalTaxSum":"270.00","invoiceRemarks":" ","checkCode":"56559926721335440055","totalAmount":"238.94","goodsClerk":"张艳","voidMark":"0","tollSign":"08","tollSignName":"成品油","machineNumber":"00879927","isBillMark":"N","invoiceDetailData":[{"lineNum":"1","goodserviceName":"*汽油*95号车用汽油(Ⅵ)","unit":"","number":"36.78000000","price":"7.34000000","zeroTaxRateSign":"","zeroTaxRateSignName":"非零税率","sum":"270","model":"","taxRate":"13%","tax":"31.06","isBillLine":"N"}]}' }
+2019-11-13 14:27:46: 请求： 
+2019-11-13 14:27:46:         insert into fp_record (resultCode,resultMsg,invoiceName,invoiceResult,dwbm,createTime) values 
+2019-11-13 14:27:46:         ('1000','查验结果成功','山东增值税（卷式普通发票）','{"invoiceDataCode":"037001851107","invoiceNumber":"00879927","invoiceTypeName":"山东增值税（卷式普通发票）","invoiceTypeCode":"11","checkDate":"2019-10-09 10:17:10","checkNum":"0","billingTime":"2019-04-04","salesName":"中国石化销售有限公司山东日照石油分公司","salesTaxpayerNum":"91371100724291958M","purchaserName":"日照日科信息技术有限公司","taxpayerNumber":"91371102MA3C7J0X37","taxDiskCode":"661718079895","totalTaxNum":"31.06","totalTaxSum":"270.00","invoiceRemarks":" ","checkCode":"56559926721335440055","totalAmount":"238.94","goodsClerk":"张艳","voidMark":"0","tollSign":"08","tollSignName":"成品油","machineNumber":"00879927","isBillMark":"N","invoiceDetailData":[{"lineNum":"1","goodserviceName":"*汽油*95号车用汽油(Ⅵ)","unit":"","number":"36.78000000","price":"7.34000000","zeroTaxRateSign":"","zeroTaxRateSignName":"非零税率","sum":"270","model":"","taxRate":"13%","tax":"31.06","isBillLine":"N"}]}',
+2019-11-13 14:27:46:         undefined,'2019-11-13 2:27:46 PM')
+2019-11-13 14:27:46:     
+2019-11-13 14:27:47: 12111s
+2019-11-13 14:27:47: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:27:47: invalid token
+2019-11-13 14:27:47: undefined
+2019-11-13 14:27:47: 12111s
+2019-11-13 14:27:47: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:27:47: invalid token
+2019-11-13 14:27:47: undefined
+2019-11-13 14:27:47: 请求： 
+2019-11-13 14:27:47:          select * from pub_zyxx where dwbm = 1 
+2019-11-13 14:27:47:     
+2019-11-13 14:27:47: { dwbm: '1' }
+2019-11-13 14:27:47: 请求： 
+2019-11-13 14:27:47:         select count(id) as total from pub_bmxx where dwbm = 1
+2019-11-13 14:27:47:     
+2019-11-13 14:27:47: 结果 [ RowDataPacket { id: 21, zymc: '张三', bmbm: 11, dwbm: 1, bz: '' },
+2019-11-13 14:27:47:   RowDataPacket { id: 22, zymc: '张三1', bmbm: 6, dwbm: 1, bz: '' },
+2019-11-13 14:27:47:   RowDataPacket { id: 23, zymc: '张三2', bmbm: 19, dwbm: 1, bz: '' } ]
+2019-11-13 14:27:47: 结果 [ RowDataPacket { total: 7 } ]
+2019-11-13 14:27:47: 7
+2019-11-13 14:27:47: 
+2019-11-13 14:27:47:         select b.id,b.bmmc,b.bz,d.dwmc from pub_bmxx as b 
+2019-11-13 14:27:47:         inner join pub_dwxx as d on d.id = b.dwbm
+2019-11-13 14:27:47:          where b.dwbm = 1
+2019-11-13 14:27:47:     
+2019-11-13 14:27:47: 请求： 
+2019-11-13 14:27:47:         select b.id,b.bmmc,b.bz,d.dwmc from pub_bmxx as b 
+2019-11-13 14:27:47:         inner join pub_dwxx as d on d.id = b.dwbm
+2019-11-13 14:27:47:          where b.dwbm = 1
+2019-11-13 14:27:47:     
+2019-11-13 14:27:47: 结果 [ RowDataPacket { id: 6, bmmc: '财务部', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:47:   RowDataPacket { id: 7, bmmc: '财务部4', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:47:   RowDataPacket { id: 8, bmmc: '财务部1', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:47:   RowDataPacket { id: 9, bmmc: '财务部2', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:47:   RowDataPacket { id: 10, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:47:   RowDataPacket { id: 11, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:47:   RowDataPacket { id: 19, bmmc: '12', bz: '12', dwmc: '中医院' } ]
+2019-11-13 14:27:47: [ RowDataPacket { id: 6, bmmc: '财务部', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:47:   RowDataPacket { id: 7, bmmc: '财务部4', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:47:   RowDataPacket { id: 8, bmmc: '财务部1', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:47:   RowDataPacket { id: 9, bmmc: '财务部2', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:47:   RowDataPacket { id: 10, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:47:   RowDataPacket { id: 11, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:27:47:   RowDataPacket { id: 19, bmmc: '12', bz: '12', dwmc: '中医院' } ]
+2019-11-13 14:56:03: 12111s
+2019-11-13 14:56:03: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:56:03: invalid token
+2019-11-13 14:56:03: undefined
+2019-11-13 14:56:03: 请求 { code: '037001851107' }
+2019-11-13 14:56:03: { code: '037001851107' }
+2019-11-13 14:56:03: 请求： 
+2019-11-13 14:56:03:         select * from fp_main where invoiceNumber = '037001851107'
+2019-11-13 14:56:03:     
+2019-11-13 14:56:03: 结果 []
+2019-11-13 14:56:03: {}
+2019-11-13 14:56:03: 12111s
+2019-11-13 14:56:03: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:56:03: invalid token
+2019-11-13 14:56:03: undefined
+2019-11-13 14:56:04: 参数： { invoiceCode: '037001851107',
+2019-11-13 14:56:04:   invoiceNumber: '00879927',
+2019-11-13 14:56:04:   billTime: '2019-4-4',
+2019-11-13 14:56:04:   invoiceAmount: '',
+2019-11-13 14:56:04:   checkCode: '440055',
+2019-11-13 14:56:04:   dwbm: '1',
+2019-11-13 14:56:04:   token: '7744a480-05dd-11ea-9313-edd2797f83b7' }
+2019-11-13 14:56:04: { [String: '1']
+2019-11-13 14:56:04:   resultMsg: '查验结果成功',
+2019-11-13 14:56:04:   invoiceName: '山东增值税（卷式普通发票）',
+2019-11-13 14:56:04:   isFree: 'N',
+2019-11-13 14:56:04:   RtnCode: '00',
+2019-11-13 14:56:04:   resultCode: '1000',
+2019-11-13 14:56:04:   invoiceResult:
+2019-11-13 14:56:04:    '{"invoiceDataCode":"037001851107","invoiceNumber":"00879927","invoiceTypeName":"山东增值税（卷式普通发票）","invoiceTypeCode":"11","checkDate":"2019-10-09 10:17:10","checkNum":"0","billingTime":"2019-04-04","salesName":"中国石化销售有限公司山东日照石油分公司","salesTaxpayerNum":"91371100724291958M","purchaserName":"日照日科信息技术有限公司","taxpayerNumber":"91371102MA3C7J0X37","taxDiskCode":"661718079895","totalTaxNum":"31.06","totalTaxSum":"270.00","invoiceRemarks":" ","checkCode":"56559926721335440055","totalAmount":"238.94","goodsClerk":"张艳","voidMark":"0","tollSign":"08","tollSignName":"成品油","machineNumber":"00879927","isBillMark":"N","invoiceDetailData":[{"lineNum":"1","goodserviceName":"*汽油*95号车用汽油(Ⅵ)","unit":"","number":"36.78000000","price":"7.34000000","zeroTaxRateSign":"","zeroTaxRateSignName":"非零税率","sum":"270","model":"","taxRate":"13%","tax":"31.06","isBillLine":"N"}]}' }
+2019-11-13 14:56:04: 请求： 
+2019-11-13 14:56:04:         insert into fp_record (resultCode,resultMsg,invoiceName,invoiceResult,dwbm,createTime) values 
+2019-11-13 14:56:04:         ('1000',
+2019-11-13 14:56:04:         '查验结果成功',
+2019-11-13 14:56:04:         '山东增值税（卷式普通发票）',
+2019-11-13 14:56:04:         '{"invoiceDataCode":"037001851107","invoiceNumber":"00879927","invoiceTypeName":"山东增值税（卷式普通发票）","invoiceTypeCode":"11","checkDate":"2019-10-09 10:17:10","checkNum":"0","billingTime":"2019-04-04","salesName":"中国石化销售有限公司山东日照石油分公司","salesTaxpayerNum":"91371100724291958M","purchaserName":"日照日科信息技术有限公司","taxpayerNumber":"91371102MA3C7J0X37","taxDiskCode":"661718079895","totalTaxNum":"31.06","totalTaxSum":"270.00","invoiceRemarks":" ","checkCode":"56559926721335440055","totalAmount":"238.94","goodsClerk":"张艳","voidMark":"0","tollSign":"08","tollSignName":"成品油","machineNumber":"00879927","isBillMark":"N","invoiceDetailData":[{"lineNum":"1","goodserviceName":"*汽油*95号车用汽油(Ⅵ)","unit":"","number":"36.78000000","price":"7.34000000","zeroTaxRateSign":"","zeroTaxRateSignName":"非零税率","sum":"270","model":"","taxRate":"13%","tax":"31.06","isBillLine":"N"}]}',
+2019-11-13 14:56:04:         undefined,
+2019-11-13 14:56:04:         '2019-11-13 2:56:04 PM'
+2019-11-13 14:56:04:         )
+2019-11-13 14:56:04:     
+2019-11-13 14:56:04: 12111s
+2019-11-13 14:56:04: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:56:04: invalid token
+2019-11-13 14:56:04: undefined
+2019-11-13 14:56:04: 请求： 
+2019-11-13 14:56:04:          select * from pub_zyxx where dwbm = 1 
+2019-11-13 14:56:04:     
+2019-11-13 14:56:04: 12111s
+2019-11-13 14:56:04: 验证  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTczNjI1OTM0LCJleHAiOjE1NzM4ODUxMzR9.wD4k69o4AVIvuot0A69FIBXlgO-arYZv3DN17yi0_-E
+2019-11-13 14:56:04: invalid token
+2019-11-13 14:56:04: undefined
+2019-11-13 14:56:04: { dwbm: '1' }
+2019-11-13 14:56:04: 请求： 
+2019-11-13 14:56:04:         select count(id) as total from pub_bmxx where dwbm = 1
+2019-11-13 14:56:04:     
+2019-11-13 14:56:04: 结果 [ RowDataPacket { id: 21, zymc: '张三', bmbm: 11, dwbm: 1, bz: '' },
+2019-11-13 14:56:04:   RowDataPacket { id: 22, zymc: '张三1', bmbm: 6, dwbm: 1, bz: '' },
+2019-11-13 14:56:04:   RowDataPacket { id: 23, zymc: '张三2', bmbm: 19, dwbm: 1, bz: '' } ]
+2019-11-13 14:56:04: 结果 [ RowDataPacket { total: 7 } ]
+2019-11-13 14:56:04: 7
+2019-11-13 14:56:04: 
+2019-11-13 14:56:04:         select b.id,b.bmmc,b.bz,d.dwmc from pub_bmxx as b 
+2019-11-13 14:56:04:         inner join pub_dwxx as d on d.id = b.dwbm
+2019-11-13 14:56:04:          where b.dwbm = 1
+2019-11-13 14:56:04:     
+2019-11-13 14:56:04: 请求： 
+2019-11-13 14:56:04:         select b.id,b.bmmc,b.bz,d.dwmc from pub_bmxx as b 
+2019-11-13 14:56:04:         inner join pub_dwxx as d on d.id = b.dwbm
+2019-11-13 14:56:04:          where b.dwbm = 1
+2019-11-13 14:56:04:     
+2019-11-13 14:56:04: 结果 [ RowDataPacket { id: 6, bmmc: '财务部', bz: '', dwmc: '中医院' },
+2019-11-13 14:56:04:   RowDataPacket { id: 7, bmmc: '财务部4', bz: '', dwmc: '中医院' },
+2019-11-13 14:56:04:   RowDataPacket { id: 8, bmmc: '财务部1', bz: '', dwmc: '中医院' },
+2019-11-13 14:56:04:   RowDataPacket { id: 9, bmmc: '财务部2', bz: '', dwmc: '中医院' },
+2019-11-13 14:56:04:   RowDataPacket { id: 10, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:56:04:   RowDataPacket { id: 11, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:56:04:   RowDataPacket { id: 19, bmmc: '12', bz: '12', dwmc: '中医院' } ]
+2019-11-13 14:56:04: [ RowDataPacket { id: 6, bmmc: '财务部', bz: '', dwmc: '中医院' },
+2019-11-13 14:56:04:   RowDataPacket { id: 7, bmmc: '财务部4', bz: '', dwmc: '中医院' },
+2019-11-13 14:56:04:   RowDataPacket { id: 8, bmmc: '财务部1', bz: '', dwmc: '中医院' },
+2019-11-13 14:56:04:   RowDataPacket { id: 9, bmmc: '财务部2', bz: '', dwmc: '中医院' },
+2019-11-13 14:56:04:   RowDataPacket { id: 10, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:56:04:   RowDataPacket { id: 11, bmmc: '财务部3', bz: '', dwmc: '中医院' },
+2019-11-13 14:56:04:   RowDataPacket { id: 19, bmmc: '12', bz: '12', dwmc: '中医院' } ]

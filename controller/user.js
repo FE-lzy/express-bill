@@ -25,15 +25,6 @@ const userInfo = (uId) => {
     })
 }
 
-// const getUserToken = (usrename) => {
-//     // jwt获取token
-//     var connect = { username:usrename };// 要生成token的主题信息
-//     let secret = "jwt";// 这是加密的key（密钥）
-//     let token = jwt.sign(connect, secret, {
-//         expiresIn: 60 * 60 * 24 * 3  //三天失效
-//     })
-//     return token;
-// }
 var signkey = 'mes_qdhd_mobile_xhykjyxgs';
 const setToken = function (username) {
     return new Promise((resolve, reject) => {
@@ -50,13 +41,10 @@ const verToken = function (token) {
     console.log('12111s');
     return new Promise((resolve, reject) => {
         var info = jwt.verify(token, signkey ,(error, decoded) => {
-           
-            console.log('验证  '+token)
             if (error) {
               console.log(error.message)
               return
             }
-            console.log(decoded)
           });
         console.log(info);
         resolve(info);

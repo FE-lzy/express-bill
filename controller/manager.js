@@ -69,7 +69,6 @@ const queryAllBm = (data) => {
         let n = (data.current - 1) * 10;
         sql += ` order by b.id limit ${n},10 `
     }
-    console.log(sql);
     return exec(sql).then(rows => {
         return rows
     })
@@ -98,7 +97,6 @@ const saveOrUpdatePart = (data) => {
     } else {
         sql = ` insert into pub_bmxx (bmmc,dwbm,bz) values ('${data.bmmc}','${data.dwbm}','${data.bz}') `
     }
-    console.log(sql);
     return exec(sql).then(rows => {
         return rows;
     })

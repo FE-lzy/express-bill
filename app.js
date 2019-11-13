@@ -10,7 +10,6 @@ var userRouter = require('./routes/user')
 var manRouter = require('./routes/manager')
 const expressJwt = require('express-jwt');
 var vertoken = require('./controller/user.js');
-const jwt = require('jsonwebtoken');
 var app = express();
 app.all("*", function (req, res, next) {
   //设置允许跨域的域名，*代表允许任意域名跨域
@@ -48,16 +47,10 @@ var signkey = 'mes_qdhd_mobile_xhykjyxgs';
 // 解析token获取用户信息
 app.use(function(req, res, next) {
   var token = req.headers['authorization'];
-  console.log('获取到的：',token);
 	if(token == undefined){
 		return next();
 	}else{
-    console.log(jwt);
-    
-    // console.log(info);
-
 		vertoken.verToken(token).then((data)=> {
-      console.log('123',token);
 			req.data = data;
 			return next();
 		}).catch((error)=>{
@@ -73,7 +66,6 @@ app.use(expressJwt({
 }).unless({
   path: ['/', '/user/login']//除了这个地址，其他的URL都需要验证
 }));
-console.log("object");
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));

@@ -34,17 +34,42 @@ function queryScanString(param) {
     });
     return promise
 }
+function recordLog(data) {
+    console.log(data);
+    // 获取当前时间
+    let entryDate = new Date().toLocaleString('chinese', { hour12: false });
+    const sql = `
+        insert into fp_record (resultCode,resultMsg,invoiceName,invoiceResult,dwbm,createTime) values 
+        ('${data.resultCode}',
+        '${data.resultMsg}',
+        '${data.invoiceName}',
+        '${data.invoiceResult}',
+        ${data.dwbm},
+        '${entryDate}'
+        )
+    `
+    return exec(sql).then(rows => {
+        return rows
+    })
+}
 // 根据发票代码和号码查验
 function queryScanByCode(param) {
+    console.log(param);
     // get请求获取token
     var promise = new Promise(function (reslove, reject) {
         request(postQueryParam('/api/invoiceInfoForCom', param), function (error, response, body) {
-            
+
             if (!error && response.statusCode == 200) {
-                if(!body.isFree){
+                if (body.isFree == 'N') {
                     // 不免費
-                    queryLog(param.dwbm).then(insertId =>{
-                        console.log(insertId);
+                    let logParam = Object.assign({ dwbm: param.dwbm }, body);
+                    console.log('参数：', logParam);
+                    recordLog(logParam).then(insertRes => {
+                        if (!insertRes.insertId) {
+                            console.error(param.dwbm + '查询发票，保存失败' + logParam)
+                        } else {
+                            console.log(param.dwbm + '查验发票' + logParam);
+                        }
                     })
                 }
                 reslove(body)
@@ -55,9 +80,7 @@ function queryScanByCode(param) {
     });
     return promise
 }
-const queryLog = (data) => {
-    return true
-}
+
 // 查询是否存在
 const BillIsHave = (data) => {
     console.log(data);
@@ -148,7 +171,7 @@ const saveMainBill = (data) => {
 
 const saveMainBillByScan = (data) => {
     // 获取当前时间
-    let entryDate = new Date().toLocaleString();
+    let entryDate = new Date().toLocaleString('chinese', { hour12: false });
     const sql = `
         insert  into fp_main 
         (invoiceTypeCode,invoiceTypeName,checkDate,checkNum,invoiceDataCode,invoiceNumber,billingTime,taxDiskCode,fp_checktype,fp_czy,fp_gsr,fp_gsbm,fp_gsdw,fp_bz,entryDate) 
@@ -201,5 +224,5 @@ module.exports = {
     getBillDetail,
     updateMainBill,
     getBillList,
-    getBillType
+    getBillType,
 }

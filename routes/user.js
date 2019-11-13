@@ -1,6 +1,6 @@
 var express = require('express')
 var router = express.Router();
-const { login, getUserToken, userInfo,setToken } = require('../controller/user')
+const { login, getUserToken, userInfo, setToken } = require('../controller/user')
 const { getLsToken } = require('../controller/ls')
 const { SuccessModel, ErrorModel } = require('../model/resModel')
 
@@ -9,48 +9,58 @@ router.post('/login', function (req, res, next) {
     const result = login(username, password)
 
     return result.then(data => {
-        console.log(data);
+
         if (data.username) {
+            console.log(data);
             getLsToken().then(lsToken => {
-                console.log(lsToken);
+                console.log('lsToken');
                 if (lsToken) {
-                   setToken(data.username).then(token =>{
-                       console.log('user token',token);
-                        if(token){
+                    setToken(data.username).then(token => {
+                        if (token) {
                             res.json(
                                 new SuccessModel({ token: lsToken, uToken: token, user: data })
                             )
                         }
                     })
-                    
-                    
                 }
+            }).catch(err => {
+                console.error(req.path + '　' + err);
             })
-
-            return
+        } else {
+            return res.json(
+                new ErrorModel('用户名或密码错误')
+            )
         }
-        res.json(
-            new ErrorModel('用户名或密码错误')
-        )
 
+
+    }).catch(err => {
+        console.error(req.path + '　' + err);
+        return res.json(
+            new ErrorModel(err)
+        )
     })
 });
 router.post('/userInfo', function (req, res, next) {
     const { id } = req.body;
     const result = userInfo(id);
     return result.then(data => {
-        console.log(data)
-        if (data) {
-            res.json(
+        console.log(!data)
+        if (data.username) {
+            return res.json(
                 new SuccessModel({ roles: [data.roles], name: data.username })
             )
-            return
+        } else {
+            console.error(req.path + '　用户不存在');
+            return res.json(
+                new ErrorModel('用户不存在')
+            )
         }
-        res.json(
-            new ErrorModel('获取用户信息失败')
+
+    }).catch(err => {
+        console.error(req.path + '　' + err);
+        return res.json(
+            new ErrorModel(err)
         )
-
-
     })
 
 })

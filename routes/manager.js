@@ -14,19 +14,20 @@ router.post('/queryZyxx', function (req, res, next) {
                 if (result) {
                     // result.total = totalData.total;
                     result = Object.assign({ data: result }, totalData)
-                    res.json(
+                    return res.json(
                         new SuccessModel(result)
                     )
                 }
             })
         } else {
-            res.json(
+            return res.json(
                 new SuccessModel([])
             )
         }
 
     }).catch(err => {
-        res.json(
+        console.error(req.path + ' ' + err);
+        return res.json(
             new ErrorModel(err)
         )
     })
@@ -40,15 +41,15 @@ router.post('/queryAllBm', function (req, res, next) {
         console.log(totalData.total);
         if (totalData.total > 0) {
             queryAllBm(req.body).then(result => {
-                console.log(result);
                 if (result) {
                     result = Object.assign({ data: result }, totalData)
-                    res.json(
+                    return res.json(
                         new SuccessModel(result)
                     )
                 }
             }).catch(err => {
-                res.json(
+                console.error(req.path + ' ' + err);
+                return res.json(
                     new ErrorModel(err)
                 )
             })
@@ -58,7 +59,8 @@ router.post('/queryAllBm', function (req, res, next) {
             )
         }
     }).catch(err => {
-        res.json(
+        console.error(req.path + ' ' + err);
+        return res.json(
             new ErrorModel(err)
         )
     })
@@ -73,12 +75,14 @@ router.post('/saveOrUpdatePart', function (req, res, next) {
                 new SuccessModel()
             )
         } else {
-            res.json(
+            console.error(req.path + ' 操作失败');
+            return res.json(
                 new ErrorModel('操作失败')
             )
         }
     }).catch(err => {
-        res.json(
+        console.error(req.path + ' ' + err);
+        return res.json(
             new ErrorModel(err)
         )
     })
@@ -87,16 +91,17 @@ router.post('/saveOrUpdatePart', function (req, res, next) {
 router.post('/deletePart', function (req, res, next) {
     deletePart(req.body).then(result => {
         if (result) {
-            res.json(
+            return res.json(
                 new SuccessModel()
             )
         } else {
-            res.json(
+            return res.json(
                 new ErrorModel('操作失败')
             )
         }
     }).catch(err => {
-        res.json(
+        console.error(req.path + ' ' + err);
+        return res.json(
             new ErrorModel(err)
         )
     })
@@ -106,16 +111,18 @@ router.post('/saveOrUpdateZy', function (req, res, next) {
     saveOrUpdateZy(req.body).then(result => {
         console.log(result);
         if (result) {
-            res.json(
+            return res.json(
                 new SuccessModel()
             )
         } else {
-            res.json(
+            console.error(req.path + ' 操作失败');
+            return res.json(
                 new ErrorModel('操作失败')
             )
         }
     }).catch(err => {
-        res.json(
+        console.error(req.path + ' ' + err);
+        return res.json(
             new ErrorModel(err)
         )
     })
@@ -123,16 +130,18 @@ router.post('/saveOrUpdateZy', function (req, res, next) {
 router.post('/queryAllUser', function (req, res, next) {
     queryAllUser(req.body).then(result => {
         if (result) {
-            res.json(
+            return res.json(
                 new SuccessModel(result)
             )
         } else {
-            res.json(
+            console.error(req.path + ' 操作失败' );
+            return res.json(
                 new ErrorModel('操作失败')
             )
         }
     }).catch(err => {
-        res.json(
+        console.error(req.path + ' ' + err);
+        return res.json(
             new ErrorModel(err)
         )
     })

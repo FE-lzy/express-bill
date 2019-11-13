@@ -24,7 +24,6 @@ function exec(sql) {
                 reject(err)
                 return
             }
-            console.log('结果',result);
             resolve(result)
         })
     })

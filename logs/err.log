@@ -1,2 +1,963 @@
 2019-10-31 10:57:04: 无效token
 2019-10-31 10:57:38: 无效token
+2019-11-13 11:06:25: /user/userInfo,无效token
+2019-11-13 11:13:44: /userInfo　用户不存在
+2019-11-13 14:20:07: /getBillInfo 不存在
+2019-11-13 14:20:07: ReferenceError: recordLog is not defined
+2019-11-13 14:20:07:     at Request._callback (F:\bill\express-bill\controller\ls.js:47:21)
+2019-11-13 14:20:07:     at Request.self.callback (F:\bill\express-bill\node_modules\request\request.js:185:22)
+2019-11-13 14:20:07:     at Request.emit (events.js:198:13)
+2019-11-13 14:20:07:     at Request.<anonymous> (F:\bill\express-bill\node_modules\request\request.js:1161:10)
+2019-11-13 14:20:07:     at Request.emit (events.js:198:13)
+2019-11-13 14:20:07:     at IncomingMessage.<anonymous> (F:\bill\express-bill\node_modules\request\request.js:1083:12)
+2019-11-13 14:20:07:     at Object.onceWrapper (events.js:286:20)
+2019-11-13 14:20:07:     at IncomingMessage.emit (events.js:203:15)
+2019-11-13 14:20:07:     at endReadableNT (_stream_readable.js:1145:12)
+2019-11-13 14:20:07:     at process._tickCallback (internal/process/next_tick.js:63:19)
+2019-11-13 14:20:09: ReferenceError: recordLog is not defined
+2019-11-13 14:20:09:     at Request._callback (F:\bill\express-bill\controller\ls.js:47:21)
+2019-11-13 14:20:09:     at Request.self.callback (F:\bill\express-bill\node_modules\request\request.js:185:22)
+2019-11-13 14:20:09:     at Request.emit (events.js:198:13)
+2019-11-13 14:20:09:     at Request.<anonymous> (F:\bill\express-bill\node_modules\request\request.js:1161:10)
+2019-11-13 14:20:09:     at Request.emit (events.js:198:13)
+2019-11-13 14:20:09:     at IncomingMessage.<anonymous> (F:\bill\express-bill\node_modules\request\request.js:1083:12)
+2019-11-13 14:20:09:     at Object.onceWrapper (events.js:286:20)
+2019-11-13 14:20:09:     at IncomingMessage.emit (events.js:203:15)
+2019-11-13 14:20:09:     at endReadableNT (_stream_readable.js:1145:12)
+2019-11-13 14:20:09:     at process._tickCallback (internal/process/next_tick.js:63:19)
+2019-11-13 14:22:54: /getBillInfo 不存在
+2019-11-13 14:22:55: { Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 2
+2019-11-13 14:22:55:     at Query.Sequence._packetToError (F:\bill\express-bill\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+2019-11-13 14:22:55:     at Query.ErrorPacket (F:\bill\express-bill\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+2019-11-13 14:22:55:     at Protocol._parsePacket (F:\bill\express-bill\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+2019-11-13 14:22:55:     at Parser._parsePacket (F:\bill\express-bill\node_modules\mysql\lib\protocol\Parser.js:433:10)
+2019-11-13 14:22:55:     at Parser.write (F:\bill\express-bill\node_modules\mysql\lib\protocol\Parser.js:43:10)
+2019-11-13 14:22:55:     at Protocol.write (F:\bill\express-bill\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+2019-11-13 14:22:55:     at Socket.<anonymous> (F:\bill\express-bill\node_modules\mysql\lib\Connection.js:91:28)
+2019-11-13 14:22:55:     at Socket.<anonymous> (F:\bill\express-bill\node_modules\mysql\lib\Connection.js:525:10)
+2019-11-13 14:22:55:     at Socket.emit (events.js:198:13)
+2019-11-13 14:22:55:     at addChunk (_stream_readable.js:288:12)
+2019-11-13 14:22:55:     --------------------
+2019-11-13 14:22:55:     at Protocol._enqueue (F:\bill\express-bill\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+2019-11-13 14:22:55:     at Connection.query (F:\bill\express-bill\node_modules\mysql\lib\Connection.js:201:25)
+2019-11-13 14:22:55:     at Promise (F:\bill\express-bill\db\mysql.js:22:13)
+2019-11-13 14:22:55:     at new Promise (<anonymous>)
+2019-11-13 14:22:55:     at exec (F:\bill\express-bill\db\mysql.js:21:21)
+2019-11-13 14:22:55:     at recordLog (F:\bill\express-bill\controller\ls.js:46:12)
+2019-11-13 14:22:55:     at Request._callback (F:\bill\express-bill\controller\ls.js:60:21)
+2019-11-13 14:22:55:     at Request.self.callback (F:\bill\express-bill\node_modules\request\request.js:185:22)
+2019-11-13 14:22:55:     at Request.emit (events.js:198:13)
+2019-11-13 14:22:55:     at Request.<anonymous> (F:\bill\express-bill\node_modules\request\request.js:1161:10)
+2019-11-13 14:22:55:   code: 'ER_PARSE_ERROR',
+2019-11-13 14:22:55:   errno: 1064,
+2019-11-13 14:22:55:   sqlMessage:
+2019-11-13 14:22:55:    'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')\' at line 2',
+2019-11-13 14:22:55:   sqlState: '42000',
+2019-11-13 14:22:55:   index: 0,
+2019-11-13 14:22:55:   sql:
+2019-11-13 14:22:55:    '\n        insert into fp_record (resultCode,resultMsg,invoiceName,invoiceResult,dwbm,createTime) values \n        (\'1000\',\'查验结果成功\',\'山东增值税（卷式普通发票）\',\'{"invoiceDataCode":"037001851107","invoiceNumber":"00879927","invoiceTypeName":"山东增值税（卷式普通发票）","invoiceTypeCode":"11","checkDate":"2019-10-09 10:17:10","checkNum":"0","billingTime":"2019-04-04","salesName":"中国石化销售有限公司山东日照石油分公司","salesTaxpayerNum":"91371100724291958M","purchaserName":"日照日科信息技术有限公司","taxpayerNumber":"91371102MA3C7J0X37","taxDiskCode":"661718079895","totalTaxNum":"31.06","totalTaxSum":"270.00","invoiceRemarks":" ","checkCode":"56559926721335440055","totalAmount":"238.94","goodsClerk":"张艳","voidMark":"0","tollSign":"08","tollSignName":"成品油","machineNumber":"00879927","isBillMark":"N","invoiceDetailData":[{"lineNum":"1","goodserviceName":"*汽油*95号车用汽油(Ⅵ)","unit":"","number":"36.78000000","price":"7.34000000","zeroTaxRateSign":"","zeroTaxRateSignName":"非零税率","sum":"270","model":"","taxRate":"13%","tax":"31.06","isBillLine":"N"}]}\',\n        undefined,undefined,)\n    ' }
+2019-11-13 14:23:33: /getBillInfo 不存在
+2019-11-13 14:23:34: { Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 2
+2019-11-13 14:23:34:     at Query.Sequence._packetToError (F:\bill\express-bill\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+2019-11-13 14:23:34:     at Query.ErrorPacket (F:\bill\express-bill\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+2019-11-13 14:23:34:     at Protocol._parsePacket (F:\bill\express-bill\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+2019-11-13 14:23:34:     at Parser._parsePacket (F:\bill\express-bill\node_modules\mysql\lib\protocol\Parser.js:433:10)
+2019-11-13 14:23:34:     at Parser.write (F:\bill\express-bill\node_modules\mysql\lib\protocol\Parser.js:43:10)
+2019-11-13 14:23:34:     at Protocol.write (F:\bill\express-bill\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+2019-11-13 14:23:34:     at Socket.<anonymous> (F:\bill\express-bill\node_modules\mysql\lib\Connection.js:91:28)
+2019-11-13 14:23:34:     at Socket.<anonymous> (F:\bill\express-bill\node_modules\mysql\lib\Connection.js:525:10)
+2019-11-13 14:23:34:     at Socket.emit (events.js:198:13)
+2019-11-13 14:23:34:     at addChunk (_stream_readable.js:288:12)
+2019-11-13 14:23:34:     --------------------
+2019-11-13 14:23:34:     at Protocol._enqueue (F:\bill\express-bill\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+2019-11-13 14:23:34:     at Connection.query (F:\bill\express-bill\node_modules\mysql\lib\Connection.js:201:25)
+2019-11-13 14:23:34:     at Promise (F:\bill\express-bill\db\mysql.js:22:13)
+2019-11-13 14:23:34:     at new Promise (<anonymous>)
+2019-11-13 14:23:34:     at exec (F:\bill\express-bill\db\mysql.js:21:21)
+2019-11-13 14:23:34:     at recordLog (F:\bill\express-bill\controller\ls.js:46:12)
+2019-11-13 14:23:34:     at Request._callback (F:\bill\express-bill\controller\ls.js:60:21)
+2019-11-13 14:23:34:     at Request.self.callback (F:\bill\express-bill\node_modules\request\request.js:185:22)
+2019-11-13 14:23:34:     at Request.emit (events.js:198:13)
+2019-11-13 14:23:34:     at Request.<anonymous> (F:\bill\express-bill\node_modules\request\request.js:1161:10)
+2019-11-13 14:23:34:   code: 'ER_PARSE_ERROR',
+2019-11-13 14:23:34:   errno: 1064,
+2019-11-13 14:23:34:   sqlMessage:
+2019-11-13 14:23:34:    'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \')\' at line 2',
+2019-11-13 14:23:34:   sqlState: '42000',
+2019-11-13 14:23:34:   index: 0,
+2019-11-13 14:23:34:   sql:
+2019-11-13 14:23:34:    '\n        insert into fp_record (resultCode,resultMsg,invoiceName,invoiceResult,dwbm,createTime) values \n        (\'1000\',\'查验结果成功\',\'山东增值税（卷式普通发票）\',\'{"invoiceTypeName":"山东增值税（卷式普通发票）","invoiceTypeCode":"11","checkDate":"2019-11-04 11:36:24","checkNum":"1","invoiceDataCode":"037001851107","invoiceNumber":"01947559","machineNumber":"01947559","billingTime":"2019-10-04","purchaserName":"日照日科信息技术有限公司","taxpayerNumber":"91371102MA3C7J0X37","taxDiskCode":"661718079692","salesName":"中国石化销售有限公司山东日照石油分公司","salesTaxpayerNum":"91371100724291958M","salesTaxpayerAddress":" ","salesTaxpayerBankAccount":" ","totalAmount":"221.24","totalTaxNum":"28.76","totalTaxSum":"250.00","invoiceRemarks":" ","goodsClerk":"刘芳","checkCode":"85180770102055250185","voidMark":"0","isBillMark":"N","invoiceDetailData":[{"lineNum":"1","goodserviceName":"*汽油*92号车用汽油(Ⅵ)","model":" ","unit":" ","number":"37.2100000","price":"6.7200000","sum":"250.00","taxRate":" ","tax":" ","isBillLine":"N","zeroTaxRateSign":"","zeroTaxRateSignName":""}],"tollSign":"","tollSignName":""}\',\n        undefined,undefined,)\n    ' }
+2019-11-13 14:27:15: /getBillInfo 不存在
+2019-11-13 14:27:15: { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'field list'
+2019-11-13 14:27:15:     at Query.Sequence._packetToError (F:\bill\express-bill\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+2019-11-13 14:27:15:     at Query.ErrorPacket (F:\bill\express-bill\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+2019-11-13 14:27:15:     at Protocol._parsePacket (F:\bill\express-bill\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+2019-11-13 14:27:15:     at Parser._parsePacket (F:\bill\express-bill\node_modules\mysql\lib\protocol\Parser.js:433:10)
+2019-11-13 14:27:15:     at Parser.write (F:\bill\express-bill\node_modules\mysql\lib\protocol\Parser.js:43:10)
+2019-11-13 14:27:15:     at Protocol.write (F:\bill\express-bill\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+2019-11-13 14:27:15:     at Socket.<anonymous> (F:\bill\express-bill\node_modules\mysql\lib\Connection.js:91:28)
+2019-11-13 14:27:15:     at Socket.<anonymous> (F:\bill\express-bill\node_modules\mysql\lib\Connection.js:525:10)
+2019-11-13 14:27:15:     at Socket.emit (events.js:198:13)
+2019-11-13 14:27:15:     at addChunk (_stream_readable.js:288:12)
+2019-11-13 14:27:15:     --------------------
+2019-11-13 14:27:15:     at Protocol._enqueue (F:\bill\express-bill\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+2019-11-13 14:27:15:     at Connection.query (F:\bill\express-bill\node_modules\mysql\lib\Connection.js:201:25)
+2019-11-13 14:27:15:     at Promise (F:\bill\express-bill\db\mysql.js:22:13)
+2019-11-13 14:27:15:     at new Promise (<anonymous>)
+2019-11-13 14:27:15:     at exec (F:\bill\express-bill\db\mysql.js:21:21)
+2019-11-13 14:27:15:     at recordLog (F:\bill\express-bill\controller\ls.js:46:12)
+2019-11-13 14:27:15:     at Request._callback (F:\bill\express-bill\controller\ls.js:60:21)
+2019-11-13 14:27:15:     at Request.self.callback (F:\bill\express-bill\node_modules\request\request.js:185:22)
+2019-11-13 14:27:15:     at Request.emit (events.js:198:13)
+2019-11-13 14:27:15:     at Request.<anonymous> (F:\bill\express-bill\node_modules\request\request.js:1161:10)
+2019-11-13 14:27:15:   code: 'ER_BAD_FIELD_ERROR',
+2019-11-13 14:27:15:   errno: 1054,
+2019-11-13 14:27:15:   sqlMessage: 'Unknown column \'undefined\' in \'field list\'',
+2019-11-13 14:27:15:   sqlState: '42S22',
+2019-11-13 14:27:15:   index: 0,
+2019-11-13 14:27:15:   sql:
+2019-11-13 14:27:15:    '\n        insert into fp_record (resultCode,resultMsg,invoiceName,invoiceResult,dwbm,createTime) values \n        (\'1000\',\'查验结果成功\',\'山东增值税（卷式普通发票）\',\'{"invoiceTypeName":"山东增值税（卷式普通发票）","invoiceTypeCode":"11","checkDate":"2019-11-04 11:36:24","checkNum":"1","invoiceDataCode":"037001851107","invoiceNumber":"01947559","machineNumber":"01947559","billingTime":"2019-10-04","purchaserName":"日照日科信息技术有限公司","taxpayerNumber":"91371102MA3C7J0X37","taxDiskCode":"661718079692","salesName":"中国石化销售有限公司山东日照石油分公司","salesTaxpayerNum":"91371100724291958M","salesTaxpayerAddress":" ","salesTaxpayerBankAccount":" ","totalAmount":"221.24","totalTaxNum":"28.76","totalTaxSum":"250.00","invoiceRemarks":" ","goodsClerk":"刘芳","checkCode":"85180770102055250185","voidMark":"0","isBillMark":"N","invoiceDetailData":[{"lineNum":"1","goodserviceName":"*汽油*92号车用汽油(Ⅵ)","model":" ","unit":" ","number":"37.2100000","price":"6.7200000","sum":"250.00","taxRate":" ","tax":" ","isBillLine":"N","zeroTaxRateSign":"","zeroTaxRateSignName":""}],"tollSign":"","tollSignName":""}\',\n        undefined,\'2019-11-13 2:27:15 PM\')\n    ' }
+2019-11-13 14:27:46: /getBillInfo 不存在
+2019-11-13 14:27:46: { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'field list'
+2019-11-13 14:27:46:     at Query.Sequence._packetToError (F:\bill\express-bill\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+2019-11-13 14:27:46:     at Query.ErrorPacket (F:\bill\express-bill\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+2019-11-13 14:27:46:     at Protocol._parsePacket (F:\bill\express-bill\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+2019-11-13 14:27:46:     at Parser._parsePacket (F:\bill\express-bill\node_modules\mysql\lib\protocol\Parser.js:433:10)
+2019-11-13 14:27:46:     at Parser.write (F:\bill\express-bill\node_modules\mysql\lib\protocol\Parser.js:43:10)
+2019-11-13 14:27:46:     at Protocol.write (F:\bill\express-bill\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+2019-11-13 14:27:46:     at Socket.<anonymous> (F:\bill\express-bill\node_modules\mysql\lib\Connection.js:91:28)
+2019-11-13 14:27:46:     at Socket.<anonymous> (F:\bill\express-bill\node_modules\mysql\lib\Connection.js:525:10)
+2019-11-13 14:27:46:     at Socket.emit (events.js:198:13)
+2019-11-13 14:27:46:     at addChunk (_stream_readable.js:288:12)
+2019-11-13 14:27:46:     --------------------
+2019-11-13 14:27:46:     at Protocol._enqueue (F:\bill\express-bill\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+2019-11-13 14:27:46:     at Connection.query (F:\bill\express-bill\node_modules\mysql\lib\Connection.js:201:25)
+2019-11-13 14:27:46:     at Promise (F:\bill\express-bill\db\mysql.js:22:13)
+2019-11-13 14:27:46:     at new Promise (<anonymous>)
+2019-11-13 14:27:46:     at exec (F:\bill\express-bill\db\mysql.js:21:21)
+2019-11-13 14:27:46:     at recordLog (F:\bill\express-bill\controller\ls.js:46:12)
+2019-11-13 14:27:46:     at Request._callback (F:\bill\express-bill\controller\ls.js:60:21)
+2019-11-13 14:27:46:     at Request.self.callback (F:\bill\express-bill\node_modules\request\request.js:185:22)
+2019-11-13 14:27:46:     at Request.emit (events.js:198:13)
+2019-11-13 14:27:46:     at Request.<anonymous> (F:\bill\express-bill\node_modules\request\request.js:1161:10)
+2019-11-13 14:27:46:   code: 'ER_BAD_FIELD_ERROR',
+2019-11-13 14:27:46:   errno: 1054,
+2019-11-13 14:27:46:   sqlMessage: 'Unknown column \'undefined\' in \'field list\'',
+2019-11-13 14:27:46:   sqlState: '42S22',
+2019-11-13 14:27:46:   index: 0,
+2019-11-13 14:27:46:   sql:
+2019-11-13 14:27:46:    '\n        insert into fp_record (resultCode,resultMsg,invoiceName,invoiceResult,dwbm,createTime) values \n        (\'1000\',\'查验结果成功\',\'山东增值税（卷式普通发票）\',\'{"invoiceDataCode":"037001851107","invoiceNumber":"00879927","invoiceTypeName":"山东增值税（卷式普通发票）","invoiceTypeCode":"11","checkDate":"2019-10-09 10:17:10","checkNum":"0","billingTime":"2019-04-04","salesName":"中国石化销售有限公司山东日照石油分公司","salesTaxpayerNum":"91371100724291958M","purchaserName":"日照日科信息技术有限公司","taxpayerNumber":"91371102MA3C7J0X37","taxDiskCode":"661718079895","totalTaxNum":"31.06","totalTaxSum":"270.00","invoiceRemarks":" ","checkCode":"56559926721335440055","totalAmount":"238.94","goodsClerk":"张艳","voidMark":"0","tollSign":"08","tollSignName":"成品油","machineNumber":"00879927","isBillMark":"N","invoiceDetailData":[{"lineNum":"1","goodserviceName":"*汽油*95号车用汽油(Ⅵ)","unit":"","number":"36.78000000","price":"7.34000000","zeroTaxRateSign":"","zeroTaxRateSignName":"非零税率","sum":"270","model":"","taxRate":"13%","tax":"31.06","isBillLine":"N"}]}\',\n        undefined,\'2019-11-13 2:27:46 PM\')\n    ' }
+2019-11-13 14:36:39: Port 3000 is already in use
+2019-11-13 14:36:41: Port 3000 is already in use
+2019-11-13 14:36:42: Port 3000 is already in use
+2019-11-13 14:36:44: Port 3000 is already in use
+2019-11-13 14:36:45: Port 3000 is already in use
+2019-11-13 14:36:47: Port 3000 is already in use
+2019-11-13 14:36:48: Port 3000 is already in use
+2019-11-13 14:36:49: Port 3000 is already in use
+2019-11-13 14:36:50: Port 3000 is already in use
+2019-11-13 14:36:51: Port 3000 is already in use
+2019-11-13 14:36:53: Port 3000 is already in use
+2019-11-13 14:36:54: Port 3000 is already in use
+2019-11-13 14:36:55: Port 3000 is already in use
+2019-11-13 14:36:56: Port 3000 is already in use
+2019-11-13 14:36:58: Port 3000 is already in use
+2019-11-13 14:36:59: Port 3000 is already in use
+2019-11-13 14:37:00: Port 3000 is already in use
+2019-11-13 14:37:02: Port 3000 is already in use
+2019-11-13 14:37:03: Port 3000 is already in use
+2019-11-13 14:37:04: Port 3000 is already in use
+2019-11-13 14:37:05: Port 3000 is already in use
+2019-11-13 14:37:06: Port 3000 is already in use
+2019-11-13 14:37:07: Port 3000 is already in use
+2019-11-13 14:37:08: Port 3000 is already in use
+2019-11-13 14:37:10: Port 3000 is already in use
+2019-11-13 14:37:11: Port 3000 is already in use
+2019-11-13 14:37:12: Port 3000 is already in use
+2019-11-13 14:37:13: Port 3000 is already in use
+2019-11-13 14:37:14: Port 3000 is already in use
+2019-11-13 14:37:15: Port 3000 is already in use
+2019-11-13 14:37:17: Port 3000 is already in use
+2019-11-13 14:37:18: Port 3000 is already in use
+2019-11-13 14:37:19: Port 3000 is already in use
+2019-11-13 14:37:20: Port 3000 is already in use
+2019-11-13 14:37:21: Port 3000 is already in use
+2019-11-13 14:37:22: Port 3000 is already in use
+2019-11-13 14:37:24: Port 3000 is already in use
+2019-11-13 14:37:25: Port 3000 is already in use
+2019-11-13 14:37:26: Port 3000 is already in use
+2019-11-13 14:37:27: Port 3000 is already in use
+2019-11-13 14:37:28: Port 3000 is already in use
+2019-11-13 14:37:29: Port 3000 is already in use
+2019-11-13 14:37:31: Port 3000 is already in use
+2019-11-13 14:37:32: Port 3000 is already in use
+2019-11-13 14:37:33: Port 3000 is already in use
+2019-11-13 14:37:35: Port 3000 is already in use
+2019-11-13 14:37:36: Port 3000 is already in use
+2019-11-13 14:37:37: Port 3000 is already in use
+2019-11-13 14:37:38: Port 3000 is already in use
+2019-11-13 14:37:39: Port 3000 is already in use
+2019-11-13 14:37:40: Port 3000 is already in use
+2019-11-13 14:37:41: Port 3000 is already in use
+2019-11-13 14:37:42: Port 3000 is already in use
+2019-11-13 14:37:44: Port 3000 is already in use
+2019-11-13 14:37:45: Port 3000 is already in use
+2019-11-13 14:37:46: Port 3000 is already in use
+2019-11-13 14:37:47: Port 3000 is already in use
+2019-11-13 14:37:48: Port 3000 is already in use
+2019-11-13 14:37:49: Port 3000 is already in use
+2019-11-13 14:37:51: Port 3000 is already in use
+2019-11-13 14:37:52: Port 3000 is already in use
+2019-11-13 14:37:53: Port 3000 is already in use
+2019-11-13 14:37:54: Port 3000 is already in use
+2019-11-13 14:37:55: Port 3000 is already in use
+2019-11-13 14:37:57: Port 3000 is already in use
+2019-11-13 14:37:58: Port 3000 is already in use
+2019-11-13 14:37:59: Port 3000 is already in use
+2019-11-13 14:38:00: Port 3000 is already in use
+2019-11-13 14:38:01: Port 3000 is already in use
+2019-11-13 14:38:03: Port 3000 is already in use
+2019-11-13 14:38:04: Port 3000 is already in use
+2019-11-13 14:38:05: Port 3000 is already in use
+2019-11-13 14:38:06: Port 3000 is already in use
+2019-11-13 14:38:08: Port 3000 is already in use
+2019-11-13 14:38:09: Port 3000 is already in use
+2019-11-13 14:38:10: Port 3000 is already in use
+2019-11-13 14:38:11: Port 3000 is already in use
+2019-11-13 14:38:12: Port 3000 is already in use
+2019-11-13 14:38:14: Port 3000 is already in use
+2019-11-13 14:38:15: Port 3000 is already in use
+2019-11-13 14:38:16: Port 3000 is already in use
+2019-11-13 14:38:17: Port 3000 is already in use
+2019-11-13 14:38:18: Port 3000 is already in use
+2019-11-13 14:38:19: Port 3000 is already in use
+2019-11-13 14:38:20: Port 3000 is already in use
+2019-11-13 14:38:21: Port 3000 is already in use
+2019-11-13 14:38:23: Port 3000 is already in use
+2019-11-13 14:38:24: Port 3000 is already in use
+2019-11-13 14:38:25: Port 3000 is already in use
+2019-11-13 14:38:26: Port 3000 is already in use
+2019-11-13 14:38:27: Port 3000 is already in use
+2019-11-13 14:38:29: Port 3000 is already in use
+2019-11-13 14:38:30: Port 3000 is already in use
+2019-11-13 14:38:32: Port 3000 is already in use
+2019-11-13 14:38:33: Port 3000 is already in use
+2019-11-13 14:38:34: Port 3000 is already in use
+2019-11-13 14:38:35: Port 3000 is already in use
+2019-11-13 14:38:37: Port 3000 is already in use
+2019-11-13 14:38:38: Port 3000 is already in use
+2019-11-13 14:38:39: Port 3000 is already in use
+2019-11-13 14:38:40: Port 3000 is already in use
+2019-11-13 14:38:42: Port 3000 is already in use
+2019-11-13 14:38:43: Port 3000 is already in use
+2019-11-13 14:38:45: Port 3000 is already in use
+2019-11-13 14:38:46: Port 3000 is already in use
+2019-11-13 14:38:47: Port 3000 is already in use
+2019-11-13 14:38:48: Port 3000 is already in use
+2019-11-13 14:38:50: Port 3000 is already in use
+2019-11-13 14:38:51: Port 3000 is already in use
+2019-11-13 14:38:52: Port 3000 is already in use
+2019-11-13 14:38:54: Port 3000 is already in use
+2019-11-13 14:38:55: Port 3000 is already in use
+2019-11-13 14:38:56: Port 3000 is already in use
+2019-11-13 14:38:58: Port 3000 is already in use
+2019-11-13 14:39:00: Port 3000 is already in use
+2019-11-13 14:39:02: Port 3000 is already in use
+2019-11-13 14:39:03: Port 3000 is already in use
+2019-11-13 14:39:05: Port 3000 is already in use
+2019-11-13 14:39:07: Port 3000 is already in use
+2019-11-13 14:39:08: Port 3000 is already in use
+2019-11-13 14:39:09: Port 3000 is already in use
+2019-11-13 14:39:11: Port 3000 is already in use
+2019-11-13 14:39:13: Port 3000 is already in use
+2019-11-13 14:39:14: Port 3000 is already in use
+2019-11-13 14:39:16: Port 3000 is already in use
+2019-11-13 14:39:17: Port 3000 is already in use
+2019-11-13 14:39:19: Port 3000 is already in use
+2019-11-13 14:39:20: Port 3000 is already in use
+2019-11-13 14:39:21: Port 3000 is already in use
+2019-11-13 14:39:23: Port 3000 is already in use
+2019-11-13 14:39:25: Port 3000 is already in use
+2019-11-13 14:39:26: Port 3000 is already in use
+2019-11-13 14:39:28: Port 3000 is already in use
+2019-11-13 14:39:29: Port 3000 is already in use
+2019-11-13 14:39:30: Port 3000 is already in use
+2019-11-13 14:39:31: Port 3000 is already in use
+2019-11-13 14:39:33: Port 3000 is already in use
+2019-11-13 14:39:34: Port 3000 is already in use
+2019-11-13 14:39:35: Port 3000 is already in use
+2019-11-13 14:39:36: Port 3000 is already in use
+2019-11-13 14:39:37: Port 3000 is already in use
+2019-11-13 14:39:39: Port 3000 is already in use
+2019-11-13 14:39:40: Port 3000 is already in use
+2019-11-13 14:39:41: Port 3000 is already in use
+2019-11-13 14:39:42: Port 3000 is already in use
+2019-11-13 14:39:43: Port 3000 is already in use
+2019-11-13 14:39:45: Port 3000 is already in use
+2019-11-13 14:39:46: Port 3000 is already in use
+2019-11-13 14:39:47: Port 3000 is already in use
+2019-11-13 14:39:48: Port 3000 is already in use
+2019-11-13 14:39:50: Port 3000 is already in use
+2019-11-13 14:39:51: Port 3000 is already in use
+2019-11-13 14:39:52: Port 3000 is already in use
+2019-11-13 14:39:53: Port 3000 is already in use
+2019-11-13 14:39:54: Port 3000 is already in use
+2019-11-13 14:39:56: Port 3000 is already in use
+2019-11-13 14:39:57: Port 3000 is already in use
+2019-11-13 14:39:58: Port 3000 is already in use
+2019-11-13 14:39:59: Port 3000 is already in use
+2019-11-13 14:40:01: Port 3000 is already in use
+2019-11-13 14:40:02: Port 3000 is already in use
+2019-11-13 14:40:03: Port 3000 is already in use
+2019-11-13 14:40:04: Port 3000 is already in use
+2019-11-13 14:40:05: Port 3000 is already in use
+2019-11-13 14:40:06: Port 3000 is already in use
+2019-11-13 14:40:08: Port 3000 is already in use
+2019-11-13 14:40:09: Port 3000 is already in use
+2019-11-13 14:40:10: Port 3000 is already in use
+2019-11-13 14:40:11: Port 3000 is already in use
+2019-11-13 14:40:13: Port 3000 is already in use
+2019-11-13 14:40:14: Port 3000 is already in use
+2019-11-13 14:40:15: Port 3000 is already in use
+2019-11-13 14:40:16: Port 3000 is already in use
+2019-11-13 14:40:17: Port 3000 is already in use
+2019-11-13 14:40:18: Port 3000 is already in use
+2019-11-13 14:40:20: Port 3000 is already in use
+2019-11-13 14:40:21: Port 3000 is already in use
+2019-11-13 14:40:22: Port 3000 is already in use
+2019-11-13 14:40:23: Port 3000 is already in use
+2019-11-13 14:40:25: Port 3000 is already in use
+2019-11-13 14:40:26: Port 3000 is already in use
+2019-11-13 14:40:27: Port 3000 is already in use
+2019-11-13 14:40:28: Port 3000 is already in use
+2019-11-13 14:40:30: Port 3000 is already in use
+2019-11-13 14:40:31: Port 3000 is already in use
+2019-11-13 14:40:32: Port 3000 is already in use
+2019-11-13 14:40:33: Port 3000 is already in use
+2019-11-13 14:40:34: Port 3000 is already in use
+2019-11-13 14:40:36: Port 3000 is already in use
+2019-11-13 14:40:37: Port 3000 is already in use
+2019-11-13 14:40:38: Port 3000 is already in use
+2019-11-13 14:40:39: Port 3000 is already in use
+2019-11-13 14:40:40: Port 3000 is already in use
+2019-11-13 14:40:41: Port 3000 is already in use
+2019-11-13 14:40:42: Port 3000 is already in use
+2019-11-13 14:40:44: Port 3000 is already in use
+2019-11-13 14:40:45: Port 3000 is already in use
+2019-11-13 14:40:46: Port 3000 is already in use
+2019-11-13 14:40:47: Port 3000 is already in use
+2019-11-13 14:40:48: Port 3000 is already in use
+2019-11-13 14:40:50: Port 3000 is already in use
+2019-11-13 14:40:51: Port 3000 is already in use
+2019-11-13 14:40:52: Port 3000 is already in use
+2019-11-13 14:40:53: Port 3000 is already in use
+2019-11-13 14:40:54: Port 3000 is already in use
+2019-11-13 14:40:55: Port 3000 is already in use
+2019-11-13 14:40:57: Port 3000 is already in use
+2019-11-13 14:40:58: Port 3000 is already in use
+2019-11-13 14:40:59: Port 3000 is already in use
+2019-11-13 14:41:00: Port 3000 is already in use
+2019-11-13 14:41:02: Port 3000 is already in use
+2019-11-13 14:41:03: Port 3000 is already in use
+2019-11-13 14:41:04: Port 3000 is already in use
+2019-11-13 14:41:05: Port 3000 is already in use
+2019-11-13 14:41:06: Port 3000 is already in use
+2019-11-13 14:41:08: Port 3000 is already in use
+2019-11-13 14:41:09: Port 3000 is already in use
+2019-11-13 14:41:10: Port 3000 is already in use
+2019-11-13 14:41:11: Port 3000 is already in use
+2019-11-13 14:41:12: Port 3000 is already in use
+2019-11-13 14:41:14: Port 3000 is already in use
+2019-11-13 14:41:15: Port 3000 is already in use
+2019-11-13 14:41:17: Port 3000 is already in use
+2019-11-13 14:41:18: Port 3000 is already in use
+2019-11-13 14:41:19: Port 3000 is already in use
+2019-11-13 14:41:20: Port 3000 is already in use
+2019-11-13 14:41:22: Port 3000 is already in use
+2019-11-13 14:41:23: Port 3000 is already in use
+2019-11-13 14:41:24: Port 3000 is already in use
+2019-11-13 14:41:25: Port 3000 is already in use
+2019-11-13 14:41:27: Port 3000 is already in use
+2019-11-13 14:41:28: Port 3000 is already in use
+2019-11-13 14:41:30: Port 3000 is already in use
+2019-11-13 14:41:31: Port 3000 is already in use
+2019-11-13 14:41:32: Port 3000 is already in use
+2019-11-13 14:41:33: Port 3000 is already in use
+2019-11-13 14:41:34: Port 3000 is already in use
+2019-11-13 14:41:35: Port 3000 is already in use
+2019-11-13 14:41:37: Port 3000 is already in use
+2019-11-13 14:41:38: Port 3000 is already in use
+2019-11-13 14:41:39: Port 3000 is already in use
+2019-11-13 14:41:40: Port 3000 is already in use
+2019-11-13 14:41:42: Port 3000 is already in use
+2019-11-13 14:41:43: Port 3000 is already in use
+2019-11-13 14:41:44: Port 3000 is already in use
+2019-11-13 14:41:45: Port 3000 is already in use
+2019-11-13 14:41:46: Port 3000 is already in use
+2019-11-13 14:41:48: Port 3000 is already in use
+2019-11-13 14:41:49: Port 3000 is already in use
+2019-11-13 14:41:50: Port 3000 is already in use
+2019-11-13 14:41:51: Port 3000 is already in use
+2019-11-13 14:41:52: Port 3000 is already in use
+2019-11-13 14:41:54: Port 3000 is already in use
+2019-11-13 14:41:55: Port 3000 is already in use
+2019-11-13 14:41:56: Port 3000 is already in use
+2019-11-13 14:41:57: Port 3000 is already in use
+2019-11-13 14:41:58: Port 3000 is already in use
+2019-11-13 14:41:59: Port 3000 is already in use
+2019-11-13 14:42:01: Port 3000 is already in use
+2019-11-13 14:42:02: Port 3000 is already in use
+2019-11-13 14:42:03: Port 3000 is already in use
+2019-11-13 14:42:05: Port 3000 is already in use
+2019-11-13 14:42:07: Port 3000 is already in use
+2019-11-13 14:42:09: Port 3000 is already in use
+2019-11-13 14:42:11: Port 3000 is already in use
+2019-11-13 14:42:13: Port 3000 is already in use
+2019-11-13 14:42:14: Port 3000 is already in use
+2019-11-13 14:42:16: Port 3000 is already in use
+2019-11-13 14:42:17: Port 3000 is already in use
+2019-11-13 14:42:18: Port 3000 is already in use
+2019-11-13 14:42:20: Port 3000 is already in use
+2019-11-13 14:42:21: Port 3000 is already in use
+2019-11-13 14:42:22: Port 3000 is already in use
+2019-11-13 14:42:24: Port 3000 is already in use
+2019-11-13 14:42:25: Port 3000 is already in use
+2019-11-13 14:42:26: Port 3000 is already in use
+2019-11-13 14:42:27: Port 3000 is already in use
+2019-11-13 14:42:28: Port 3000 is already in use
+2019-11-13 14:42:30: Port 3000 is already in use
+2019-11-13 14:42:31: Port 3000 is already in use
+2019-11-13 14:42:32: Port 3000 is already in use
+2019-11-13 14:42:33: Port 3000 is already in use
+2019-11-13 14:42:34: Port 3000 is already in use
+2019-11-13 14:42:36: Port 3000 is already in use
+2019-11-13 14:42:37: Port 3000 is already in use
+2019-11-13 14:42:38: Port 3000 is already in use
+2019-11-13 14:42:39: Port 3000 is already in use
+2019-11-13 14:42:40: Port 3000 is already in use
+2019-11-13 14:42:41: Port 3000 is already in use
+2019-11-13 14:42:42: Port 3000 is already in use
+2019-11-13 14:42:44: Port 3000 is already in use
+2019-11-13 14:42:45: Port 3000 is already in use
+2019-11-13 14:42:46: Port 3000 is already in use
+2019-11-13 14:42:47: Port 3000 is already in use
+2019-11-13 14:42:48: Port 3000 is already in use
+2019-11-13 14:42:49: Port 3000 is already in use
+2019-11-13 14:42:51: Port 3000 is already in use
+2019-11-13 14:42:52: Port 3000 is already in use
+2019-11-13 14:42:53: Port 3000 is already in use
+2019-11-13 14:42:55: Port 3000 is already in use
+2019-11-13 14:42:56: Port 3000 is already in use
+2019-11-13 14:42:57: Port 3000 is already in use
+2019-11-13 14:42:58: Port 3000 is already in use
+2019-11-13 14:42:59: Port 3000 is already in use
+2019-11-13 14:43:01: Port 3000 is already in use
+2019-11-13 14:43:02: Port 3000 is already in use
+2019-11-13 14:43:03: Port 3000 is already in use
+2019-11-13 14:43:04: Port 3000 is already in use
+2019-11-13 14:43:05: Port 3000 is already in use
+2019-11-13 14:43:06: Port 3000 is already in use
+2019-11-13 14:43:07: Port 3000 is already in use
+2019-11-13 14:43:08: Port 3000 is already in use
+2019-11-13 14:43:10: Port 3000 is already in use
+2019-11-13 14:43:11: Port 3000 is already in use
+2019-11-13 14:43:12: Port 3000 is already in use
+2019-11-13 14:43:13: Port 3000 is already in use
+2019-11-13 14:43:15: Port 3000 is already in use
+2019-11-13 14:43:16: Port 3000 is already in use
+2019-11-13 14:43:17: Port 3000 is already in use
+2019-11-13 14:43:18: Port 3000 is already in use
+2019-11-13 14:43:20: Port 3000 is already in use
+2019-11-13 14:43:21: Port 3000 is already in use
+2019-11-13 14:43:22: Port 3000 is already in use
+2019-11-13 14:43:24: Port 3000 is already in use
+2019-11-13 14:43:25: Port 3000 is already in use
+2019-11-13 14:43:27: Port 3000 is already in use
+2019-11-13 14:43:28: Port 3000 is already in use
+2019-11-13 14:43:29: Port 3000 is already in use
+2019-11-13 14:43:31: Port 3000 is already in use
+2019-11-13 14:43:32: Port 3000 is already in use
+2019-11-13 14:43:33: Port 3000 is already in use
+2019-11-13 14:43:34: Port 3000 is already in use
+2019-11-13 14:43:35: Port 3000 is already in use
+2019-11-13 14:43:37: Port 3000 is already in use
+2019-11-13 14:43:38: Port 3000 is already in use
+2019-11-13 14:43:39: Port 3000 is already in use
+2019-11-13 14:43:40: Port 3000 is already in use
+2019-11-13 14:43:41: Port 3000 is already in use
+2019-11-13 14:43:43: Port 3000 is already in use
+2019-11-13 14:43:44: Port 3000 is already in use
+2019-11-13 14:43:45: Port 3000 is already in use
+2019-11-13 14:43:46: Port 3000 is already in use
+2019-11-13 14:43:47: Port 3000 is already in use
+2019-11-13 14:43:48: Port 3000 is already in use
+2019-11-13 14:43:50: Port 3000 is already in use
+2019-11-13 14:43:51: Port 3000 is already in use
+2019-11-13 14:43:52: Port 3000 is already in use
+2019-11-13 14:43:53: Port 3000 is already in use
+2019-11-13 14:43:55: Port 3000 is already in use
+2019-11-13 14:43:56: Port 3000 is already in use
+2019-11-13 14:43:57: Port 3000 is already in use
+2019-11-13 14:43:58: Port 3000 is already in use
+2019-11-13 14:44:00: Port 3000 is already in use
+2019-11-13 14:44:01: Port 3000 is already in use
+2019-11-13 14:44:02: Port 3000 is already in use
+2019-11-13 14:44:03: Port 3000 is already in use
+2019-11-13 14:44:04: Port 3000 is already in use
+2019-11-13 14:44:05: Port 3000 is already in use
+2019-11-13 14:44:07: Port 3000 is already in use
+2019-11-13 14:44:08: Port 3000 is already in use
+2019-11-13 14:44:09: Port 3000 is already in use
+2019-11-13 14:44:10: Port 3000 is already in use
+2019-11-13 14:44:11: Port 3000 is already in use
+2019-11-13 14:44:12: Port 3000 is already in use
+2019-11-13 14:44:13: Port 3000 is already in use
+2019-11-13 14:44:15: Port 3000 is already in use
+2019-11-13 14:44:16: Port 3000 is already in use
+2019-11-13 14:44:17: Port 3000 is already in use
+2019-11-13 14:44:18: Port 3000 is already in use
+2019-11-13 14:44:19: Port 3000 is already in use
+2019-11-13 14:44:20: Port 3000 is already in use
+2019-11-13 14:44:22: Port 3000 is already in use
+2019-11-13 14:44:23: Port 3000 is already in use
+2019-11-13 14:44:24: Port 3000 is already in use
+2019-11-13 14:44:25: Port 3000 is already in use
+2019-11-13 14:44:27: Port 3000 is already in use
+2019-11-13 14:44:28: Port 3000 is already in use
+2019-11-13 14:44:30: Port 3000 is already in use
+2019-11-13 14:44:31: Port 3000 is already in use
+2019-11-13 14:44:32: Port 3000 is already in use
+2019-11-13 14:44:33: Port 3000 is already in use
+2019-11-13 14:44:34: Port 3000 is already in use
+2019-11-13 14:44:35: Port 3000 is already in use
+2019-11-13 14:44:36: Port 3000 is already in use
+2019-11-13 14:44:37: Port 3000 is already in use
+2019-11-13 14:44:39: Port 3000 is already in use
+2019-11-13 14:44:40: Port 3000 is already in use
+2019-11-13 14:44:41: Port 3000 is already in use
+2019-11-13 14:44:42: Port 3000 is already in use
+2019-11-13 14:44:43: Port 3000 is already in use
+2019-11-13 14:44:44: Port 3000 is already in use
+2019-11-13 14:44:46: Port 3000 is already in use
+2019-11-13 14:44:47: Port 3000 is already in use
+2019-11-13 14:44:48: Port 3000 is already in use
+2019-11-13 14:44:49: Port 3000 is already in use
+2019-11-13 14:44:50: Port 3000 is already in use
+2019-11-13 14:44:52: Port 3000 is already in use
+2019-11-13 14:44:53: Port 3000 is already in use
+2019-11-13 14:44:54: Port 3000 is already in use
+2019-11-13 14:44:55: Port 3000 is already in use
+2019-11-13 14:44:56: Port 3000 is already in use
+2019-11-13 14:44:58: Port 3000 is already in use
+2019-11-13 14:44:59: Port 3000 is already in use
+2019-11-13 14:45:00: Port 3000 is already in use
+2019-11-13 14:45:01: Port 3000 is already in use
+2019-11-13 14:45:03: Port 3000 is already in use
+2019-11-13 14:45:04: Port 3000 is already in use
+2019-11-13 14:45:05: Port 3000 is already in use
+2019-11-13 14:45:06: Port 3000 is already in use
+2019-11-13 14:45:07: Port 3000 is already in use
+2019-11-13 14:45:09: Port 3000 is already in use
+2019-11-13 14:45:10: Port 3000 is already in use
+2019-11-13 14:45:11: Port 3000 is already in use
+2019-11-13 14:45:12: Port 3000 is already in use
+2019-11-13 14:45:14: Port 3000 is already in use
+2019-11-13 14:45:15: Port 3000 is already in use
+2019-11-13 14:45:16: Port 3000 is already in use
+2019-11-13 14:45:17: Port 3000 is already in use
+2019-11-13 14:45:18: Port 3000 is already in use
+2019-11-13 14:45:20: Port 3000 is already in use
+2019-11-13 14:45:22: Port 3000 is already in use
+2019-11-13 14:45:23: Port 3000 is already in use
+2019-11-13 14:45:25: Port 3000 is already in use
+2019-11-13 14:45:27: Port 3000 is already in use
+2019-11-13 14:45:28: Port 3000 is already in use
+2019-11-13 14:45:29: Port 3000 is already in use
+2019-11-13 14:45:31: Port 3000 is already in use
+2019-11-13 14:45:32: Port 3000 is already in use
+2019-11-13 14:45:34: Port 3000 is already in use
+2019-11-13 14:45:35: Port 3000 is already in use
+2019-11-13 14:45:36: Port 3000 is already in use
+2019-11-13 14:45:38: Port 3000 is already in use
+2019-11-13 14:45:39: Port 3000 is already in use
+2019-11-13 14:45:40: Port 3000 is already in use
+2019-11-13 14:45:41: Port 3000 is already in use
+2019-11-13 14:45:43: Port 3000 is already in use
+2019-11-13 14:45:44: Port 3000 is already in use
+2019-11-13 14:45:46: Port 3000 is already in use
+2019-11-13 14:45:47: Port 3000 is already in use
+2019-11-13 14:45:48: Port 3000 is already in use
+2019-11-13 14:45:49: Port 3000 is already in use
+2019-11-13 14:45:50: Port 3000 is already in use
+2019-11-13 14:45:52: Port 3000 is already in use
+2019-11-13 14:45:53: Port 3000 is already in use
+2019-11-13 14:45:54: Port 3000 is already in use
+2019-11-13 14:45:55: Port 3000 is already in use
+2019-11-13 14:45:56: Port 3000 is already in use
+2019-11-13 14:45:58: Port 3000 is already in use
+2019-11-13 14:45:59: Port 3000 is already in use
+2019-11-13 14:46:00: Port 3000 is already in use
+2019-11-13 14:46:02: Port 3000 is already in use
+2019-11-13 14:46:03: Port 3000 is already in use
+2019-11-13 14:46:04: Port 3000 is already in use
+2019-11-13 14:46:05: Port 3000 is already in use
+2019-11-13 14:46:07: Port 3000 is already in use
+2019-11-13 14:46:08: Port 3000 is already in use
+2019-11-13 14:46:09: Port 3000 is already in use
+2019-11-13 14:46:10: Port 3000 is already in use
+2019-11-13 14:46:12: Port 3000 is already in use
+2019-11-13 14:46:13: Port 3000 is already in use
+2019-11-13 14:46:14: Port 3000 is already in use
+2019-11-13 14:46:15: Port 3000 is already in use
+2019-11-13 14:46:16: Port 3000 is already in use
+2019-11-13 14:46:17: Port 3000 is already in use
+2019-11-13 14:46:18: Port 3000 is already in use
+2019-11-13 14:46:19: Port 3000 is already in use
+2019-11-13 14:46:21: Port 3000 is already in use
+2019-11-13 14:46:22: Port 3000 is already in use
+2019-11-13 14:46:23: Port 3000 is already in use
+2019-11-13 14:46:24: Port 3000 is already in use
+2019-11-13 14:46:25: Port 3000 is already in use
+2019-11-13 14:46:27: Port 3000 is already in use
+2019-11-13 14:46:29: Port 3000 is already in use
+2019-11-13 14:46:30: Port 3000 is already in use
+2019-11-13 14:46:31: Port 3000 is already in use
+2019-11-13 14:46:32: Port 3000 is already in use
+2019-11-13 14:46:33: Port 3000 is already in use
+2019-11-13 14:46:34: Port 3000 is already in use
+2019-11-13 14:46:36: Port 3000 is already in use
+2019-11-13 14:46:37: Port 3000 is already in use
+2019-11-13 14:46:38: Port 3000 is already in use
+2019-11-13 14:46:39: Port 3000 is already in use
+2019-11-13 14:46:41: Port 3000 is already in use
+2019-11-13 14:46:42: Port 3000 is already in use
+2019-11-13 14:46:43: Port 3000 is already in use
+2019-11-13 14:46:44: Port 3000 is already in use
+2019-11-13 14:46:45: Port 3000 is already in use
+2019-11-13 14:46:46: Port 3000 is already in use
+2019-11-13 14:46:48: Port 3000 is already in use
+2019-11-13 14:46:49: Port 3000 is already in use
+2019-11-13 14:46:50: Port 3000 is already in use
+2019-11-13 14:46:51: Port 3000 is already in use
+2019-11-13 14:46:52: Port 3000 is already in use
+2019-11-13 14:46:53: Port 3000 is already in use
+2019-11-13 14:46:54: Port 3000 is already in use
+2019-11-13 14:46:55: Port 3000 is already in use
+2019-11-13 14:46:57: Port 3000 is already in use
+2019-11-13 14:46:58: Port 3000 is already in use
+2019-11-13 14:46:59: Port 3000 is already in use
+2019-11-13 14:47:00: Port 3000 is already in use
+2019-11-13 14:47:01: Port 3000 is already in use
+2019-11-13 14:47:02: Port 3000 is already in use
+2019-11-13 14:47:04: Port 3000 is already in use
+2019-11-13 14:47:05: Port 3000 is already in use
+2019-11-13 14:47:06: Port 3000 is already in use
+2019-11-13 14:47:07: Port 3000 is already in use
+2019-11-13 14:47:08: Port 3000 is already in use
+2019-11-13 14:47:10: Port 3000 is already in use
+2019-11-13 14:47:11: Port 3000 is already in use
+2019-11-13 14:47:12: Port 3000 is already in use
+2019-11-13 14:47:13: Port 3000 is already in use
+2019-11-13 14:47:15: Port 3000 is already in use
+2019-11-13 14:47:16: Port 3000 is already in use
+2019-11-13 14:47:17: Port 3000 is already in use
+2019-11-13 14:47:18: Port 3000 is already in use
+2019-11-13 14:47:19: Port 3000 is already in use
+2019-11-13 14:47:21: Port 3000 is already in use
+2019-11-13 14:47:22: Port 3000 is already in use
+2019-11-13 14:47:23: Port 3000 is already in use
+2019-11-13 14:47:24: Port 3000 is already in use
+2019-11-13 14:47:25: Port 3000 is already in use
+2019-11-13 14:47:26: Port 3000 is already in use
+2019-11-13 14:47:27: Port 3000 is already in use
+2019-11-13 14:47:29: Port 3000 is already in use
+2019-11-13 14:47:30: Port 3000 is already in use
+2019-11-13 14:47:31: Port 3000 is already in use
+2019-11-13 14:47:32: Port 3000 is already in use
+2019-11-13 14:47:33: Port 3000 is already in use
+2019-11-13 14:47:34: Port 3000 is already in use
+2019-11-13 14:47:36: Port 3000 is already in use
+2019-11-13 14:47:37: Port 3000 is already in use
+2019-11-13 14:47:38: Port 3000 is already in use
+2019-11-13 14:47:39: Port 3000 is already in use
+2019-11-13 14:47:40: Port 3000 is already in use
+2019-11-13 14:47:42: Port 3000 is already in use
+2019-11-13 14:47:43: Port 3000 is already in use
+2019-11-13 14:47:44: Port 3000 is already in use
+2019-11-13 14:47:45: Port 3000 is already in use
+2019-11-13 14:47:46: Port 3000 is already in use
+2019-11-13 14:47:47: Port 3000 is already in use
+2019-11-13 14:47:49: Port 3000 is already in use
+2019-11-13 14:47:50: Port 3000 is already in use
+2019-11-13 14:47:51: Port 3000 is already in use
+2019-11-13 14:47:52: Port 3000 is already in use
+2019-11-13 14:47:53: Port 3000 is already in use
+2019-11-13 14:47:55: Port 3000 is already in use
+2019-11-13 14:47:56: Port 3000 is already in use
+2019-11-13 14:47:57: Port 3000 is already in use
+2019-11-13 14:47:58: Port 3000 is already in use
+2019-11-13 14:48:00: Port 3000 is already in use
+2019-11-13 14:48:01: Port 3000 is already in use
+2019-11-13 14:48:03: Port 3000 is already in use
+2019-11-13 14:48:04: Port 3000 is already in use
+2019-11-13 14:48:06: Port 3000 is already in use
+2019-11-13 14:48:07: Port 3000 is already in use
+2019-11-13 14:48:09: Port 3000 is already in use
+2019-11-13 14:48:10: Port 3000 is already in use
+2019-11-13 14:48:11: Port 3000 is already in use
+2019-11-13 14:48:12: Port 3000 is already in use
+2019-11-13 14:48:14: Port 3000 is already in use
+2019-11-13 14:48:15: Port 3000 is already in use
+2019-11-13 14:48:17: Port 3000 is already in use
+2019-11-13 14:48:18: Port 3000 is already in use
+2019-11-13 14:48:20: Port 3000 is already in use
+2019-11-13 14:48:21: Port 3000 is already in use
+2019-11-13 14:48:22: Port 3000 is already in use
+2019-11-13 14:48:23: Port 3000 is already in use
+2019-11-13 14:48:25: Port 3000 is already in use
+2019-11-13 14:48:27: Port 3000 is already in use
+2019-11-13 14:48:28: Port 3000 is already in use
+2019-11-13 14:48:29: Port 3000 is already in use
+2019-11-13 14:48:31: Port 3000 is already in use
+2019-11-13 14:48:34: Port 3000 is already in use
+2019-11-13 14:48:39: Port 3000 is already in use
+2019-11-13 14:48:40: Port 3000 is already in use
+2019-11-13 14:48:42: Port 3000 is already in use
+2019-11-13 14:48:43: Port 3000 is already in use
+2019-11-13 14:48:45: Port 3000 is already in use
+2019-11-13 14:48:46: Port 3000 is already in use
+2019-11-13 14:48:47: Port 3000 is already in use
+2019-11-13 14:48:49: Port 3000 is already in use
+2019-11-13 14:48:50: Port 3000 is already in use
+2019-11-13 14:48:51: Port 3000 is already in use
+2019-11-13 14:48:53: Port 3000 is already in use
+2019-11-13 14:48:55: Port 3000 is already in use
+2019-11-13 14:48:56: Port 3000 is already in use
+2019-11-13 14:48:57: Port 3000 is already in use
+2019-11-13 14:48:59: Port 3000 is already in use
+2019-11-13 14:49:00: Port 3000 is already in use
+2019-11-13 14:49:02: Port 3000 is already in use
+2019-11-13 14:49:03: Port 3000 is already in use
+2019-11-13 14:49:04: Port 3000 is already in use
+2019-11-13 14:49:06: Port 3000 is already in use
+2019-11-13 14:49:07: Port 3000 is already in use
+2019-11-13 14:49:08: Port 3000 is already in use
+2019-11-13 14:49:09: Port 3000 is already in use
+2019-11-13 14:49:10: Port 3000 is already in use
+2019-11-13 14:49:12: Port 3000 is already in use
+2019-11-13 14:49:13: Port 3000 is already in use
+2019-11-13 14:49:14: Port 3000 is already in use
+2019-11-13 14:49:15: Port 3000 is already in use
+2019-11-13 14:49:17: Port 3000 is already in use
+2019-11-13 14:49:19: Port 3000 is already in use
+2019-11-13 14:49:20: Port 3000 is already in use
+2019-11-13 14:49:22: Port 3000 is already in use
+2019-11-13 14:49:23: Port 3000 is already in use
+2019-11-13 14:49:25: Port 3000 is already in use
+2019-11-13 14:49:26: Port 3000 is already in use
+2019-11-13 14:49:28: Port 3000 is already in use
+2019-11-13 14:49:29: Port 3000 is already in use
+2019-11-13 14:49:30: Port 3000 is already in use
+2019-11-13 14:49:32: Port 3000 is already in use
+2019-11-13 14:49:34: Port 3000 is already in use
+2019-11-13 14:49:36: Port 3000 is already in use
+2019-11-13 14:49:37: Port 3000 is already in use
+2019-11-13 14:49:39: Port 3000 is already in use
+2019-11-13 14:49:40: Port 3000 is already in use
+2019-11-13 14:49:41: Port 3000 is already in use
+2019-11-13 14:49:42: Port 3000 is already in use
+2019-11-13 14:49:43: Port 3000 is already in use
+2019-11-13 14:49:45: Port 3000 is already in use
+2019-11-13 14:49:46: Port 3000 is already in use
+2019-11-13 14:49:47: Port 3000 is already in use
+2019-11-13 14:49:48: Port 3000 is already in use
+2019-11-13 14:49:50: Port 3000 is already in use
+2019-11-13 14:49:51: Port 3000 is already in use
+2019-11-13 14:49:52: Port 3000 is already in use
+2019-11-13 14:49:53: Port 3000 is already in use
+2019-11-13 14:49:55: Port 3000 is already in use
+2019-11-13 14:49:56: Port 3000 is already in use
+2019-11-13 14:49:57: Port 3000 is already in use
+2019-11-13 14:49:58: Port 3000 is already in use
+2019-11-13 14:49:59: Port 3000 is already in use
+2019-11-13 14:50:00: Port 3000 is already in use
+2019-11-13 14:50:02: Port 3000 is already in use
+2019-11-13 14:50:03: Port 3000 is already in use
+2019-11-13 14:50:04: Port 3000 is already in use
+2019-11-13 14:50:05: Port 3000 is already in use
+2019-11-13 14:50:07: Port 3000 is already in use
+2019-11-13 14:50:08: Port 3000 is already in use
+2019-11-13 14:50:10: Port 3000 is already in use
+2019-11-13 14:50:11: Port 3000 is already in use
+2019-11-13 14:50:12: Port 3000 is already in use
+2019-11-13 14:50:14: Port 3000 is already in use
+2019-11-13 14:50:15: Port 3000 is already in use
+2019-11-13 14:50:16: Port 3000 is already in use
+2019-11-13 14:50:17: Port 3000 is already in use
+2019-11-13 14:50:19: Port 3000 is already in use
+2019-11-13 14:50:20: Port 3000 is already in use
+2019-11-13 14:50:22: Port 3000 is already in use
+2019-11-13 14:50:25: Port 3000 is already in use
+2019-11-13 14:50:27: Port 3000 is already in use
+2019-11-13 14:50:30: Port 3000 is already in use
+2019-11-13 14:50:31: Port 3000 is already in use
+2019-11-13 14:50:33: Port 3000 is already in use
+2019-11-13 14:50:34: Port 3000 is already in use
+2019-11-13 14:50:35: Port 3000 is already in use
+2019-11-13 14:50:36: Port 3000 is already in use
+2019-11-13 14:50:38: Port 3000 is already in use
+2019-11-13 14:50:39: Port 3000 is already in use
+2019-11-13 14:50:40: Port 3000 is already in use
+2019-11-13 14:50:41: Port 3000 is already in use
+2019-11-13 14:50:42: Port 3000 is already in use
+2019-11-13 14:50:43: Port 3000 is already in use
+2019-11-13 14:50:45: Port 3000 is already in use
+2019-11-13 14:50:46: Port 3000 is already in use
+2019-11-13 14:50:47: Port 3000 is already in use
+2019-11-13 14:50:48: Port 3000 is already in use
+2019-11-13 14:50:49: Port 3000 is already in use
+2019-11-13 14:50:50: Port 3000 is already in use
+2019-11-13 14:50:52: Port 3000 is already in use
+2019-11-13 14:50:53: Port 3000 is already in use
+2019-11-13 14:50:54: Port 3000 is already in use
+2019-11-13 14:50:56: Port 3000 is already in use
+2019-11-13 14:50:57: Port 3000 is already in use
+2019-11-13 14:50:58: Port 3000 is already in use
+2019-11-13 14:50:59: Port 3000 is already in use
+2019-11-13 14:51:01: Port 3000 is already in use
+2019-11-13 14:51:02: Port 3000 is already in use
+2019-11-13 14:51:03: Port 3000 is already in use
+2019-11-13 14:51:04: Port 3000 is already in use
+2019-11-13 14:51:05: Port 3000 is already in use
+2019-11-13 14:51:07: Port 3000 is already in use
+2019-11-13 14:51:08: Port 3000 is already in use
+2019-11-13 14:51:09: Port 3000 is already in use
+2019-11-13 14:51:10: Port 3000 is already in use
+2019-11-13 14:51:11: Port 3000 is already in use
+2019-11-13 14:51:12: Port 3000 is already in use
+2019-11-13 14:51:14: Port 3000 is already in use
+2019-11-13 14:51:15: Port 3000 is already in use
+2019-11-13 14:51:16: Port 3000 is already in use
+2019-11-13 14:51:17: Port 3000 is already in use
+2019-11-13 14:51:19: Port 3000 is already in use
+2019-11-13 14:51:20: Port 3000 is already in use
+2019-11-13 14:51:22: Port 3000 is already in use
+2019-11-13 14:51:24: Port 3000 is already in use
+2019-11-13 14:51:26: Port 3000 is already in use
+2019-11-13 14:51:28: Port 3000 is already in use
+2019-11-13 14:51:30: Port 3000 is already in use
+2019-11-13 14:51:31: Port 3000 is already in use
+2019-11-13 14:51:32: Port 3000 is already in use
+2019-11-13 14:51:34: Port 3000 is already in use
+2019-11-13 14:51:35: Port 3000 is already in use
+2019-11-13 14:51:36: Port 3000 is already in use
+2019-11-13 14:51:37: Port 3000 is already in use
+2019-11-13 14:51:39: Port 3000 is already in use
+2019-11-13 14:51:41: Port 3000 is already in use
+2019-11-13 14:51:43: Port 3000 is already in use
+2019-11-13 14:51:44: Port 3000 is already in use
+2019-11-13 14:51:46: Port 3000 is already in use
+2019-11-13 14:51:48: Port 3000 is already in use
+2019-11-13 14:51:49: Port 3000 is already in use
+2019-11-13 14:51:51: Port 3000 is already in use
+2019-11-13 14:51:55: Port 3000 is already in use
+2019-11-13 14:51:57: Port 3000 is already in use
+2019-11-13 14:51:59: Port 3000 is already in use
+2019-11-13 14:52:00: Port 3000 is already in use
+2019-11-13 14:52:02: Port 3000 is already in use
+2019-11-13 14:52:04: Port 3000 is already in use
+2019-11-13 14:52:06: Port 3000 is already in use
+2019-11-13 14:52:07: Port 3000 is already in use
+2019-11-13 14:52:08: Port 3000 is already in use
+2019-11-13 14:52:10: Port 3000 is already in use
+2019-11-13 14:52:11: Port 3000 is already in use
+2019-11-13 14:52:13: Port 3000 is already in use
+2019-11-13 14:52:14: Port 3000 is already in use
+2019-11-13 14:52:16: Port 3000 is already in use
+2019-11-13 14:52:17: Port 3000 is already in use
+2019-11-13 14:52:19: Port 3000 is already in use
+2019-11-13 14:52:20: Port 3000 is already in use
+2019-11-13 14:52:21: Port 3000 is already in use
+2019-11-13 14:52:23: Port 3000 is already in use
+2019-11-13 14:52:25: Port 3000 is already in use
+2019-11-13 14:52:26: Port 3000 is already in use
+2019-11-13 14:52:28: Port 3000 is already in use
+2019-11-13 14:52:29: Port 3000 is already in use
+2019-11-13 14:52:31: Port 3000 is already in use
+2019-11-13 14:52:32: Port 3000 is already in use
+2019-11-13 14:52:33: Port 3000 is already in use
+2019-11-13 14:52:34: Port 3000 is already in use
+2019-11-13 14:52:36: Port 3000 is already in use
+2019-11-13 14:52:37: Port 3000 is already in use
+2019-11-13 14:52:38: Port 3000 is already in use
+2019-11-13 14:52:39: Port 3000 is already in use
+2019-11-13 14:52:40: Port 3000 is already in use
+2019-11-13 14:52:42: Port 3000 is already in use
+2019-11-13 14:52:43: Port 3000 is already in use
+2019-11-13 14:52:44: Port 3000 is already in use
+2019-11-13 14:52:45: Port 3000 is already in use
+2019-11-13 14:52:47: Port 3000 is already in use
+2019-11-13 14:52:48: Port 3000 is already in use
+2019-11-13 14:52:49: Port 3000 is already in use
+2019-11-13 14:52:50: Port 3000 is already in use
+2019-11-13 14:52:51: Port 3000 is already in use
+2019-11-13 14:52:52: Port 3000 is already in use
+2019-11-13 14:52:54: Port 3000 is already in use
+2019-11-13 14:52:55: Port 3000 is already in use
+2019-11-13 14:52:56: Port 3000 is already in use
+2019-11-13 14:52:57: Port 3000 is already in use
+2019-11-13 14:52:59: Port 3000 is already in use
+2019-11-13 14:53:00: Port 3000 is already in use
+2019-11-13 14:53:02: Port 3000 is already in use
+2019-11-13 14:53:04: Port 3000 is already in use
+2019-11-13 14:53:05: Port 3000 is already in use
+2019-11-13 14:53:07: Port 3000 is already in use
+2019-11-13 14:53:08: Port 3000 is already in use
+2019-11-13 14:53:09: Port 3000 is already in use
+2019-11-13 14:53:11: Port 3000 is already in use
+2019-11-13 14:53:12: Port 3000 is already in use
+2019-11-13 14:53:13: Port 3000 is already in use
+2019-11-13 14:53:15: Port 3000 is already in use
+2019-11-13 14:53:16: Port 3000 is already in use
+2019-11-13 14:53:17: Port 3000 is already in use
+2019-11-13 14:53:19: Port 3000 is already in use
+2019-11-13 14:53:20: Port 3000 is already in use
+2019-11-13 14:53:23: Port 3000 is already in use
+2019-11-13 14:53:24: Port 3000 is already in use
+2019-11-13 14:53:26: Port 3000 is already in use
+2019-11-13 14:53:28: Port 3000 is already in use
+2019-11-13 14:53:30: Port 3000 is already in use
+2019-11-13 14:53:31: Port 3000 is already in use
+2019-11-13 14:53:32: Port 3000 is already in use
+2019-11-13 14:53:34: Port 3000 is already in use
+2019-11-13 14:53:36: Port 3000 is already in use
+2019-11-13 14:56:03: /getBillInfo 不存在
+2019-11-13 14:56:04: { Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'field list'
+2019-11-13 14:56:04:     at Query.Sequence._packetToError (F:\bill\express-bill\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+2019-11-13 14:56:04:     at Query.ErrorPacket (F:\bill\express-bill\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+2019-11-13 14:56:04:     at Protocol._parsePacket (F:\bill\express-bill\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+2019-11-13 14:56:04:     at Parser._parsePacket (F:\bill\express-bill\node_modules\mysql\lib\protocol\Parser.js:433:10)
+2019-11-13 14:56:04:     at Parser.write (F:\bill\express-bill\node_modules\mysql\lib\protocol\Parser.js:43:10)
+2019-11-13 14:56:04:     at Protocol.write (F:\bill\express-bill\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+2019-11-13 14:56:04:     at Socket.<anonymous> (F:\bill\express-bill\node_modules\mysql\lib\Connection.js:91:28)
+2019-11-13 14:56:04:     at Socket.<anonymous> (F:\bill\express-bill\node_modules\mysql\lib\Connection.js:525:10)
+2019-11-13 14:56:04:     at Socket.emit (events.js:198:13)
+2019-11-13 14:56:04:     at addChunk (_stream_readable.js:288:12)
+2019-11-13 14:56:04:     --------------------
+2019-11-13 14:56:04:     at Protocol._enqueue (F:\bill\express-bill\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+2019-11-13 14:56:04:     at Connection.query (F:\bill\express-bill\node_modules\mysql\lib\Connection.js:201:25)
+2019-11-13 14:56:04:     at Promise (F:\bill\express-bill\db\mysql.js:22:13)
+2019-11-13 14:56:04:     at new Promise (<anonymous>)
+2019-11-13 14:56:04:     at exec (F:\bill\express-bill\db\mysql.js:21:21)
+2019-11-13 14:56:04:     at recordLog (F:\bill\express-bill\controller\ls.js:51:12)
+2019-11-13 14:56:04:     at Request._callback (F:\bill\express-bill\controller\ls.js:66:21)
+2019-11-13 14:56:04:     at Request.self.callback (F:\bill\express-bill\node_modules\request\request.js:185:22)
+2019-11-13 14:56:04:     at Request.emit (events.js:198:13)
+2019-11-13 14:56:04:     at Request.<anonymous> (F:\bill\express-bill\node_modules\request\request.js:1161:10)
+2019-11-13 14:56:04:   code: 'ER_BAD_FIELD_ERROR',
+2019-11-13 14:56:04:   errno: 1054,
+2019-11-13 14:56:04:   sqlMessage: 'Unknown column \'undefined\' in \'field list\'',
+2019-11-13 14:56:04:   sqlState: '42S22',
+2019-11-13 14:56:04:   index: 0,
+2019-11-13 14:56:04:   sql:
+2019-11-13 14:56:04:    '\n        insert into fp_record (resultCode,resultMsg,invoiceName,invoiceResult,dwbm,createTime) values \n        (\'1000\',\n        \'查验结果成功\',\n        \'山东增值税（卷式普通发票）\',\n        \'{"invoiceDataCode":"037001851107","invoiceNumber":"00879927","invoiceTypeName":"山东增值税（卷式普通发票）","invoiceTypeCode":"11","checkDate":"2019-10-09 10:17:10","checkNum":"0","billingTime":"2019-04-04","salesName":"中国石化销售有限公司山东日照石油分公司","salesTaxpayerNum":"91371100724291958M","purchaserName":"日照日科信息技术有限公司","taxpayerNumber":"91371102MA3C7J0X37","taxDiskCode":"661718079895","totalTaxNum":"31.06","totalTaxSum":"270.00","invoiceRemarks":" ","checkCode":"56559926721335440055","totalAmount":"238.94","goodsClerk":"张艳","voidMark":"0","tollSign":"08","tollSignName":"成品油","machineNumber":"00879927","isBillMark":"N","invoiceDetailData":[{"lineNum":"1","goodserviceName":"*汽油*95号车用汽油(Ⅵ)","unit":"","number":"36.78000000","price":"7.34000000","zeroTaxRateSign":"","zeroTaxRateSignName":"非零税率","sum":"270","model":"","taxRate":"13%","tax":"31.06","isBillLine":"N"}]}\',\n        undefined,\n        \'2019-11-13 2:56:04 PM\'\n        )\n    ' }
