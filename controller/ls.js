@@ -104,8 +104,8 @@ const getBillType = (data) => {
 const getBillList = (data) => {
 
     var sql = `
-        select m.id,m.invoiceDataCode,m.invoiceTypeCode,m.saleName,m.totalTaxSum,m.entryDate,
-        z.zymc,b.bmmc,t.type_name from fp_main as m 
+        select m.id,m.invoiceDataCode,m.invoiceTypeCode,m.salesName,m.totalTaxSum,m.entryDate,
+        z.zymc,b.bmmc,t.type_name,d.fp_detail from fp_main as m 
         inner join fp_detail as d on m.id = d.fp_id 
         inner join pub_zyxx as z on z.id = m.fp_gsr
         inner join pub_bmxx as b on b.id = m.fp_gsbm
@@ -118,8 +118,8 @@ const getBillList = (data) => {
     if (data.invoiceNumber) {
         sql += ` and m.invoiceNumber = '${data.invoiceNumber}'`
     }
-    if (data.saleName) {
-        sql += ` and m.saleName like '%${data.saleName}%'`
+    if (data.salesName) {
+        sql += ` and m.salesName like '%${data.salesName}%'`
     }
     if (data.invoiceTypeCode) {
         sql += ` and m.invoiceTypeCode = '${data.invoiceTypeCode}'`

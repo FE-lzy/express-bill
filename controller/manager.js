@@ -53,6 +53,40 @@ const queryAllUser = (data) => {
         return rows;
     })
 }
+const handleIsHave = data => {
+    var sql = `
+    select * from pub_field where dwbm = ${data.dwbm}`;
+
+    return exec(sql).then(rows => {
+        return rows[0]
+    })
+}
+
+const setNoEntry = param => {
+    console.log(param);
+    handleIsHave(param).then(data => {
+        console.log(data);
+        if (data.length > 0) {
+            // 存在数据
+            let updateSql = `
+                    update pub_field set ${data.type} = ${data.val} where id = ${rows[0].id}
+                `
+            return exec(updateSql).then(rowsU => {
+                return rowsU;
+            })
+        } else {
+            // 不存在数据
+            let insertSql = `
+                    insert into pub_field ( ${data.type},dmbm ) values (${data.val},${data.dwbm})
+                `
+            return exec(insertSql).then(rowsI => {
+                return rowsI;
+            })
+        }
+    })
+
+
+}
 // 部门信息
 const queryAllBm = (data) => {
     var sql = `
@@ -131,5 +165,6 @@ module.exports = {
     saveOrUpdatePart,
     deletePart,
     saveOrUpdateZy,
-    queryAllUser
+    queryAllUser,
+    setNoEntry
 }

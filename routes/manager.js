@@ -1,6 +1,6 @@
 var express = require('express')
 var router = express.Router();
-const { queryAllUser, queryZyxx, queryAllBm, queryZyxxTotal, queryBmTotal, saveOrUpdatePart, deletePart, saveOrUpdateZy } = require('../controller/manager')
+const { queryAllUser, queryZyxx, queryAllBm, queryZyxxTotal, queryBmTotal, saveOrUpdatePart, deletePart, saveOrUpdateZy ,setNoEntry} = require('../controller/manager')
 const { getLsToken } = require('../controller/ls')
 const { SuccessModel, ErrorModel } = require('../model/resModel')
 
@@ -127,6 +127,25 @@ router.post('/saveOrUpdateZy', function (req, res, next) {
         )
     })
 })
+router.post('/setNoEntry', function (req, res, next) {
+    console.log(req.body)
+    setNoEntry(req.body).then(result => {
+        console.log(result);
+        if (result) {
+            return res.json(
+                new SuccessModel(result)
+            )
+        } else {
+            return res.json(
+                new ErrorModel('操作失败')
+            )
+        }
+    }).catch(err => {
+        return res.json(
+            new ErrorModel(err)
+        )
+    })
+})
 router.post('/queryAllUser', function (req, res, next) {
     queryAllUser(req.body).then(result => {
         if (result) {
@@ -134,7 +153,7 @@ router.post('/queryAllUser', function (req, res, next) {
                 new SuccessModel(result)
             )
         } else {
-            console.error(req.path + ' 操作失败' );
+            console.error(req.path + ' 操作失败');
             return res.json(
                 new ErrorModel('操作失败')
             )
