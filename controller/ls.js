@@ -58,8 +58,12 @@ function queryScanByCode(param) {
     // get请求获取token
     var promise = new Promise(function (reslove, reject) {
         request(postQueryParam('/api/invoiceInfoForCom', param), function (error, response, body) {
-
+            console.log(error, response.statusCode);
             if (!error && response.statusCode == 200) {
+                console.log(body);
+                if (body.error) {
+                    reject(body)
+                }
                 if (body.isFree == 'N') {
                     // 不免費
                     let logParam = Object.assign({ dwbm: param.dwbm }, body);
@@ -85,7 +89,7 @@ function queryScanByCode(param) {
 const BillIsHave = (data) => {
     console.log(data);
     const sql = `
-        select * from fp_main where invoiceNumber = '${data.code}'
+        select * from fp_main where invoiceNumber = '${data.code} where is_delete = 0'
     `
     return exec(sql).then(rows => {
         return rows[0] || {}
@@ -110,7 +114,7 @@ const getBillList = (data) => {
         inner join pub_zyxx as z on z.id = m.fp_gsr
         inner join pub_bmxx as b on b.id = m.fp_gsbm
         inner join fp_type  as t on m.invoiceTypeCode = t.type_id
-        where fp_gsdw = '${data.dwbm}'
+        where m.fp_gsdw = '${data.dwbm}' and m.is_delete = 0
     `
     if (data.invoiceDataCode) {
         sql += ` and m.invoiceDataCode = '${data.invoiceDataCode}'`
@@ -171,13 +175,16 @@ const saveMainBill = (data) => {
 
 const saveMainBillByScan = (data) => {
     // 获取当前时间
-    let entryDate = new Date().toLocaleString('chinese', { hour12: false });
+    let entryDate = new Date().toLocaleDateString();
     const sql = `
         insert  into fp_main 
-        (invoiceTypeCode,invoiceTypeName,checkDate,checkNum,invoiceDataCode,invoiceNumber,billingTime,taxDiskCode,fp_checktype,fp_czy,fp_gsr,fp_gsbm,fp_gsdw,fp_bz,entryDate) 
+        (invoiceTypeCode,invoiceTypeName,checkDate,checkNum,invoiceDataCode,invoiceNumber,
+            billingTime,taxDiskCode,fp_checktype,fp_czy,fp_gsr,fp_gsbm,fp_gsdw,fp_bz,
+            entryDate,totalTaxNum,totalTaxSum,salesName) 
         values ('${data.invoiceTypeCode}','${data.invoiceTypeName}','${data.checkDate}','${data.checkNum}','${data.invoiceDataCode}','${data.invoiceNumber}',
         '${data.billingTime}','${data.taxDiskCode}','${data.fp_checktype}','${data.fp_czy}',
-        '${data.fp_gsr}','${data.fp_gsbm}','${data.fp_gsdw}','${data.fp_bz}','${entryDate}')
+        '${data.fp_gsr}','${data.fp_gsbm}','${data.fp_gsdw}','${data.fp_bz}',
+        '${entryDate}',${data.totalTaxNum},${data.totalTaxSum},'${data.salesName}')
     `
     console.log(sql);
 
@@ -198,7 +205,14 @@ const updateMainBill = (id, data) => {
         return rows;
     })
 }
-
+const deleteBills = data =>{
+    const sql = `
+        update fp_main set is_delete = 1 where id in (${data.ids})
+    `
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
 const saveBillDetail = (id, data) => {
     console.log(data);
     const sql = `
@@ -225,4 +239,5 @@ module.exports = {
     updateMainBill,
     getBillList,
     getBillType,
+    deleteBills
 }

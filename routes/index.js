@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   var myDate = new Date();
   let time = myDate.toLocaleString('chinese', { hour12: false });
   var mytime=myDate.toLocaleTimeString(); //获取当前时间  
-    console.log(time);
+    console.log(new Date().toLocaleDateString());
   // console.log(myDate.toLocaleDateString('chinese', { hour12: false }));
   // console.log(myDate.toLocaleTimeString('chinese', { hour12: false }));
   res.render('index', { title: 'Express' });

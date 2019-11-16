@@ -1,6 +1,6 @@
 var express = require('express')
 var router = express.Router();
-const { queryAllUser, queryZyxx, queryAllBm, queryZyxxTotal, queryBmTotal, saveOrUpdatePart, deletePart, saveOrUpdateZy ,setNoEntry} = require('../controller/manager')
+const { getDwInfo, updateDw, queryAllUser, getBillType, getBillTypeCount, getBillCount, queryZyxx, getCensus, queryAllBm, queryZyxxTotal, queryBmTotal, saveOrUpdatePart, deletePart, saveOrUpdateZy, getDwxx, updateDwxx } = require('../controller/manager')
 const { getLsToken } = require('../controller/ls')
 const { SuccessModel, ErrorModel } = require('../model/resModel')
 
@@ -32,7 +32,92 @@ router.post('/queryZyxx', function (req, res, next) {
         )
     })
 });
+router.post('/getBillType', function (req, res, next) {
+    getBillType(req.body).then(result => {
+        if (result) {
+            return res.json(
+                new SuccessModel(result)
+            )
+        }
+    }).catch(err => {
+        return res.json(
+            new ErrorModel(err)
+        )
+    })
+})
+router.post('/updateDw', function (req, res, next) {
+    updateDw(req.body).then(result => {
+        if (result.affectedRows > 0) {
+            return res.json(
+                new SuccessModel(
+                    result
+                )
+            )
+        } else {
+            return res.json(
+                new ErrorModel('操作失败')
+            )
+        }
+    }).catch(err => {
+        return res.json(
+            new ErrorModel(err)
+        )
+    })
+});
+router.post('/getDwInfo', function (req, res, next) {
+    getDwInfo(req.body).then(result => {
+        if (result) {
+            return res.json(
+                new SuccessModel(result)
+            )
+        } else {
+            return res.json(
+                new ErrorModel('查询失败')
+            )
+        }
+    }).catch(err => {
+        return res.json(
+            new ErrorModel(err)
+        )
+    })
+})
+router.post('/getCensus', function (req, res, next) {
+    getCensus(req.body).then(result => {
+        console.log(result);
+        if (result) {
+            return res.json(
+                new SuccessModel(result)
+            )
+        } else {
+            return res.json(
+                new ErrorModel('查询失败')
+            )
+        }
+    }).catch(err => {
+        return res.json(
+            new ErrorModel(err)
+        )
+    })
 
+});
+router.post('/getBillTypeCount', function (req, res, next) {
+    getBillTypeCount(req.body).then(result => {
+        console.log(result);
+        if (result) {
+            return res.json(
+                new SuccessModel(result)
+            )
+        } else {
+            return res.json(
+                new ErrorModel('出错')
+            )
+        }
+    }).catch(err => {
+        return res.json(
+            new ErrorModel(err)
+        )
+    })
+})
 // 获取所有部门
 router.post('/queryAllBm', function (req, res, next) {
     console.log(req.body);
@@ -129,16 +214,20 @@ router.post('/saveOrUpdateZy', function (req, res, next) {
 })
 router.post('/setNoEntry', function (req, res, next) {
     console.log(req.body)
-    setNoEntry(req.body).then(result => {
-        console.log(result);
+    getDwxx(req.body).then(result => {
         if (result) {
-            return res.json(
-                new SuccessModel(result)
-            )
-        } else {
-            return res.json(
-                new ErrorModel('操作失败')
-            )
+            updateDwxx(req.body).then(updateRow => {
+                if (updateRow) {
+                    return res.json(
+                        new SuccessModel(updateRow)
+                    )
+                } else {
+                    return res.json(
+                        new ErrorModel('重复操作')
+                    )
+                }
+            })
+
         }
     }).catch(err => {
         return res.json(
@@ -146,6 +235,33 @@ router.post('/setNoEntry', function (req, res, next) {
         )
     })
 })
+router.post('/getBillCount', function (req, res, next) {
+    getBillCount(req.body).then(result => {
+        if (result) {
+            return res.json(
+                new SuccessModel(result)
+            )
+        }
+    }).catch(err => {
+        return res.json(
+            new ErrorModel(err)
+        )
+    });
+})
+router.post('/getSetting', function (req, res, next) {
+    getDwxx(req.body).then(result => {
+        if (result) {
+            return res.json(
+                new SuccessModel(result)
+            )
+        }
+    }).catch(err => {
+        return res.json(
+            new ErrorModel(err)
+        )
+    });
+});
+
 router.post('/queryAllUser', function (req, res, next) {
     queryAllUser(req.body).then(result => {
         if (result) {
