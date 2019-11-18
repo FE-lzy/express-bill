@@ -1,6 +1,6 @@
 var express = require('express')
 var router = express.Router();
-const { getDwInfo, updateDw, queryAllUser, getBillType, getBillTypeCount, getBillCount, queryZyxx, getCensus, queryAllBm, queryZyxxTotal, queryBmTotal, saveOrUpdatePart, deletePart, saveOrUpdateZy, getDwxx, updateDwxx } = require('../controller/manager')
+const { partisCreated, getDwInfo, deleteZy,updateDw, queryAllUser, getBillType, getBillTypeCount, getBillCount, queryZyxx, getCensus, queryAllBm, queryZyxxTotal, queryBmTotal, saveOrUpdatePart, deletePart, saveOrUpdateZy, getDwxx, updateDwxx } = require('../controller/manager')
 const { getLsToken } = require('../controller/ls')
 const { SuccessModel, ErrorModel } = require('../model/resModel')
 
@@ -153,24 +153,33 @@ router.post('/queryAllBm', function (req, res, next) {
 });
 
 router.post('/saveOrUpdatePart', function (req, res, next) {
-    saveOrUpdatePart(req.body).then(result => {
-        console.log(result);
-        if (result) {
-            res.json(
-                new SuccessModel()
+    partisCreated(req.body).then(isCreated => {
+        if (isCreated.length > 0) {
+            return res.json(
+                new ErrorModel('该部门已存在')
             )
         } else {
-            console.error(req.path + ' 操作失败');
-            return res.json(
-                new ErrorModel('操作失败')
-            )
+            saveOrUpdatePart(req.body).then(result => {
+                console.log(result);
+                if (result) {
+                    res.json(
+                        new SuccessModel()
+                    )
+                } else {
+                    console.error(req.path + ' 操作失败');
+                    return res.json(
+                        new ErrorModel('操作失败')
+                    )
+                }
+            }).catch(err => {
+                console.error(req.path + ' ' + err);
+                return res.json(
+                    new ErrorModel(err)
+                )
+            })
         }
-    }).catch(err => {
-        console.error(req.path + ' ' + err);
-        return res.json(
-            new ErrorModel(err)
-        )
     })
+
 });
 
 router.post('/deletePart', function (req, res, next) {
@@ -191,7 +200,24 @@ router.post('/deletePart', function (req, res, next) {
         )
     })
 });
-
+router.post('/deleteZy', function (req, res, next) {
+    deleteZy(req.body).then(result => {
+        if (result) {
+            return res.json(
+                new SuccessModel()
+            )
+        } else {
+            return res.json(
+                new ErrorModel('操作失败')
+            )
+        }
+    }).catch(err => {
+        console.error(req.path + ' ' + err);
+        return res.json(
+            new ErrorModel(err)
+        )
+    })
+});
 router.post('/saveOrUpdateZy', function (req, res, next) {
     saveOrUpdateZy(req.body).then(result => {
         console.log(result);

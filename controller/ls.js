@@ -89,7 +89,7 @@ function queryScanByCode(param) {
 const BillIsHave = (data) => {
     console.log(data);
     const sql = `
-        select * from fp_main where invoiceNumber = '${data.code} where is_delete = 0'
+        select * from fp_main where invoiceNumber = '${data.code}' and is_delete = 0
     `
     return exec(sql).then(rows => {
         return rows[0] || {}
@@ -132,10 +132,16 @@ const getBillList = (data) => {
         sql += ` and m.fp_gsbm = '${data.fp_gsbm}'`
     }
     if (data.billingTime) {
-        sql += ` and m.billingTime >'${data.billingTime[0]}' and m.billingTime < '${data.billingTime[1]}'`
+        var reg = new RegExp(/\//, "g")
+        var startTime = data.billingTime[0].replace(reg, '-');
+        let endTime = data.billingTime[1].replace(reg, '-')
+        sql += ` and m.billingTime >'${startTime}' and m.billingTime < '${endTime}'`
     }
     if (data.entryDate) {
-        sql += ` and m.entryDate >'${data.entryDate[0]}' and m.entryDate < '${data.entryDate[1]}'`
+        var reg = new RegExp(/\//, "g")
+        var startTime = data.entryDate[0].replace(reg, '-');
+        let endTime = data.entryDate[1].replace(reg, '-')
+        sql += ` and m.entryDate >'${startTime}' and m.entryDate < '${endTime}'`
     }
     if (data.minPrice) {
         sql += ` and m.totalTaxSum >'${data.minPrice}'`
@@ -205,7 +211,7 @@ const updateMainBill = (id, data) => {
         return rows;
     })
 }
-const deleteBills = data =>{
+const deleteBills = data => {
     const sql = `
         update fp_main set is_delete = 1 where id in (${data.ids})
     `

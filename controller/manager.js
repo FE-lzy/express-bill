@@ -26,7 +26,7 @@ const queryZyxx = (data) => {
 // 员工总数
 const queryZyxxTotal = (data) => {
     var countSql = `
-        select count(id) as total from pub_zyxx as z where 1=1 
+        select count(id) as total from pub_zyxx as z where 1=1  and dwbm = ${data.dwbm}
     `
     if (data.bmbm) {
         countSql += ` and z.bmbm="${data.bmbm}" `
@@ -107,6 +107,14 @@ const queryBmTotal = (data) => {
         return rows[0];
     })
 }
+const partisCreated = data =>{
+    const sql = `
+        select * from pub_bmxx where bmmc = '${data.bmmc}'
+    `
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
 // 修改Or新建
 const saveOrUpdatePart = (data) => {
     var sql;
@@ -128,6 +136,13 @@ const deletePart = (data) => {
         return rows;
     })
 }
+const deleteZy = (data) => {
+    sql = `delete from pub_zyxx where id = ${data.id}`
+
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
 
 const saveOrUpdateZy = (data) => {
     var sql;
@@ -136,7 +151,7 @@ const saveOrUpdateZy = (data) => {
         // 修改
         sql = `update pub_zyxx set bmbm = '${data.bmbm}',zymc = '${data.zymc}', bz = '${data.bz}' where id = ${data.id}`
     } else {
-        sql = ` insert into pub_zyxx (zymc,bmbm,bz) values ('${data.zymc}' ,'${data.bmbm}','${data.bz}') `
+        sql = ` insert into pub_zyxx (zymc,bmbm,dwbm,bz) values ('${data.zymc}' ,'${data.bmbm}','${data.dwbm}','${data.bz}') `
     }
     console.log(sql);
     return exec(sql).then(rows => {
@@ -234,5 +249,7 @@ module.exports = {
     getBillCount,
     getBillTypeCount,
     getDwInfo,
-    updateDw
+    updateDw,
+    partisCreated,
+    deleteZy
 }
