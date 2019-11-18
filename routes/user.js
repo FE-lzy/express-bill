@@ -1,6 +1,6 @@
 var express = require('express')
 var router = express.Router();
-const { login, getUserToken, userInfo, setToken } = require('../controller/user')
+const { resetPwd, login, getUserToken, userInfo, setToken } = require('../controller/user')
 const { getLsToken } = require('../controller/ls')
 const { SuccessModel, ErrorModel } = require('../model/resModel')
 
@@ -40,6 +40,25 @@ router.post('/login', function (req, res, next) {
         )
     })
 });
+router.post('/resetPwd', function (req, res, next) {
+    return resetPwd(req.body).then(result => {
+        if (result.affectedRows > 0) {
+            return res.json(
+                new SuccessModel(
+                    result
+                )
+            )
+        } else {
+            return res.json(
+                new ErrorModel('操作失败')
+            )
+        }
+    }).catch(err => {
+        return res.json(
+            new ErrorModel(err)
+        )
+    })
+})
 router.post('/userInfo', function (req, res, next) {
     const { id } = req.body;
     const result = userInfo(id);

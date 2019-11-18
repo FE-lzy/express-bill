@@ -56,20 +56,19 @@ router.post('/queryBillByCode', function (req, res, next) {
         if (!data.error) {
             if (data.resultCode == '1000') {
                 // 加日志
-                if (data) {
-                    res.json(
-                        new SuccessModel(data)
-                    )
-                }
+                return res.json(
+                    new SuccessModel(data)
+                )
+
             } else {
-                res.json(
+                return res.json(
                     new ErrorModel(data.resultMsg)
                 )
             }
         } else {
             console.error(req.path + data.error);
-            res.json(
-                new ErrorModel(data)
+            return res.json(
+                new ErrorModel(data.error)
             )
         }
     }).catch(err => {
@@ -84,7 +83,7 @@ router.post('/queryBillByCode', function (req, res, next) {
 router.post('/deleteBills', function (req, res, next) {
     deleteBills(req.body).then(result => {
         console.log(result);
-        if(result.affectedRows){
+        if (result.affectedRows) {
             return res.json(
                 new SuccessModel(result)
             )
@@ -93,7 +92,7 @@ router.post('/deleteBills', function (req, res, next) {
                 new ErrorModel('删除失败')
             )
         }
-        
+
     }).catch(err => {
         console.error(req.path + ' ' + err);
         return res.json(
