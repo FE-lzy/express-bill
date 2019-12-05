@@ -1,1 +1,256 @@
-var _0x222f=['dwbm','bmbm','\x20and\x20z.bmbm=\x22','zymc','\x20and\x20z.zymc\x20like\x20\x22%','%\x22\x20','current','\x20order\x20by\x20z.bmbm\x20limit\x20',',10\x20','then','\x0a\x20\x20\x20\x20\x20\x20\x20\x20select\x20count(id)\x20as\x20total\x20from\x20pub_zyxx\x20as\x20z\x20where\x201=1\x20\x20and\x20dwbm\x20=\x20','\x0a\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20select\x20*\x20from\x20pub_zyxx\x20where\x20dwbm\x20=\x20','\x20\x0a\x20\x20\x20\x20','\x20and\x20bmbm\x20=\x20','\x0a\x20\x20\x20\x20select\x20*\x20from\x20\x20pub_dwxx\x20\x20where\x20id\x20=\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20update\x20pub_dwxx\x20set\x20','type','\x20=\x20','val','\x20where\x20id\x20=\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20select\x20b.id,b.bmmc,b.bz,d.dwmc\x20from\x20pub_bmxx\x20as\x20b\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20inner\x20join\x20pub_dwxx\x20as\x20d\x20on\x20d.id\x20=\x20b.dwbm\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20where\x20b.dwbm\x20=\x20','bmmc','\x20and\x20b.bmmc\x20like\x20\x27%','\x20order\x20by\x20b.id\x20limit\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20select\x20count(id)\x20as\x20total\x20from\x20pub_bmxx\x20where\x20dwbm\x20=\x20','\x20and\x20bmmc\x20like\x20\x27%','\x0a\x20\x20\x20\x20\x20\x20\x20\x20select\x20*\x20from\x20pub_bmxx\x20where\x20bmmc\x20=\x20\x27','\x27\x0a\x20\x20\x20\x20','update\x20pub_bmxx\x20set\x20bmmc\x20=\x20\x27','\x27,bz\x20=\x20\x27','\x27\x20where\x20id\x20=\x20','\x20insert\x20into\x20pub_bmxx\x20(bmmc,dwbm,bz)\x20values\x20(\x27','\x27,\x27','\x27)\x20','delete\x20from\x20pub_bmxx\x20where\x20id\x20=\x20','delete\x20from\x20pub_zyxx\x20where\x20id\x20=\x20','update\x20pub_zyxx\x20set\x20bmbm\x20=\x20\x27','\x27,zymc\x20=\x20\x27','\x27,\x20bz\x20=\x20\x27','\x20insert\x20into\x20pub_zyxx\x20(zymc,bmbm,dwbm,bz)\x20values\x20(\x27','\x27\x20,\x27','log','\x0a\x20\x20\x20\x20\x20\x20\x20\x20select\x20t1.people,t2.bill,t3.part,t4.record\x20\x20from\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20(select\x20count(*)\x20people\x20from\x20pub_zyxx\x20where\x20dwbm\x20=\x20',')\x20t1,\x0a\x20\x20\x20\x20\x20\x20\x20\x20(select\x20count(*)\x20bill\x20from\x20fp_main\x20\x20where\x20fp_gsdw\x20=\x20','\x20and\x20is_delete=0)\x20t2,\x0a\x20\x20\x20\x20\x20\x20\x20\x20(select\x20count(*)\x20part\x20from\x20pub_bmxx\x20where\x20dwbm\x20=\x20',')\x20t3,\x0a\x20\x20\x20\x20\x20\x20\x20\x20(select\x20count(*)\x20record\x20\x20from\x20fp_record\x20where\x20dwbm\x20=\x20',')\x20t4\x0a\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20select\x20type_name\x20from\x20fp_type\x0a\x20\x20\x20\x20','\x0a\x20\x20\x20\x20select\x20\x20t.type_name\x20as\x20name,m.taxsum,\x20m.taxnum,m.typeCount,m.total\x20\x20\x0a\x20\x20\x20\x20from\x20fp_type\x20as\x20t\x20inner\x20join\x20\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20(select\x20invoiceTypeCode,count(invoiceTypeCode)\x20as\x20typeCount,\x20sum(totalTaxSum)\x20as\x20taxsum,sum(totalTaxNum)\x20as\x20taxnum\x20,\x0a\x20\x20\x20\x20sum(totalTaxSum)+\x20sum(totalTaxNum)\x20as\x20total\x0a\x20\x20\x20\x20from\x20fp_main\x20where\x20is_delete\x20=\x200\x20and\x20fp_gsdw\x20=\x20','\x20and\x20','timeType','\x20\x20>\x20\x27','pickMonth','-01\x27\x20and\x20','\x20<\x20\x27','-31\x27\x20\x0a\x20\x20\x20\x20group\x20by\x20invoiceTypeCode\x20)\x20m\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20on\x20t.type_id\x20=\x20m.invoiceTypeCode\x20\x0a\x20\x20\x20\x20','\x0a\x20\x20\x20\x20select\x20*\x20from\x20pub_dwxx\x20where\x20id\x20=\x20','\x0a\x20\x20\x20\x20update\x20pub_dwxx\x20set\x20\x0a\x20\x20\x20\x20dwmc\x20=\x20\x27','dwmc','\x27,\x0a\x20\x20\x20\x20taxnum\x20=\x20\x27','taxnum','\x27,\x0a\x20\x20\x20\x20address\x20=\x20\x27','address','\x27,\x0a\x20\x20\x20\x20tel\x20=\x20\x27','tel','\x27,\x0a\x20\x20\x20\x20bank\x20=\x20\x27','bank','\x27,\x0a\x20\x20\x20\x20account\x20=\x20\x27','account','\x27,\x0a\x20\x20\x20\x20bz\x20=\x20\x27','\x0a\x20\x20\x20\x20\x20\x20\x20\x20select\x20\x20t.type_name\x20as\x20name,m.counts\x20as\x20value\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20from\x20fp_type\x20as\x20t\x20inner\x20join\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20(select\x20invoiceTypeCode,count(invoiceTypeCode)\x20as\x20counts\x20from\x20fp_main\x20where\x20fp_gsdw\x20=\x20','\x20and\x20is_delete\x20=\x200\x20group\x20by\x20invoiceTypeCode)\x20m\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20on\x20t.type_id\x20=\x20m.invoiceTypeCode\x20\x0a\x20\x20\x20\x20','exports','../db/mysql','\x0a\x20\x20\x20\x20\x20\x20\x20\x20select\x20z.id,z.zymc,z.bmbm,b.bmmc,z.bz,d.dwmc\x20from\x20pub_zyxx\x20as\x20z\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20inner\x20join\x20pub_bmxx\x20as\x20b\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20on\x20z.bmbm\x20=\x20b.id\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20inner\x20join\x20pub_dwxx\x20as\x20d\x0a\x20\x20\x20\x20\x20\x20\x20\x20on\x20z.dwbm\x20=\x20d.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20where\x20z.dwbm='];(function(_0x2699a9,_0x501e82){var _0x5b6c40=function(_0xa3de42){while(--_0xa3de42){_0x2699a9['push'](_0x2699a9['shift']());}};_0x5b6c40(++_0x501e82);}(_0x222f,0x1cc));var _0x39fe=function(_0x50838f,_0x2040a9){_0x50838f=_0x50838f-0x0;var _0x26be39=_0x222f[_0x50838f];return _0x26be39;};const {exec}=require(_0x39fe('0x0'));const queryZyxx=_0x2d0a60=>{var _0x51aa51=_0x39fe('0x1')+_0x2d0a60[_0x39fe('0x2')]+'\x20';if(_0x2d0a60[_0x39fe('0x3')]){_0x51aa51+=_0x39fe('0x4')+_0x2d0a60[_0x39fe('0x3')]+'\x22\x20';}if(_0x2d0a60[_0x39fe('0x5')]){_0x51aa51+=_0x39fe('0x6')+_0x2d0a60[_0x39fe('0x5')]+_0x39fe('0x7');}let _0x18fb7e=(_0x2d0a60[_0x39fe('0x8')]-0x1)*0xa;_0x51aa51+=_0x39fe('0x9')+_0x18fb7e+_0x39fe('0xa');return exec(_0x51aa51)[_0x39fe('0xb')](_0x47c96f=>{return _0x47c96f;});};const queryZyxxTotal=_0x44bdbf=>{var _0x3a0a51=_0x39fe('0xc')+_0x44bdbf[_0x39fe('0x2')]+_0x39fe('0xd');if(_0x44bdbf[_0x39fe('0x3')]){_0x3a0a51+=_0x39fe('0x4')+_0x44bdbf[_0x39fe('0x3')]+'\x22\x20';}if(_0x44bdbf[_0x39fe('0x5')]){_0x3a0a51+=_0x39fe('0x6')+_0x44bdbf[_0x39fe('0x5')]+_0x39fe('0x7');}return exec(_0x3a0a51)[_0x39fe('0xb')](_0x366b06=>{return _0x366b06[0x0];});};const queryAllUser=_0x4a10a9=>{var _0x5b4eb8=_0x39fe('0xe')+_0x4a10a9[_0x39fe('0x2')]+_0x39fe('0xf');if(_0x4a10a9[_0x39fe('0x3')]){_0x5b4eb8+=_0x39fe('0x10')+_0x4a10a9[_0x39fe('0x3')];}return exec(_0x5b4eb8)[_0x39fe('0xb')](_0x596157=>{return _0x596157;});};const getDwxx=_0x39ff53=>{var _0x3cd319=_0x39fe('0x11')+_0x39ff53[_0x39fe('0x2')];return exec(_0x3cd319)[_0x39fe('0xb')](_0x47377f=>{return _0x47377f[0x0];});};const updateDwxx=_0x1d4e66=>{let _0x113b63=_0x39fe('0x12')+_0x1d4e66[_0x39fe('0x13')]+_0x39fe('0x14')+_0x1d4e66[_0x39fe('0x15')]+_0x39fe('0x16')+_0x1d4e66[_0x39fe('0x2')]+_0x39fe('0x17');return exec(_0x113b63)[_0x39fe('0xb')](_0x5cdc5d=>{return _0x5cdc5d;});};const queryAllBm=_0x80740=>{var _0x1692af=_0x39fe('0x18')+_0x80740[_0x39fe('0x2')]+_0x39fe('0xd');if(_0x80740[_0x39fe('0x19')]){_0x1692af+=_0x39fe('0x1a')+_0x80740[_0x39fe('0x19')]+'%\x27';}if(_0x80740[_0x39fe('0x8')]){let _0x39f037=(_0x80740[_0x39fe('0x8')]-0x1)*0xa;_0x1692af+=_0x39fe('0x1b')+_0x39f037+_0x39fe('0xa');}return exec(_0x1692af)[_0x39fe('0xb')](_0x453c6d=>{return _0x453c6d;});};const queryBmTotal=_0x32b462=>{var _0x390416=_0x39fe('0x1c')+_0x32b462[_0x39fe('0x2')]+_0x39fe('0xd');if(_0x32b462[_0x39fe('0x19')]){_0x390416+=_0x39fe('0x1d')+_0x32b462[_0x39fe('0x19')]+'%\x27';}return exec(_0x390416)[_0x39fe('0xb')](_0x42f4dc=>{return _0x42f4dc[0x0];});};const partisCreated=_0x33f150=>{const _0x16ca0c=_0x39fe('0x1e')+_0x33f150[_0x39fe('0x19')]+_0x39fe('0x1f');return exec(_0x16ca0c)[_0x39fe('0xb')](_0x21cc73=>{return _0x21cc73;});};const saveOrUpdatePart=_0x48e89e=>{var _0x29eaa1;if(_0x48e89e['id']){_0x29eaa1=_0x39fe('0x20')+_0x48e89e[_0x39fe('0x19')]+_0x39fe('0x21')+_0x48e89e['bz']+_0x39fe('0x22')+_0x48e89e['id'];}else{_0x29eaa1=_0x39fe('0x23')+_0x48e89e[_0x39fe('0x19')]+_0x39fe('0x24')+_0x48e89e[_0x39fe('0x2')]+_0x39fe('0x24')+_0x48e89e['bz']+_0x39fe('0x25');}return exec(_0x29eaa1)[_0x39fe('0xb')](_0x48f7cf=>{return _0x48f7cf;});};const deletePart=_0x9a16ed=>{sql=_0x39fe('0x26')+_0x9a16ed['id'];return exec(sql)[_0x39fe('0xb')](_0x79cd14=>{return _0x79cd14;});};const deleteZy=_0x238862=>{const _0x406f62=_0x39fe('0x27')+_0x238862['id'];return exec(_0x406f62)[_0x39fe('0xb')](_0x1275e6=>{return _0x1275e6;});};const saveOrUpdateZy=_0x1ba154=>{var _0x4270d6;if(_0x1ba154['id']){_0x4270d6=_0x39fe('0x28')+_0x1ba154[_0x39fe('0x3')]+_0x39fe('0x29')+_0x1ba154[_0x39fe('0x5')]+_0x39fe('0x2a')+_0x1ba154['bz']+_0x39fe('0x22')+_0x1ba154['id'];}else{_0x4270d6=_0x39fe('0x2b')+_0x1ba154[_0x39fe('0x5')]+_0x39fe('0x2c')+_0x1ba154[_0x39fe('0x3')]+_0x39fe('0x24')+_0x1ba154[_0x39fe('0x2')]+_0x39fe('0x24')+_0x1ba154['bz']+_0x39fe('0x25');}console[_0x39fe('0x2d')](_0x4270d6);return exec(_0x4270d6)[_0x39fe('0xb')](_0x5d8e05=>{return _0x5d8e05;});};const getCensus=_0x5c613d=>{const _0x2d5e8c=_0x39fe('0x2e')+_0x5c613d[_0x39fe('0x2')]+_0x39fe('0x2f')+_0x5c613d[_0x39fe('0x2')]+_0x39fe('0x30')+_0x5c613d[_0x39fe('0x2')]+_0x39fe('0x31')+_0x5c613d[_0x39fe('0x2')]+_0x39fe('0x32');return exec(_0x2d5e8c)[_0x39fe('0xb')](_0x13cd80=>{return _0x13cd80;});};const getBillType=_0x239285=>{const _0x4a7d84=_0x39fe('0x33');return exec(_0x4a7d84)[_0x39fe('0xb')](_0x25d498=>{return _0x25d498;});};const getBillTypeCount=_0x27dab4=>{var _0x45f263=_0x39fe('0x34')+_0x27dab4[_0x39fe('0x2')]+_0x39fe('0x35')+_0x27dab4[_0x39fe('0x36')]+_0x39fe('0x37')+_0x27dab4[_0x39fe('0x38')]+_0x39fe('0x39')+_0x27dab4[_0x39fe('0x36')]+_0x39fe('0x3a')+_0x27dab4[_0x39fe('0x38')]+_0x39fe('0x3b');return exec(_0x45f263)[_0x39fe('0xb')](_0x7f1504=>{return _0x7f1504;});};const getDwInfo=_0xb9208c=>{const _0x4b4be1=_0x39fe('0x3c')+_0xb9208c[_0x39fe('0x2')];return exec(_0x4b4be1)[_0x39fe('0xb')](_0x466661=>{return _0x466661;});};const updateDw=_0xd088d1=>{const _0x5ac13c=_0x39fe('0x3d')+_0xd088d1[_0x39fe('0x3e')]+_0x39fe('0x3f')+_0xd088d1[_0x39fe('0x40')]+_0x39fe('0x41')+_0xd088d1[_0x39fe('0x42')]+_0x39fe('0x43')+_0xd088d1[_0x39fe('0x44')]+_0x39fe('0x45')+_0xd088d1[_0x39fe('0x46')]+_0x39fe('0x47')+_0xd088d1[_0x39fe('0x48')]+_0x39fe('0x49')+_0xd088d1['bz']+_0x39fe('0x22')+_0xd088d1[_0x39fe('0x2')];return exec(_0x5ac13c)[_0x39fe('0xb')](_0x37844b=>{return _0x37844b;});};const getBillCount=_0x3a4e9e=>{const _0x3afc11=_0x39fe('0x4a')+_0x3a4e9e[_0x39fe('0x2')]+_0x39fe('0x4b');return exec(_0x3afc11)[_0x39fe('0xb')](_0x48d1cd=>{return _0x48d1cd;});};module[_0x39fe('0x4c')]={'queryZyxx':queryZyxx,'queryAllBm':queryAllBm,'queryZyxxTotal':queryZyxxTotal,'queryBmTotal':queryBmTotal,'saveOrUpdatePart':saveOrUpdatePart,'deletePart':deletePart,'saveOrUpdateZy':saveOrUpdateZy,'queryAllUser':queryAllUser,'getDwxx':getDwxx,'updateDwxx':updateDwxx,'getCensus':getCensus,'getBillType':getBillType,'getBillCount':getBillCount,'getBillTypeCount':getBillTypeCount,'getDwInfo':getDwInfo,'updateDw':updateDw,'partisCreated':partisCreated,'deleteZy':deleteZy};
+const { exec } = require('../db/mysql')
+// 根据单位编码查询员工信息
+const queryZyxx = (data) => {
+
+    var sql = `
+        select z.id,z.zymc,z.bmbm,b.bmmc,z.bz,d.dwmc from pub_zyxx as z  
+        inner join pub_bmxx as b 
+        on z.bmbm = b.id  
+        inner join pub_dwxx as d
+        on z.dwbm = d.id
+        where z.dwbm=${data.dwbm} `
+    if (data.bmbm) {
+        sql += ` and z.bmbm="${data.bmbm}" `
+    }
+    if (data.zymc) {
+        sql += ` and z.zymc like "%${data.zymc}%" `
+    }
+    let n = (data.current - 1) * 10;
+    sql += ` order by z.bmbm limit ${n},10 `
+
+    return exec(sql).then(rows => {
+        return rows
+    })
+
+}
+// 员工总数
+const queryZyxxTotal = (data) => {
+    var countSql = `
+        select count(id) as total from pub_zyxx as z where 1=1  and dwbm = ${data.dwbm}
+    `
+    if (data.bmbm) {
+        countSql += ` and z.bmbm="${data.bmbm}" `
+    }
+    if (data.zymc) {
+        countSql += ` and z.zymc like "%${data.zymc}%" `
+    }
+
+    return exec(countSql).then(rows => {
+        return rows[0]
+    })
+}
+// 获取职员信息
+const queryAllUser = (data) => {
+    var sql = `
+         select * from pub_zyxx where dwbm = ${data.dwbm} 
+    `
+
+    if (data.bmbm) {
+        sql += ` and bmbm = ${data.bmbm}`
+    }
+
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+// 获取单位信息
+const getDwxx = data => {
+    var sql = `
+    select * from  pub_dwxx  where id = ${data.dwbm}`;
+
+    return exec(sql).then(rows => {
+        return rows[0]
+    })
+}
+// 修改单位信息的发票设置
+const updateDwxx = (data) => {
+
+    let updateSql = `
+                    update pub_dwxx set ${data.type} = ${data.val} where id = ${data.dwbm}
+                `
+    return exec(updateSql).then(rowsU => {
+        return rowsU;
+    })
+}
+
+// 部门信息
+const queryAllBm = (data) => {
+    var sql = `
+        select b.id,b.bmmc,b.bz,d.dwmc from pub_bmxx as b 
+        inner join pub_dwxx as d on d.id = b.dwbm
+         where b.dwbm = ${data.dwbm}
+    `
+
+    if (data.bmmc) {
+        sql += ` and b.bmmc like '%${data.bmmc}%'`
+    }
+
+    if (data.current) {
+        let n = (data.current - 1) * 10;
+        sql += ` order by b.id limit ${n},10 `
+    }
+    return exec(sql).then(rows => {
+        return rows
+    })
+}
+// 部门总数
+const queryBmTotal = (data) => {
+    var sql = `
+        select count(id) as total from pub_bmxx where dwbm = ${data.dwbm}
+    `
+
+    if (data.bmmc) {
+        sql += ` and bmmc like '%${data.bmmc}%'`
+    }
+
+    return exec(sql).then(rows => {
+        return rows[0];
+    })
+}
+const partisCreated = data =>{
+    const sql = `
+        select * from pub_bmxx where bmmc = '${data.bmmc}'
+    `
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+// 修改Or新建
+const saveOrUpdatePart = (data) => {
+    var sql;
+
+    if (data.id) {
+        // 修改
+        sql = `update pub_bmxx set bmmc = '${data.bmmc}',bz = '${data.bz}' where id = ${data.id}`
+    } else {
+        sql = ` insert into pub_bmxx (bmmc,dwbm,bz) values ('${data.bmmc}','${data.dwbm}','${data.bz}') `
+    }
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+const deletePart = (data) => {
+    sql = `delete from pub_bmxx where id = ${data.id}`
+
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+const deleteZy = (data) => {
+    const sql = `delete from pub_zyxx where id = ${data.id}`
+
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+
+
+const saveOrUpdateZy = (data) => {
+    var sql;
+
+    if (data.id) {
+        // 修改
+        sql = `update pub_zyxx set bmbm = '${data.bmbm}',zymc = '${data.zymc}', bz = '${data.bz}' where id = ${data.id}`
+    } else {
+        sql = ` insert into pub_zyxx (zymc,bmbm,dwbm,bz) values ('${data.zymc}' ,'${data.bmbm}','${data.dwbm}','${data.bz}') `
+    }
+    console.log(sql);
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+
+const getCensus = data => {
+
+    const sql = `
+        select t1.people,t2.bill,t3.part,t4.record  from 
+        (select count(*) people from pub_zyxx where dwbm = ${data.dwbm}) t1,
+        (select count(*) bill from fp_main  where fp_gsdw = ${data.dwbm} and is_delete=0) t2,
+        (select count(*) part from pub_bmxx where dwbm = ${data.dwbm}) t3,
+        (select count(*) record  from fp_record where dwbm = ${data.dwbm}) t4
+    `
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+const getBillType = data => {
+    const sql = `
+        select type_name from fp_type
+    `
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+const getBillTypeCount = (data) => {
+    var sql = `
+    select  t.type_name as name,m.taxsum, m.taxnum,m.typeCount,m.total  
+    from fp_type as t inner join 
+    
+    (select invoiceTypeCode,count(invoiceTypeCode) as typeCount, sum(totalTaxSum-totalTaxNum) as taxsum,sum(totalTaxNum) as taxnum ,
+    sum(totalTaxSum) as total
+    from fp_main where is_delete = 0 and fp_gsdw = ${data.dwbm} and ${data.timeType}  > '${data.pickMonth}-01' and ${data.timeType} < '${data.pickMonth}-31' 
+    group by invoiceTypeCode ) m
+    
+    on t.type_id = m.invoiceTypeCode 
+    `
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+const getDwInfo = data => {
+    const sql = `
+    select * from pub_dwxx where id = ${data.dwbm}`
+
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+const updateDw = data => {
+    const sql = `
+    update pub_dwxx set 
+    dwmc = '${data.dwmc}',
+    taxnum = '${data.taxnum}',
+    address = '${data.address}',
+    tel = '${data.tel}',
+    bank = '${data.bank}',
+    account = '${data.account}',
+    bz = '${data.bz}' where id = ${data.dwbm}`
+
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+const getBillCount = data => {
+    const sql = `
+        select  t.type_name as name,m.counts as value
+
+        from fp_type as t inner join 
+        
+        (select invoiceTypeCode,count(invoiceTypeCode) as counts from fp_main where fp_gsdw = ${data.dwbm} and is_delete = 0 group by invoiceTypeCode) m
+        
+        on t.type_id = m.invoiceTypeCode 
+    `
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+module.exports = {
+    queryZyxx,
+    queryAllBm,
+    queryZyxxTotal,
+    queryBmTotal,
+    saveOrUpdatePart,
+    deletePart,
+    saveOrUpdateZy,
+    queryAllUser,
+    getDwxx,
+    updateDwxx,
+    getCensus,
+    getBillType,
+    getBillCount,
+    getBillTypeCount,
+    getDwInfo,
+    updateDw,
+    partisCreated,
+    deleteZy
+}

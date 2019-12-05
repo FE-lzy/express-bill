@@ -1633,3 +1633,408 @@
 2019-11-13 14:56:04:   RowDataPacket { id: 10, bmmc: '财务部3', bz: '', dwmc: '中医院' },
 2019-11-13 14:56:04:   RowDataPacket { id: 11, bmmc: '财务部3', bz: '', dwmc: '中医院' },
 2019-11-13 14:56:04:   RowDataPacket { id: 19, bmmc: '12', bz: '12', dwmc: '中医院' } ]
+2019-11-19 14:20:51: 12111s
+2019-11-19 14:20:51: invalid token
+2019-11-19 14:20:51: undefined
+2019-11-19 14:20:51: 请求 { code: '01947559' }
+2019-11-19 14:20:51: { code: '01947559' }
+2019-11-19 14:20:51: 请求： 
+2019-11-19 14:20:51:         select * from fp_main where invoiceNumber = '01947559' and is_delete = 0
+2019-11-19 14:20:51:     
+2019-11-19 14:20:51: RowDataPacket {
+2019-11-19 14:20:51:   id: 23,
+2019-11-19 14:20:51:   invoiceDataCode: '037001851107',
+2019-11-19 14:20:51:   invoiceTypeName: '山东增值税（卷式普通发票）',
+2019-11-19 14:20:51:   invoiceTypeCode: '11',
+2019-11-19 14:20:51:   checkDate: 2019-11-04T03:36:24.000Z,
+2019-11-19 14:20:51:   invoiceNumber: '01947559',
+2019-11-19 14:20:51:   billingTime: '2019-10-04',
+2019-11-19 14:20:51:   taxDiskCode: '661718079692',
+2019-11-19 14:20:51:   checkNum: '1',
+2019-11-19 14:20:51:   totalTaxNum: 29,
+2019-11-19 14:20:51:   totalTaxSum: 250,
+2019-11-19 14:20:51:   entryDate: 2019-11-18T16:00:00.000Z,
+2019-11-19 14:20:51:   fp_czy: '2',
+2019-11-19 14:20:51:   fp_gsdw: 1,
+2019-11-19 14:20:51:   salesName: '中国石化销售有限公司山东日照石油分公司',
+2019-11-19 14:20:51:   fp_state: null,
+2019-11-19 14:20:51:   fp_checktype: 'ByQRCode',
+2019-11-19 14:20:51:   fp_gsbm: 6,
+2019-11-19 14:20:51:   fp_bz: '',
+2019-11-19 14:20:51:   fp_gsr: 21,
+2019-11-19 14:20:51:   is_delete: 0 }
+2019-11-19 14:20:51: 请求： 
+2019-11-19 14:20:51:         select * from fp_detail where fp_id = '23'
+2019-11-19 14:20:51:     
+2019-11-19 14:20:51: RowDataPacket {
+2019-11-19 14:20:51:   id: 27,
+2019-11-19 14:20:51:   fp_id: 23,
+2019-11-19 14:20:51:   fp_detail:
+2019-11-19 14:20:51:    '{"invoiceTypeName":"山东增值税（卷式普通发票）","invoiceTypeCode":"11","checkDate":"2019-11-04 11:36:24","checkNum":"1","invoiceDataCode":"037001851107","invoiceNumber":"01947559","machineNumber":"01947559","billingTime":"2019-10-04","purchaserName":"日照日科信息技术有限公司","taxpayerNumber":"91371102MA3C7J0X37","taxDiskCode":"661718079692","salesName":"中国石化销售有限公司山东日照石油分公司","salesTaxpayerNum":"91371100724291958M","salesTaxpayerAddress":" ","salesTaxpayerBankAccount":" ","totalAmount":"221.24","totalTaxNum":"28.76","totalTaxSum":"250.00","invoiceRemarks":" ","goodsClerk":"刘芳","checkCode":"85180770102055250185","voidMark":"0","isBillMark":"N","invoiceDetailData":[{"lineNum":"1","goodserviceName":"*汽油*92号车用汽油(Ⅵ)","model":" ","unit":" ","number":"37.2100000","price":"6.7200000","sum":"250.00","taxRate":" ","tax":" ","isBillLine":"N","zeroTaxRateSign":"","zeroTaxRateSignName":""}],"tollSign":"","tollSignName":""}' }
+2019-11-19 14:20:51: RowDataPacket {
+2019-11-19 14:20:51:   id: 23,
+2019-11-19 14:20:51:   invoiceDataCode: '037001851107',
+2019-11-19 14:20:51:   invoiceTypeName: '山东增值税（卷式普通发票）',
+2019-11-19 14:20:51:   invoiceTypeCode: '11',
+2019-11-19 14:20:51:   checkDate: 2019-11-04T03:36:24.000Z,
+2019-11-19 14:20:51:   invoiceNumber: '01947559',
+2019-11-19 14:20:51:   billingTime: '2019-10-04',
+2019-11-19 14:20:51:   taxDiskCode: '661718079692',
+2019-11-19 14:20:51:   checkNum: '1',
+2019-11-19 14:20:51:   totalTaxNum: 29,
+2019-11-19 14:20:51:   totalTaxSum: 250,
+2019-11-19 14:20:51:   entryDate: 2019-11-18T16:00:00.000Z,
+2019-11-19 14:20:51:   fp_czy: '2',
+2019-11-19 14:20:51:   fp_gsdw: 1,
+2019-11-19 14:20:51:   salesName: '中国石化销售有限公司山东日照石油分公司',
+2019-11-19 14:20:51:   fp_state: null,
+2019-11-19 14:20:51:   fp_checktype: 'ByQRCode',
+2019-11-19 14:20:51:   fp_gsbm: 6,
+2019-11-19 14:20:51:   fp_bz: '',
+2019-11-19 14:20:51:   fp_gsr: 21,
+2019-11-19 14:20:51:   is_delete: 0,
+2019-11-19 14:20:51:   fp_detail:
+2019-11-19 14:20:51:    RowDataPacket {
+2019-11-19 14:20:51:      id: 27,
+2019-11-19 14:20:51:      fp_id: 23,
+2019-11-19 14:20:51:      fp_detail:
+2019-11-19 14:20:51:       '{"invoiceTypeName":"山东增值税（卷式普通发票）","invoiceTypeCode":"11","checkDate":"2019-11-04 11:36:24","checkNum":"1","invoiceDataCode":"037001851107","invoiceNumber":"01947559","machineNumber":"01947559","billingTime":"2019-10-04","purchaserName":"日照日科信息技术有限公司","taxpayerNumber":"91371102MA3C7J0X37","taxDiskCode":"661718079692","salesName":"中国石化销售有限公司山东日照石油分公司","salesTaxpayerNum":"91371100724291958M","salesTaxpayerAddress":" ","salesTaxpayerBankAccount":" ","totalAmount":"221.24","totalTaxNum":"28.76","totalTaxSum":"250.00","invoiceRemarks":" ","goodsClerk":"刘芳","checkCode":"85180770102055250185","voidMark":"0","isBillMark":"N","invoiceDetailData":[{"lineNum":"1","goodserviceName":"*汽油*92号车用汽油(Ⅵ)","model":" ","unit":" ","number":"37.2100000","price":"6.7200000","sum":"250.00","taxRate":" ","tax":" ","isBillLine":"N","zeroTaxRateSign":"","zeroTaxRateSignName":""}],"tollSign":"","tollSignName":""}' } }
+2019-11-19 14:20:51: 12111s
+2019-11-19 14:20:51: invalid token
+2019-11-19 14:20:51: undefined
+2019-11-19 14:20:51: 12111s
+2019-11-19 14:20:51: invalid token
+2019-11-19 14:20:51: undefined
+2019-11-19 14:20:51: 请求： 
+2019-11-19 14:20:51:          select * from pub_zyxx where dwbm = 1 
+2019-11-19 14:20:51:     
+2019-11-19 14:20:51: { dwbm: '1' }
+2019-11-19 14:20:51: 请求： 
+2019-11-19 14:20:51:         select count(id) as total from pub_bmxx where dwbm = 1
+2019-11-19 14:20:51:     
+2019-11-19 14:20:51: 10
+2019-11-19 14:20:51: 请求： 
+2019-11-19 14:20:51:         select b.id,b.bmmc,b.bz,d.dwmc from pub_bmxx as b 
+2019-11-19 14:20:51:         inner join pub_dwxx as d on d.id = b.dwbm
+2019-11-19 14:20:51:          where b.dwbm = 1
+2019-11-19 14:20:51:     
+2019-11-19 14:21:21: 12111s
+2019-11-19 14:21:21: invalid token
+2019-11-19 14:21:21: undefined
+2019-11-19 14:21:21: 请求： 
+2019-11-19 14:21:21:         select * from fp_type where 1=1
+2019-11-19 14:21:21:     
+2019-11-19 14:21:21: 12111s
+2019-11-19 14:21:21: invalid token
+2019-11-19 14:21:21: undefined
+2019-11-19 14:21:21: 12111s
+2019-11-19 14:21:21: invalid token
+2019-11-19 14:21:21: undefined
+2019-11-19 14:21:21: 12111s
+2019-11-19 14:21:21: invalid token
+2019-11-19 14:21:21: undefined
+2019-11-19 14:21:21: 请求： 
+2019-11-19 14:21:21:     select  t.type_name as name,m.taxsum, m.taxnum,m.typeCount,m.total  
+2019-11-19 14:21:21:     from fp_type as t inner join 
+2019-11-19 14:21:21:     
+2019-11-19 14:21:21:     (select invoiceTypeCode,count(invoiceTypeCode) as typeCount, sum(totalTaxSum) as taxsum,sum(totalTaxNum) as taxnum ,
+2019-11-19 14:21:21:     sum(totalTaxSum)+ sum(totalTaxNum) as total
+2019-11-19 14:21:21:     from fp_main where is_delete = 0 and fp_gsdw = 1 and billingTime  > '2019-11-01' and billingTime < '2019-11-31' 
+2019-11-19 14:21:21:     group by invoiceTypeCode ) m
+2019-11-19 14:21:21:     
+2019-11-19 14:21:21:     on t.type_id = m.invoiceTypeCode 
+2019-11-19 14:21:21:     
+2019-11-19 14:21:21: 请求： 
+2019-11-19 14:21:21:         select  t.type_name as name,m.counts as value
+2019-11-19 14:21:21: 
+2019-11-19 14:21:21:         from fp_type as t inner join 
+2019-11-19 14:21:21:         
+2019-11-19 14:21:21:         (select invoiceTypeCode,count(invoiceTypeCode) as counts from fp_main where fp_gsdw = 1 and is_delete = 0 group by invoiceTypeCode) m
+2019-11-19 14:21:21:         
+2019-11-19 14:21:21:         on t.type_id = m.invoiceTypeCode 
+2019-11-19 14:21:21:     
+2019-11-19 14:21:21: 请求： 
+2019-11-19 14:21:21:         select t1.people,t2.bill,t3.part,t4.record  from 
+2019-11-19 14:21:21:         (select count(*) people from pub_zyxx where dwbm = 1) t1,
+2019-11-19 14:21:21:         (select count(*) bill from fp_main  where fp_gsdw = 1 and is_delete=0) t2,
+2019-11-19 14:21:21:         (select count(*) part from pub_bmxx where dwbm = 1) t3,
+2019-11-19 14:21:21:         (select count(*) record  from fp_record where dwbm = 1) t4
+2019-11-19 14:21:21:     
+2019-11-19 14:21:21: [ RowDataPacket {
+2019-11-19 14:21:21:     name: '增值税普通发票',
+2019-11-19 14:21:21:     taxsum: 450,
+2019-11-19 14:21:21:     taxnum: 13,
+2019-11-19 14:21:21:     typeCount: 1,
+2019-11-19 14:21:21:     total: 463 } ]
+2019-11-19 14:21:21: [ RowDataPacket { people: 11, bill: 4, part: 10, record: 31 } ]
+2019-11-19 14:21:23: 12111s
+2019-11-19 14:21:23: invalid token
+2019-11-19 14:21:23: undefined
+2019-11-19 14:21:23: 请求： 
+2019-11-19 14:21:23:     select  t.type_name as name,m.taxsum, m.taxnum,m.typeCount,m.total  
+2019-11-19 14:21:23:     from fp_type as t inner join 
+2019-11-19 14:21:23:     
+2019-11-19 14:21:23:     (select invoiceTypeCode,count(invoiceTypeCode) as typeCount, sum(totalTaxSum) as taxsum,sum(totalTaxNum) as taxnum ,
+2019-11-19 14:21:23:     sum(totalTaxSum)+ sum(totalTaxNum) as total
+2019-11-19 14:21:23:     from fp_main where is_delete = 0 and fp_gsdw = 1 and entryDate  > '2019-11-01' and entryDate < '2019-11-31' 
+2019-11-19 14:21:23:     group by invoiceTypeCode ) m
+2019-11-19 14:21:23:     
+2019-11-19 14:21:23:     on t.type_id = m.invoiceTypeCode 
+2019-11-19 14:21:23:     
+2019-11-19 14:21:23: [ RowDataPacket {
+2019-11-19 14:21:23:     name: '增值税普通发票',
+2019-11-19 14:21:23:     taxsum: 525,
+2019-11-19 14:21:23:     taxnum: 22,
+2019-11-19 14:21:23:     typeCount: 2,
+2019-11-19 14:21:23:     total: 547 },
+2019-11-19 14:21:23:   RowDataPacket {
+2019-11-19 14:21:23:     name: '卷式普通发票',
+2019-11-19 14:21:23:     taxsum: 520,
+2019-11-19 14:21:23:     taxnum: 60,
+2019-11-19 14:21:23:     typeCount: 2,
+2019-11-19 14:21:23:     total: 580 } ]
+2019-11-19 14:21:25: 12111s
+2019-11-19 14:21:25: invalid token
+2019-11-19 14:21:25: undefined
+2019-11-19 14:21:25: 请求： 
+2019-11-19 14:21:25:     select  t.type_name as name,m.taxsum, m.taxnum,m.typeCount,m.total  
+2019-11-19 14:21:25:     from fp_type as t inner join 
+2019-11-19 14:21:25:     
+2019-11-19 14:21:25:     (select invoiceTypeCode,count(invoiceTypeCode) as typeCount, sum(totalTaxSum) as taxsum,sum(totalTaxNum) as taxnum ,
+2019-11-19 14:21:25:     sum(totalTaxSum)+ sum(totalTaxNum) as total
+2019-11-19 14:21:25:     from fp_main where is_delete = 0 and fp_gsdw = 1 and billingTime  > '2019-11-01' and billingTime < '2019-11-31' 
+2019-11-19 14:21:25:     group by invoiceTypeCode ) m
+2019-11-19 14:21:25:     
+2019-11-19 14:21:25:     on t.type_id = m.invoiceTypeCode 
+2019-11-19 14:21:25:     
+2019-11-19 14:21:25: [ RowDataPacket {
+2019-11-19 14:21:25:     name: '增值税普通发票',
+2019-11-19 14:21:25:     taxsum: 450,
+2019-11-19 14:21:25:     taxnum: 13,
+2019-11-19 14:21:25:     typeCount: 1,
+2019-11-19 14:21:25:     total: 463 } ]
+2019-11-19 14:21:25: 12111s
+2019-11-19 14:21:25: invalid token
+2019-11-19 14:21:25: undefined
+2019-11-19 14:21:25: 请求： 
+2019-11-19 14:21:25:     select  t.type_name as name,m.taxsum, m.taxnum,m.typeCount,m.total  
+2019-11-19 14:21:25:     from fp_type as t inner join 
+2019-11-19 14:21:25:     
+2019-11-19 14:21:25:     (select invoiceTypeCode,count(invoiceTypeCode) as typeCount, sum(totalTaxSum) as taxsum,sum(totalTaxNum) as taxnum ,
+2019-11-19 14:21:25:     sum(totalTaxSum)+ sum(totalTaxNum) as total
+2019-11-19 14:21:25:     from fp_main where is_delete = 0 and fp_gsdw = 1 and entryDate  > '2019-11-01' and entryDate < '2019-11-31' 
+2019-11-19 14:21:25:     group by invoiceTypeCode ) m
+2019-11-19 14:21:25:     
+2019-11-19 14:21:25:     on t.type_id = m.invoiceTypeCode 
+2019-11-19 14:21:25:     
+2019-11-19 14:21:25: [ RowDataPacket {
+2019-11-19 14:21:25:     name: '增值税普通发票',
+2019-11-19 14:21:25:     taxsum: 525,
+2019-11-19 14:21:25:     taxnum: 22,
+2019-11-19 14:21:25:     typeCount: 2,
+2019-11-19 14:21:25:     total: 547 },
+2019-11-19 14:21:25:   RowDataPacket {
+2019-11-19 14:21:25:     name: '卷式普通发票',
+2019-11-19 14:21:25:     taxsum: 520,
+2019-11-19 14:21:25:     taxnum: 60,
+2019-11-19 14:21:25:     typeCount: 2,
+2019-11-19 14:21:25:     total: 580 } ]
+2019-12-05 13:25:41: 请求： 
+2019-12-05 13:25:41:         select  * from pub_user where username='admin' and password='4d4994bde299f6168c65f24c852897b7'
+2019-12-05 13:25:41:     
+2019-12-05 13:25:42: RowDataPacket {
+2019-12-05 13:25:42:   id: 2,
+2019-12-05 13:25:42:   username: 'admin',
+2019-12-05 13:25:42:   password: '4d4994bde299f6168c65f24c852897b7',
+2019-12-05 13:25:42:   roles: 'admin',
+2019-12-05 13:25:42:   dwbm: 1,
+2019-12-05 13:25:42:   tel: null,
+2019-12-05 13:25:42:   bz: null }
+2019-12-05 13:25:43: lsToken
+2019-12-05 13:25:43: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNTc1NTIzNTQzLCJleHAiOjE1NzU3ODI3NDN9.H4LR1RNCMizpUa2TpZnezGsZhBZ65x2MAoHh7F5TtJ0
+2019-12-05 13:25:43: invalid token
+2019-12-05 13:25:43: undefined
+2019-12-05 13:25:43: 请求： 
+2019-12-05 13:25:43:         select  * from pub_user where id=2
+2019-12-05 13:25:43:     
+2019-12-05 13:25:43: false
+2019-12-05 13:25:44: invalid token
+2019-12-05 13:25:44: undefined
+2019-12-05 13:25:44: invalid token
+2019-12-05 13:25:44: undefined
+2019-12-05 13:25:44: 请求： 
+2019-12-05 13:25:44:         select * from fp_type where 1=1
+2019-12-05 13:25:44:     
+2019-12-05 13:25:44: invalid token
+2019-12-05 13:25:44: undefined
+2019-12-05 13:25:44: 请求： 
+2019-12-05 13:25:44:         select  t.type_name as name,m.counts as value
+2019-12-05 13:25:44: 
+2019-12-05 13:25:44:         from fp_type as t inner join 
+2019-12-05 13:25:44:         
+2019-12-05 13:25:44:         (select invoiceTypeCode,count(invoiceTypeCode) as counts from fp_main where fp_gsdw = 1 and is_delete = 0 group by invoiceTypeCode) m
+2019-12-05 13:25:44:         
+2019-12-05 13:25:44:         on t.type_id = m.invoiceTypeCode 
+2019-12-05 13:25:44:     
+2019-12-05 13:25:44: invalid token
+2019-12-05 13:25:44: undefined
+2019-12-05 13:25:44: 请求： 
+2019-12-05 13:25:44:         select t1.people,t2.bill,t3.part,t4.record  from 
+2019-12-05 13:25:44:         (select count(*) people from pub_zyxx where dwbm = 1) t1,
+2019-12-05 13:25:44:         (select count(*) bill from fp_main  where fp_gsdw = 1 and is_delete=0) t2,
+2019-12-05 13:25:44:         (select count(*) part from pub_bmxx where dwbm = 1) t3,
+2019-12-05 13:25:44:         (select count(*) record  from fp_record where dwbm = 1) t4
+2019-12-05 13:25:44:     
+2019-12-05 13:25:44: 请求： 
+2019-12-05 13:25:44:     select  t.type_name as name,m.taxsum, m.taxnum,m.typeCount,m.total  
+2019-12-05 13:25:44:     from fp_type as t inner join 
+2019-12-05 13:25:44:     
+2019-12-05 13:25:44:     (select invoiceTypeCode,count(invoiceTypeCode) as typeCount, sum(totalTaxSum-totalTaxNum) as taxsum,sum(totalTaxNum) as taxnum ,
+2019-12-05 13:25:44:     sum(totalTaxSum) as total
+2019-12-05 13:25:44:     from fp_main where is_delete = 0 and fp_gsdw = 1 and billingTime  > '2019-12-01' and billingTime < '2019-12-31' 
+2019-12-05 13:25:44:     group by invoiceTypeCode ) m
+2019-12-05 13:25:44:     
+2019-12-05 13:25:44:     on t.type_id = m.invoiceTypeCode 
+2019-12-05 13:25:44:     
+2019-12-05 13:25:44: [ RowDataPacket { people: 10, bill: 3, part: 10, record: 70 } ]
+2019-12-05 13:25:44: []
+2019-12-05 13:25:45: invalid token
+2019-12-05 13:25:45: undefined
+2019-12-05 13:25:45: 请求： 
+2019-12-05 13:25:45:         select  * from pub_user where id=2
+2019-12-05 13:25:45:     
+2019-12-05 13:25:45: false
+2019-12-05 13:25:45: invalid token
+2019-12-05 13:25:45: undefined
+2019-12-05 13:25:45: 请求： 
+2019-12-05 13:25:45:         select  * from pub_user where id=2
+2019-12-05 13:25:45:     
+2019-12-05 13:25:45: false
+2019-12-05 13:25:46: invalid token
+2019-12-05 13:25:46: undefined
+2019-12-05 13:25:46: invalid token
+2019-12-05 13:25:46: undefined
+2019-12-05 13:25:46: 请求： 
+2019-12-05 13:25:46:         select * from fp_type where 1=1
+2019-12-05 13:25:46:     
+2019-12-05 13:25:46: 请求： 
+2019-12-05 13:25:46:         select  t.type_name as name,m.counts as value
+2019-12-05 13:25:46: 
+2019-12-05 13:25:46:         from fp_type as t inner join 
+2019-12-05 13:25:46:         
+2019-12-05 13:25:46:         (select invoiceTypeCode,count(invoiceTypeCode) as counts from fp_main where fp_gsdw = 1 and is_delete = 0 group by invoiceTypeCode) m
+2019-12-05 13:25:46:         
+2019-12-05 13:25:46:         on t.type_id = m.invoiceTypeCode 
+2019-12-05 13:25:46:     
+2019-12-05 13:25:46: invalid token
+2019-12-05 13:25:46: undefined
+2019-12-05 13:25:46: invalid token
+2019-12-05 13:25:46: undefined
+2019-12-05 13:25:46: 请求： 
+2019-12-05 13:25:46:         select t1.people,t2.bill,t3.part,t4.record  from 
+2019-12-05 13:25:46:         (select count(*) people from pub_zyxx where dwbm = 1) t1,
+2019-12-05 13:25:46:         (select count(*) bill from fp_main  where fp_gsdw = 1 and is_delete=0) t2,
+2019-12-05 13:25:46:         (select count(*) part from pub_bmxx where dwbm = 1) t3,
+2019-12-05 13:25:46:         (select count(*) record  from fp_record where dwbm = 1) t4
+2019-12-05 13:25:46:     
+2019-12-05 13:25:46: 请求： 
+2019-12-05 13:25:46:     select  t.type_name as name,m.taxsum, m.taxnum,m.typeCount,m.total  
+2019-12-05 13:25:46:     from fp_type as t inner join 
+2019-12-05 13:25:46:     
+2019-12-05 13:25:46:     (select invoiceTypeCode,count(invoiceTypeCode) as typeCount, sum(totalTaxSum-totalTaxNum) as taxsum,sum(totalTaxNum) as taxnum ,
+2019-12-05 13:25:46:     sum(totalTaxSum) as total
+2019-12-05 13:25:46:     from fp_main where is_delete = 0 and fp_gsdw = 1 and billingTime  > '2019-12-01' and billingTime < '2019-12-31' 
+2019-12-05 13:25:46:     group by invoiceTypeCode ) m
+2019-12-05 13:25:46:     
+2019-12-05 13:25:46:     on t.type_id = m.invoiceTypeCode 
+2019-12-05 13:25:46:     
+2019-12-05 13:25:46: [ RowDataPacket { people: 10, bill: 3, part: 10, record: 70 } ]
+2019-12-05 13:25:46: []
+2019-12-05 13:25:46: invalid token
+2019-12-05 13:25:46: undefined
+2019-12-05 13:25:46: 请求： 
+2019-12-05 13:25:46:         select * from fp_type where 1=1
+2019-12-05 13:25:46:     
+2019-12-05 13:25:46: invalid token
+2019-12-05 13:25:46: undefined
+2019-12-05 13:25:46: invalid token
+2019-12-05 13:25:46: undefined
+2019-12-05 13:25:46: invalid token
+2019-12-05 13:25:46: undefined
+2019-12-05 13:25:46: 请求： 
+2019-12-05 13:25:46:         select  t.type_name as name,m.counts as value
+2019-12-05 13:25:46: 
+2019-12-05 13:25:46:         from fp_type as t inner join 
+2019-12-05 13:25:46:         
+2019-12-05 13:25:46:         (select invoiceTypeCode,count(invoiceTypeCode) as counts from fp_main where fp_gsdw = 1 and is_delete = 0 group by invoiceTypeCode) m
+2019-12-05 13:25:46:         
+2019-12-05 13:25:46:         on t.type_id = m.invoiceTypeCode 
+2019-12-05 13:25:46:     
+2019-12-05 13:25:46: 请求： 
+2019-12-05 13:25:46:         select t1.people,t2.bill,t3.part,t4.record  from 
+2019-12-05 13:25:46:         (select count(*) people from pub_zyxx where dwbm = 1) t1,
+2019-12-05 13:25:46:         (select count(*) bill from fp_main  where fp_gsdw = 1 and is_delete=0) t2,
+2019-12-05 13:25:46:         (select count(*) part from pub_bmxx where dwbm = 1) t3,
+2019-12-05 13:25:46:         (select count(*) record  from fp_record where dwbm = 1) t4
+2019-12-05 13:25:46:     
+2019-12-05 13:25:46: 请求： 
+2019-12-05 13:25:46:     select  t.type_name as name,m.taxsum, m.taxnum,m.typeCount,m.total  
+2019-12-05 13:25:46:     from fp_type as t inner join 
+2019-12-05 13:25:46:     
+2019-12-05 13:25:46:     (select invoiceTypeCode,count(invoiceTypeCode) as typeCount, sum(totalTaxSum-totalTaxNum) as taxsum,sum(totalTaxNum) as taxnum ,
+2019-12-05 13:25:46:     sum(totalTaxSum) as total
+2019-12-05 13:25:46:     from fp_main where is_delete = 0 and fp_gsdw = 1 and billingTime  > '2019-12-01' and billingTime < '2019-12-31' 
+2019-12-05 13:25:46:     group by invoiceTypeCode ) m
+2019-12-05 13:25:46:     
+2019-12-05 13:25:46:     on t.type_id = m.invoiceTypeCode 
+2019-12-05 13:25:46:     
+2019-12-05 13:25:46: [ RowDataPacket { people: 10, bill: 3, part: 10, record: 70 } ]
+2019-12-05 13:25:46: []
+2019-12-05 13:30:01: invalid token
+2019-12-05 13:30:01: undefined
+2019-12-05 13:30:01: 请求： 
+2019-12-05 13:30:01:         select  * from pub_user where id=2
+2019-12-05 13:30:01:     
+2019-12-05 13:30:01: false
+2019-12-05 14:13:26: invalid token
+2019-12-05 14:13:26: undefined
+2019-12-05 14:13:26: 请求： 
+2019-12-05 14:13:26:         select  * from pub_user where id=2
+2019-12-05 14:13:26:     
+2019-12-05 14:13:26: false
+2019-12-05 14:13:59: invalid token
+2019-12-05 14:13:59: undefined
+2019-12-05 14:13:59: 请求： 
+2019-12-05 14:13:59:         select  * from pub_user where id=2
+2019-12-05 14:13:59:     
+2019-12-05 14:13:59: false
+2019-12-05 14:15:08: invalid token
+2019-12-05 14:15:08: undefined
+2019-12-05 14:15:08: 请求： 
+2019-12-05 14:15:08:         select  * from pub_user where id=2
+2019-12-05 14:15:08:     
+2019-12-05 14:15:08: false
+2019-12-05 14:31:51: invalid token
+2019-12-05 14:31:51: undefined
+2019-12-05 14:31:51: 请求： 
+2019-12-05 14:31:51:         select  * from pub_user where id=2
+2019-12-05 14:31:51:     
+2019-12-05 14:31:51: false
+2019-12-05 14:37:45: invalid token
+2019-12-05 14:37:45: undefined
+2019-12-05 14:37:45: 请求： 
+2019-12-05 14:37:45:         select  * from pub_user where id=2
+2019-12-05 14:37:45:     
+2019-12-05 14:37:45: false
+2019-12-05 14:40:09: invalid token
+2019-12-05 14:40:09: undefined
+2019-12-05 14:40:09: 请求： 
+2019-12-05 14:40:09:         select  * from pub_user where id=2
+2019-12-05 14:40:09:     
+2019-12-05 14:40:09: false
+2019-12-05 14:54:19: invalid token
+2019-12-05 14:54:19: undefined
+2019-12-05 14:54:19: 请求： 
+2019-12-05 14:54:19:         select  * from pub_user where id=2
+2019-12-05 14:54:19:     
+2019-12-05 14:54:19: false

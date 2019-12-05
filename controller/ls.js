@@ -1,1 +1,408 @@
-var _0x2092=['\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20','then','/api/invoiceInfoForCom','error','isFree','assign','参数：','insertId','查询发票，保存失败','查验发票','\x0a\x20\x20\x20\x20\x20\x20\x20\x20select\x20*\x20from\x20fp_main\x20where\x20invoiceNumber\x20=\x20\x27','code','\x27\x20and\x20is_delete\x20=\x200\x0a\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20select\x20*\x20from\x20fp_type\x20where\x201=1\x0a\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20select\x20m.id,m.invoiceDataCode,m.invoiceTypeCode,m.salesName,m.totalTaxSum,m.entryDate,\x0a\x20\x20\x20\x20\x20\x20\x20\x20z.zymc,b.bmmc,t.type_name,d.fp_detail\x20from\x20fp_main\x20as\x20m\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20inner\x20join\x20fp_detail\x20as\x20d\x20on\x20m.id\x20=\x20d.fp_id\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20inner\x20join\x20pub_zyxx\x20as\x20z\x20on\x20z.id\x20=\x20m.fp_gsr\x0a\x20\x20\x20\x20\x20\x20\x20\x20inner\x20join\x20pub_bmxx\x20as\x20b\x20on\x20b.id\x20=\x20m.fp_gsbm\x0a\x20\x20\x20\x20\x20\x20\x20\x20inner\x20join\x20fp_type\x20\x20as\x20t\x20on\x20m.invoiceTypeCode\x20=\x20t.type_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20where\x20m.fp_gsdw\x20=\x20\x27','\x27\x20and\x20m.is_delete\x20=\x200\x0a\x20\x20\x20\x20','invoiceDataCode','\x20and\x20m.invoiceDataCode\x20=\x20\x27','invoiceNumber','\x20and\x20m.invoiceNumber\x20=\x20\x27','salesName','\x20and\x20m.salesName\x20like\x20\x27%','invoiceTypeCode','\x20and\x20m.invoiceTypeCode\x20=\x20\x27','fp_gsbm','\x20and\x20m.fp_gsbm\x20=\x20\x27','billingTime','replace','\x20and\x20m.billingTime\x20>\x27','\x27\x20and\x20m.billingTime\x20<\x20\x27','entryDate','\x20and\x20m.entryDate\x20>\x27','\x27\x20and\x20m.entryDate\x20<\x20\x27','minPrice','\x20and\x20m.totalTaxSum\x20>\x27','maxPrice','\x20and\x20m.totalTaxSum\x20<\x20\x27','\x0a\x20\x20\x20\x20\x20\x20\x20\x20select\x20*\x20from\x20fp_detail\x20where\x20fp_id\x20=\x20\x27','\x27\x0a\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20insert\x20\x20into\x20fp_main\x20(invoiceTypeCode,checkDate,checkNum,invoiceDataCode,invoiceTypeName\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20invoiceNumber,billingTime,taxDiskCode,salesName,totalTaxSum)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20values\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20(\x27','\x27,\x27','checkDate','checkNum','invoiceTypeName','taxDiskCode','totalTaxSum','\x27)\x0a\x20\x20\x20\x20','toLocaleDateString','\x0a\x20\x20\x20\x20\x20\x20\x20\x20insert\x20\x20into\x20fp_main\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20(invoiceTypeCode,invoiceTypeName,checkDate,checkNum,invoiceDataCode,invoiceNumber,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20billingTime,taxDiskCode,fp_checktype,fp_czy,fp_gsr,fp_gsbm,fp_gsdw,fp_bz,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20entryDate,totalTaxNum,totalTaxSum,salesName)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20values\x20(\x27','fp_checktype','fp_czy','fp_gsr','fp_gsdw','fp_bz','totalTaxNum','\x0a\x20\x20\x20\x20\x20\x20\x20\x20update\x20fp_main\x20set\x20fp_gsr\x20=\x20\x20\x27','\x27\x20,fp_gsbm\x20=\x20\x27','\x27,fp_bz\x20=\x20\x27','\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20where\x20id\x20=\x20\x27','\x0a\x20\x20\x20\x20\x20\x20\x20\x20update\x20fp_main\x20set\x20is_delete\x20=\x201\x20where\x20id\x20in\x20(','ids',')\x0a\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20insert\x20\x20into\x20fp_detail\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20(fp_id,fp_detail)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20values\x20(\x27','exports','../conf/ls','querystring','request','../db/mysql','stringify','/getToken?','statusCode','parse','token','/api/invoiceInfoByQRCode','log','toLocaleString','chinese','\x0a\x20\x20\x20\x20\x20\x20\x20\x20insert\x20into\x20fp_record\x20(resultCode,resultMsg,invoiceName,invoiceResult,dwbm,createTime)\x20values\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20(\x27','resultCode','\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x27','resultMsg','invoiceName','invoiceResult','\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20','dwbm',',\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x27'];(function(_0x546a53,_0x3f720e){var _0x440369=function(_0x2e1b64){while(--_0x2e1b64){_0x546a53['push'](_0x546a53['shift']());}};_0x440369(++_0x3f720e);}(_0x2092,0x96));var _0x449d=function(_0x303928,_0x17b415){_0x303928=_0x303928-0x0;var _0x3a0135=_0x2092[_0x303928];return _0x3a0135;};const {post_data,urlApi,postQueryParam}=require(_0x449d('0x0'));var querystring=require(_0x449d('0x1'));var request=require(_0x449d('0x2'));const {exec,escape}=require(_0x449d('0x3'));function getLsToken(){let _0x1043f3=querystring[_0x449d('0x4')](post_data);let _0x18e851=urlApi+_0x449d('0x5')+_0x1043f3;var _0x51bd06=new Promise(function(_0x25af99,_0x450746){request(_0x18e851,function(_0x4a75b3,_0x520615,_0x302be1){if(!_0x4a75b3&&_0x520615[_0x449d('0x6')]==0xc8){let _0xbedf93=JSON[_0x449d('0x7')](_0x302be1)[_0x449d('0x8')];_0x25af99(_0xbedf93);}else{_0x450746(_0x4a75b3);}});});return _0x51bd06;}function queryScanString(_0x122caa){var _0x3770b1=new Promise(function(_0x1c97fa,_0x43ce9a){request(postQueryParam(_0x449d('0x9'),_0x122caa),function(_0x5d3562,_0x2cd583,_0x250d47){if(!_0x5d3562&&_0x2cd583[_0x449d('0x6')]==0xc8){_0x1c97fa(_0x250d47);}else{_0x43ce9a(_0x5d3562);}});});return _0x3770b1;}function recordLog(_0x440a19){console[_0x449d('0xa')](_0x440a19);let _0x161e2f=new Date()[_0x449d('0xb')](_0x449d('0xc'),{'hour12':![]});const _0x402094=_0x449d('0xd')+_0x440a19[_0x449d('0xe')]+_0x449d('0xf')+_0x440a19[_0x449d('0x10')]+_0x449d('0xf')+_0x440a19[_0x449d('0x11')]+_0x449d('0xf')+_0x440a19[_0x449d('0x12')]+_0x449d('0x13')+_0x440a19[_0x449d('0x14')]+_0x449d('0x15')+_0x161e2f+_0x449d('0x16');return exec(_0x402094)[_0x449d('0x17')](_0xabf654=>{return _0xabf654;});}function queryScanByCode(_0x4d73f2){console[_0x449d('0xa')](_0x4d73f2);var _0x4c2572=new Promise(function(_0x47a153,_0x139247){request(postQueryParam(_0x449d('0x18'),_0x4d73f2),function(_0x3491a3,_0xd8f342,_0xae31cd){console[_0x449d('0xa')](_0x3491a3,_0xd8f342[_0x449d('0x6')]);if(!_0x3491a3&&_0xd8f342[_0x449d('0x6')]==0xc8){console[_0x449d('0xa')](_0xae31cd);if(_0xae31cd[_0x449d('0x19')]){_0x139247(_0xae31cd);}if(_0xae31cd[_0x449d('0x1a')]=='N'){let _0x490efc=Object[_0x449d('0x1b')]({'dwbm':_0x4d73f2[_0x449d('0x14')]},_0xae31cd);console[_0x449d('0xa')](_0x449d('0x1c'),_0x490efc);recordLog(_0x490efc)[_0x449d('0x17')](_0x6044a7=>{if(!_0x6044a7[_0x449d('0x1d')]){console[_0x449d('0x19')](_0x4d73f2[_0x449d('0x14')]+_0x449d('0x1e')+_0x490efc);}else{console[_0x449d('0xa')](_0x4d73f2[_0x449d('0x14')]+_0x449d('0x1f')+_0x490efc);}});}_0x47a153(_0xae31cd);}else{_0x139247(_0x3491a3);}});});return _0x4c2572;}const BillIsHave=_0xb0b86a=>{console[_0x449d('0xa')](_0xb0b86a);const _0x5b561e=_0x449d('0x20')+_0xb0b86a[_0x449d('0x21')]+_0x449d('0x22');return exec(_0x5b561e)[_0x449d('0x17')](_0x5d916c=>{return _0x5d916c[0x0]||{};});};const getBillType=_0x4cf6d3=>{const _0x49794a=_0x449d('0x23');return exec(_0x49794a)[_0x449d('0x17')](_0x416fa3=>{return _0x416fa3||{};});};const getBillList=_0xbd18aa=>{var _0x48c8df=_0x449d('0x24')+_0xbd18aa[_0x449d('0x14')]+_0x449d('0x25');if(_0xbd18aa[_0x449d('0x26')]){_0x48c8df+=_0x449d('0x27')+_0xbd18aa[_0x449d('0x26')]+'\x27';}if(_0xbd18aa[_0x449d('0x28')]){_0x48c8df+=_0x449d('0x29')+_0xbd18aa[_0x449d('0x28')]+'\x27';}if(_0xbd18aa[_0x449d('0x2a')]){_0x48c8df+=_0x449d('0x2b')+_0xbd18aa[_0x449d('0x2a')]+'%\x27';}if(_0xbd18aa[_0x449d('0x2c')]){_0x48c8df+=_0x449d('0x2d')+_0xbd18aa[_0x449d('0x2c')]+'\x27';}if(_0xbd18aa[_0x449d('0x2e')]){_0x48c8df+=_0x449d('0x2f')+_0xbd18aa[_0x449d('0x2e')]+'\x27';}if(_0xbd18aa[_0x449d('0x30')]){var _0x499df6=new RegExp(/\//,'g');var _0x36c69c=_0xbd18aa[_0x449d('0x30')][0x0][_0x449d('0x31')](_0x499df6,'-');let _0x5102a9=_0xbd18aa[_0x449d('0x30')][0x1][_0x449d('0x31')](_0x499df6,'-');_0x48c8df+=_0x449d('0x32')+_0x36c69c+_0x449d('0x33')+_0x5102a9+'\x27';}if(_0xbd18aa[_0x449d('0x34')]){var _0x499df6=new RegExp(/\//,'g');var _0x36c69c=_0xbd18aa[_0x449d('0x34')][0x0][_0x449d('0x31')](_0x499df6,'-');let _0x14c48d=_0xbd18aa[_0x449d('0x34')][0x1][_0x449d('0x31')](_0x499df6,'-');_0x48c8df+=_0x449d('0x35')+_0x36c69c+_0x449d('0x36')+_0x14c48d+'\x27';}if(_0xbd18aa[_0x449d('0x37')]){_0x48c8df+=_0x449d('0x38')+_0xbd18aa[_0x449d('0x37')]+'\x27';}if(_0xbd18aa[_0x449d('0x39')]){_0x48c8df+=_0x449d('0x3a')+_0xbd18aa[_0x449d('0x39')]+'\x27';}return exec(_0x48c8df)[_0x449d('0x17')](_0x4f359c=>{return _0x4f359c||{};});};const getBillDetail=_0x3adf52=>{const _0x3d322c=_0x449d('0x3b')+_0x3adf52['id']+_0x449d('0x3c');return exec(_0x3d322c)[_0x449d('0x17')](_0x617d35=>{return _0x617d35[0x0]||{};});};const saveMainBill=_0x1ebea4=>{const _0x3276dc=_0x449d('0x3d')+_0x1ebea4[_0x449d('0x2c')]+_0x449d('0x3e')+_0x1ebea4[_0x449d('0x3f')]+_0x449d('0x3e')+_0x1ebea4[_0x449d('0x40')]+_0x449d('0x3e')+_0x1ebea4[_0x449d('0x26')]+_0x449d('0x3e')+_0x1ebea4[_0x449d('0x41')]+_0x449d('0x3e')+_0x1ebea4[_0x449d('0x28')]+_0x449d('0xf')+_0x1ebea4[_0x449d('0x30')]+_0x449d('0x3e')+_0x1ebea4[_0x449d('0x42')]+_0x449d('0x3e')+_0x1ebea4[_0x449d('0x2a')]+_0x449d('0x3e')+_0x1ebea4[_0x449d('0x43')]+_0x449d('0x44');return exec(_0x3276dc)[_0x449d('0x17')](_0x1d4bb9=>{return _0x1d4bb9;});};const saveMainBillByScan=_0x24bed7=>{let _0x3d9b20=new Date()[_0x449d('0x45')]();const _0x4450f4=_0x449d('0x46')+_0x24bed7[_0x449d('0x2c')]+_0x449d('0x3e')+_0x24bed7[_0x449d('0x41')]+_0x449d('0x3e')+_0x24bed7[_0x449d('0x3f')]+_0x449d('0x3e')+_0x24bed7[_0x449d('0x40')]+_0x449d('0x3e')+_0x24bed7[_0x449d('0x26')]+_0x449d('0x3e')+_0x24bed7[_0x449d('0x28')]+_0x449d('0xf')+_0x24bed7[_0x449d('0x30')]+_0x449d('0x3e')+_0x24bed7[_0x449d('0x42')]+_0x449d('0x3e')+_0x24bed7[_0x449d('0x47')]+_0x449d('0x3e')+_0x24bed7[_0x449d('0x48')]+_0x449d('0xf')+_0x24bed7[_0x449d('0x49')]+_0x449d('0x3e')+_0x24bed7[_0x449d('0x2e')]+_0x449d('0x3e')+_0x24bed7[_0x449d('0x4a')]+_0x449d('0x3e')+_0x24bed7[_0x449d('0x4b')]+_0x449d('0xf')+_0x3d9b20+'\x27,'+_0x24bed7[_0x449d('0x4c')]+','+_0x24bed7[_0x449d('0x43')]+',\x27'+_0x24bed7[_0x449d('0x2a')]+_0x449d('0x44');console[_0x449d('0xa')](_0x4450f4);return exec(_0x4450f4)[_0x449d('0x17')](_0x559af4=>{return _0x559af4;});};const updateMainBill=(_0x150b0f,_0x3ac8cc)=>{console[_0x449d('0xa')](_0x3ac8cc);const _0x577a6d=_0x449d('0x4d')+_0x3ac8cc[_0x449d('0x49')]+_0x449d('0x4e')+_0x3ac8cc[_0x449d('0x2e')]+_0x449d('0x4f')+_0x3ac8cc[_0x449d('0x4b')]+_0x449d('0x50')+_0x150b0f+_0x449d('0x3c');console[_0x449d('0xa')](_0x577a6d);return exec(_0x577a6d)[_0x449d('0x17')](_0x5b3bae=>{return _0x5b3bae;});};const deleteBills=_0x5a9cde=>{const _0x1b4e61=_0x449d('0x51')+_0x5a9cde[_0x449d('0x52')]+_0x449d('0x53');return exec(_0x1b4e61)[_0x449d('0x17')](_0x3de414=>{return _0x3de414;});};const saveBillDetail=(_0x2efdd9,_0x5224d9)=>{console[_0x449d('0xa')](_0x5224d9);const _0x3afc1c=_0x449d('0x54')+_0x2efdd9+_0x449d('0x3e')+_0x5224d9+_0x449d('0x44');console[_0x449d('0xa')](_0x3afc1c);return exec(_0x3afc1c)[_0x449d('0x17')](_0x271583=>{return _0x271583;});};module[_0x449d('0x55')]={'getLsToken':getLsToken,'queryScanString':queryScanString,'queryScanByCode':queryScanByCode,'saveMainBillByScan':saveMainBillByScan,'saveBillDetail':saveBillDetail,'BillIsHave':BillIsHave,'getBillDetail':getBillDetail,'updateMainBill':updateMainBill,'getBillList':getBillList,'getBillType':getBillType,'deleteBills':deleteBills};
+const { post_data, urlApi, postQueryParam } = require('../conf/ls')
+var querystring = require('querystring');
+var request = require('request')
+var validTime = '' //当前时间戳
+var access_token = '';
+const { exec, escape } = require('../db/mysql')
+// 请求token
+function getLsToken() {
+    let contens = querystring.stringify(post_data); // 转换json
+    let url = urlApi + '/getToken?' + contens;
+    // get请求获取token
+    var promise = new Promise(function (reslove, reject) {
+        request(url, function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                let access_token = JSON.parse(body).token;
+                reslove(access_token)
+            } else {
+                reject(error)
+            }
+        });
+    });
+    return promise
+}
+
+function accessToken() {
+    var promise = new Promise(function (reslove, reject) {
+        if (!access_token || validTime < (new Date()).getTime()) {
+            getLsToken().then(token => {
+                validTime += 60 * 60 * 2;
+                access_token = token;
+                reslove(access_token)
+            }).catch(err => {
+                console.error(err);
+                reject(err)
+            });
+        } else {
+            reslove(access_token)
+        }
+    })
+
+    return promise;
+
+}
+// 验证扫描字符串
+function queryScanString(param) {
+    // get请求获取token
+    var promise = new Promise(function (reslove, reject) {
+        request(postQueryParam('/api/invoiceInfoByQRCode', param), function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                if (body.error) {
+                    reject(body)
+                }
+                if (body.isFree == 'N') {
+                    // 不免費
+                    let logParam = Object.assign({ dwbm: param.dwbm }, body);
+                    console.log('参数：', logParam);
+                    recordLog(logParam).then(insertRes => {
+                        if (!insertRes.insertId) {
+                            console.error(param.dwbm + '查询发票，保存失败' + logParam)
+                        } else {
+                            console.log(param.dwbm + '查验发票' + logParam);
+                        }
+                    })
+                }
+                reslove(body)
+            } else {
+                reject(error)
+            }
+        });
+    });
+    return promise
+}
+function recordLog(data) {
+    console.log(data);
+    // 获取当前时间
+    let entryDate = new Date().toLocaleString('chinese', { hour12: false });
+    const sql = `
+        insert into fp_record (resultCode,resultMsg,invoiceName,invoiceResult,dwbm,createTime) values 
+        ('${data.resultCode}',
+        '${data.resultMsg}',
+        '${data.invoiceName}',
+        '${data.invoiceResult}',
+        ${data.dwbm},
+        '${entryDate}'
+        )
+    `
+    console.log(sql);
+    return exec(sql).then(rows => {
+        return rows
+    })
+}
+// 根据发票代码和号码查验
+function queryScanByCode(param) {
+    console.log(param);
+    // get请求获取token
+    var promise = new Promise(function (reslove, reject) {
+        request(postQueryParam('/api/invoiceInfoForCom', param), function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                console.log(body);
+                if (body.error) {
+                    reject(body)
+                }
+                if (body.isFree == 'N') {
+                    // 不免費
+                    let logParam = Object.assign({ dwbm: param.dwbm }, body);
+                    console.log('参数：', logParam);
+                    recordLog(logParam).then(insertRes => {
+                        if (!insertRes.insertId) {
+                            console.error(param.dwbm + '查询发票，保存失败' + logParam)
+                        } else {
+                            console.log(param.dwbm + '查验发票' + logParam);
+                        }
+                    })
+                }
+                reslove(body)
+            } else {
+                reject(error)
+            }
+        });
+    });
+    return promise
+}
+
+// 查询是否存在
+const BillIsHave = (data) => {
+    console.log(data);
+    const sql = `
+        select * from fp_main where invoiceDataCode = '${data.code}' and invoiceNumber = ${data.number} and is_delete = 0
+    `
+    console.log(sql);
+    return exec(sql).then(rows => {
+        return rows[0] || {}
+    })
+}
+const getBillType = (data) => {
+    const sql = `
+        select * from fp_type where 1=1
+    `
+    return exec(sql).then(rows => {
+        return rows || {}
+    })
+
+}
+// 查询发票列表
+const getBillList = (data) => {
+
+    var sql = `
+        select m.id,m.invoiceDataCode,m.invoiceTypeCode,m.salesName,m.totalTaxSum,m.entryDate,
+        z.zymc,b.bmmc,t.type_name,d.fp_detail,u.username,m.fp_gsr,m.fp_gsbm from fp_main as m 
+        inner join fp_detail as d on m.id = d.fp_id 
+        left join pub_zyxx as z on z.id = m.fp_gsr
+        inner join pub_bmxx as b on b.id = m.fp_gsbm
+        inner join fp_type  as t on m.invoiceTypeCode = t.type_id
+        left join pub_user  as u on u.id = m.fp_czy
+        where m.fp_gsdw = '${data.dwbm}' and m.is_delete = 0
+    `
+    if (data.invoiceDataCode) {
+        sql += ` and m.invoiceDataCode = '${data.invoiceDataCode}'`
+    }
+    if (data.invoiceNumber) {
+        sql += ` and m.invoiceNumber = '${data.invoiceNumber}'`
+    }
+    if (data.salesName) {
+        sql += ` and m.salesName like '%${data.salesName}%'`
+    }
+    if (data.invoiceTypeCode) {
+        sql += ` and m.invoiceTypeCode = '${data.invoiceTypeCode}'`
+    }
+    if (data.fp_gsbm) {
+        sql += ` and m.fp_gsbm = '${data.fp_gsbm}'`
+    }
+    if (data.billingTime) {
+        var reg = new RegExp(/\//, "g")
+        var startTime = data.billingTime[0].replace(reg, '-');
+        let endTime = data.billingTime[1].replace(reg, '-')
+        sql += ` and m.billingTime >='${startTime}' and m.billingTime <= '${endTime}'`
+    }
+    if (data.entryDate) {
+        var reg = new RegExp(/\//, "g")
+        var startTime = data.entryDate[0].replace(reg, '-');
+        let endTime = data.entryDate[1].replace(reg, '-')
+        sql += ` and m.entryDate >='${startTime}' and m.entryDate <= '${endTime}'`
+    }
+    if (data.minPrice) {
+        sql += ` and m.totalTaxSum >='${data.minPrice}'`
+    }
+    if (data.maxPrice) {
+        sql += ` and m.totalTaxSum <= '${data.maxPrice}'`
+    }
+
+    let n = (data.current - 1) * 10;
+    sql += ` order by m.id desc limit ${n},10 `
+    console.log(sql);
+
+    return exec(sql).then(rows => {
+        return rows || {}
+    })
+
+
+}
+const getAllBillData = data =>{
+    var sql = `
+        select m.id,m.invoiceDataCode,m.invoiceTypeCode,m.salesName,m.totalTaxSum,m.entryDate,
+        z.zymc,b.bmmc,t.type_name,d.fp_detail,u.username,m.fp_gsr,m.fp_gsbm from fp_main as m 
+        inner join fp_detail as d on m.id = d.fp_id 
+        left join pub_zyxx as z on z.id = m.fp_gsr
+        inner join pub_bmxx as b on b.id = m.fp_gsbm
+        inner join fp_type  as t on m.invoiceTypeCode = t.type_id
+        left join pub_user  as u on u.id = m.fp_czy
+        where m.fp_gsdw = '${data.dwbm}' and m.is_delete = 0
+    `
+    if (data.invoiceDataCode) {
+        sql += ` and m.invoiceDataCode = '${data.invoiceDataCode}'`
+    }
+    if (data.invoiceNumber) {
+        sql += ` and m.invoiceNumber = '${data.invoiceNumber}'`
+    }
+    if (data.salesName) {
+        sql += ` and m.salesName like '%${data.salesName}%'`
+    }
+    if (data.invoiceTypeCode) {
+        sql += ` and m.invoiceTypeCode = '${data.invoiceTypeCode}'`
+    }
+    if (data.fp_gsbm) {
+        sql += ` and m.fp_gsbm = '${data.fp_gsbm}'`
+    }
+    if (data.billingTime) {
+        var reg = new RegExp(/\//, "g")
+        var startTime = data.billingTime[0].replace(reg, '-');
+        let endTime = data.billingTime[1].replace(reg, '-')
+        sql += ` and m.billingTime >='${startTime}' and m.billingTime <= '${endTime}'`
+    }
+    if (data.entryDate) {
+        var reg = new RegExp(/\//, "g")
+        var startTime = data.entryDate[0].replace(reg, '-');
+        let endTime = data.entryDate[1].replace(reg, '-')
+        sql += ` and m.entryDate >='${startTime}' and m.entryDate <= '${endTime}'`
+    }
+    if (data.minPrice) {
+        sql += ` and m.totalTaxSum >='${data.minPrice}'`
+    }
+    if (data.maxPrice) {
+        sql += ` and m.totalTaxSum <= '${data.maxPrice}'`
+    }
+    return exec(sql).then(rows => {
+        return rows || {}
+    })
+}
+// 获取查询条件下发票总数
+const getBillListTotal = (data) => {
+
+    var sql = `
+        select count(m.id) as total  from fp_main as m
+        where m.fp_gsdw = '${data.dwbm}' and m.is_delete = 0
+    `
+    if (data.invoiceDataCode) {
+        sql += ` and m.invoiceDataCode = '${data.invoiceDataCode}'`
+    }
+    if (data.invoiceNumber) {
+        sql += ` and m.invoiceNumber = '${data.invoiceNumber}'`
+    }
+    if (data.salesName) {
+        sql += ` and m.salesName like '%${data.salesName}%'`
+    }
+    if (data.invoiceTypeCode) {
+        sql += ` and m.invoiceTypeCode = '${data.invoiceTypeCode}'`
+    }
+    if (data.fp_gsbm) {
+        sql += ` and m.fp_gsbm = '${data.fp_gsbm}'`
+    }
+    if (data.billingTime) {
+        var reg = new RegExp(/\//, "g")
+        var startTime = data.billingTime[0].replace(reg, '-');
+        let endTime = data.billingTime[1].replace(reg, '-')
+        sql += ` and m.billingTime >='${startTime}' and m.billingTime <= '${endTime}'`
+    }
+    if (data.entryDate) {
+        var reg = new RegExp(/\//, "g")
+        var startTime = data.entryDate[0].replace(reg, '-');
+        let endTime = data.entryDate[1].replace(reg, '-')
+        sql += ` and m.entryDate >='${startTime}' and m.entryDate <= '${endTime}'`
+    }
+    if (data.minPrice) {
+        sql += ` and m.totalTaxSum >='${data.minPrice}'`
+    }
+    if (data.maxPrice) {
+        sql += ` and m.totalTaxSum <= '${data.maxPrice}'`
+    }
+
+    return exec(sql).then(rows => {
+        return rows[0] || {}
+    })
+}
+// 查询具体信息 
+const getBillDetail = (data) => {
+    const sql = `
+        select * from fp_detail where fp_id = '${data.id}'
+    `
+    return exec(sql).then(rows => {
+        return rows[0] || {}
+    })
+}
+// 存储数据
+const saveMainBill = (data) => {
+
+    const sql = `
+        insert  into fp_main (invoiceTypeCode,checkDate,checkNum,invoiceDataCode,invoiceTypeName
+            invoiceNumber,billingTime,taxDiskCode,salesName,totalTaxSum) 
+        values 
+        ('${data.invoiceTypeCode}','${data.checkDate}','${data.checkNum}','${data.invoiceDataCode}','${data.invoiceTypeName}','${data.invoiceNumber}',
+        '${data.billingTime}','${data.taxDiskCode}','${data.salesName}','${data.totalTaxSum}')
+    `
+
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+const getOnlyToken = data => {
+    let contens = querystring.stringify(post_data); // 转换json
+    let url = urlApi + '/getToken?' + contens;
+    // get请求获取token
+    var promise = new Promise(function (reslove, reject) {
+        request(url, function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                let access_token = JSON.parse(body).token;
+                reslove(access_token)
+            } else {
+                reject(error)
+            }
+        });
+    });
+    return promise
+}
+const saveMainBillByScan = (data) => {
+    // 获取当前时间
+    let entryDate = new Date().toLocaleDateString();
+
+    var sql = `
+        insert  into fp_main 
+        (invoiceTypeCode,invoiceTypeName,checkDate,checkNum,invoiceDataCode,invoiceNumber,
+            billingTime,taxDiskCode,fp_checktype,fp_czy,fp_gsr,fp_gsbm,fp_gsdw,fp_bz,
+            entryDate,totalTaxNum,totalTaxSum,salesName) 
+        values ('${data.invoiceTypeCode}','${data.invoiceTypeName}','${data.checkDate}','${data.checkNum}','${data.invoiceDataCode}','${data.invoiceNumber}',
+        '${data.billingTime}','${data.taxDiskCode}','${data.fp_checktype}','${data.uid}',
+        ${data.fp_gsr == '' ? null : data.fp_gsr},'${data.fp_gsbm}','${data.fp_gsdw}','${data.fp_bz}',
+        '${entryDate}',${data.totalTaxNum},${data.totalTaxSum},'${data.salesName}')
+    `
+
+
+    console.log(sql);
+
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+// 修改发票信息
+const updateMainBill = (id, data) => {
+    console.log(data);
+    const sql = `
+        update fp_main set fp_gsr =  ${data.fp_gsr == '' ? null : data.fp_gsr} ,fp_gsbm = '${data.fp_gsbm}',fp_bz = '${data.fp_bz}'
+        where id = '${id}'
+    `
+    console.log(sql);
+
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+const deleteBills = data => {
+    const sql = `
+        update fp_main set is_delete = 1 where id in (${data.ids})
+    `
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+const saveBillDetail = (id, data) => {
+    console.log(data);
+    const sql = `
+        insert  into fp_detail 
+        (fp_id,fp_detail) 
+        values ('${id}','${data}')
+    `
+    console.log(sql);
+
+    return exec(sql).then(rows => {
+        return rows;
+    })
+}
+
+
+module.exports = {
+    getLsToken,
+    queryScanString,
+    queryScanByCode,
+    saveMainBillByScan,
+    saveBillDetail,
+    BillIsHave,
+    getBillDetail,
+    updateMainBill,
+    getBillList,
+    getBillType,
+    deleteBills,
+    accessToken,
+    getOnlyToken,
+    getBillListTotal,
+    getAllBillData
+}

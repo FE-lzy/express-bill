@@ -3,7 +3,7 @@ var router = express.Router();
 var querystring = require('querystring');
 var request = require('request')
 var https = require("https");
-const { deleteBills, getBillType, getBillDetail, BillIsHave, queryScanString, queryScanByCode, saveMainBill, updateMainBill, saveMainBillByScan, saveBillDetail, getBillList } = require('../controller/ls')
+const { getLsToken, deleteBills, getAllBillData, getBillType, getBillListTotal, getBillDetail, BillIsHave, queryScanString, queryScanByCode, saveMainBill, updateMainBill, saveMainBillByScan, saveBillDetail, getBillList } = require('../controller/ls')
 const { getDwxx } = require('../controller/manager')
 const { SuccessModel, ErrorModel } = require('../model/resModel')
 const urlApi = 'https://open.leshui365.com';
@@ -17,41 +17,59 @@ router.post('/queryBillByScan', function (req, res, next) {
     console.log(req.body);
 
     if (!req.body) {
-        res.json(
+        return res.json(
             new ErrorModel('参数缺失')
         )
     }
+
     queryScanString(req.body).then(data => {
         // console.log(data);
+        console.log('byScan',data);
         if (!data.error) {
             if (data.resultCode == '1000') {
                 if (data) {
-                    res.json(
+                    return res.json(
                         new SuccessModel(data)
                     )
                 }
             } else {
-                res.json(
+                return res.json(
                     new ErrorModel(data.resultMsg)
                 )
             }
         } else {
             console.error(req.path + data.error);
-            res.json(
-                new ErrorModel(data)
+            return res.json(
+                new ErrorModel(data.error)
             )
         }
 
     }).catch(err => {
-        res.json(
+        return res.json(
             new ErrorModel(err)
         )
     })
 });
-
+router.post('/getToken', function (req, res, next) {
+    getLsToken().then(lsToken => {
+        console.log(lsToken);
+        if (lsToken) {
+            return res.json(
+                new SuccessModel(lsToken)
+            )
+        } else {
+            return res.json(
+                new ErrorModel('获取token错误')
+            )
+        }
+    }).catch(err => {
+        return res.json(
+            new ErrorModel(err)
+        )
+    })
+})
 // 根据发票代码和发票号码查询
 router.post('/queryBillByCode', function (req, res, next) {
-
     queryScanByCode(req.body).then(data => {
         if (!data.error) {
             if (data.resultCode == '1000') {
@@ -72,7 +90,6 @@ router.post('/queryBillByCode', function (req, res, next) {
             )
         }
     }).catch(err => {
-
         console.error(req.path + ' ' + err);
         return res.json(
             new ErrorModel(err)
@@ -100,6 +117,24 @@ router.post('/deleteBills', function (req, res, next) {
         )
     })
 })
+router.post('/updateMainBill', function (req, res, next) {
+    updateMainBill(req.body.id, req.body).then(updateRow => {
+        if (updateRow.affectedRows) {
+            res.json(
+                new SuccessModel(updateRow.affectedRows)
+            )
+        } else {
+            res.json(
+                new ErrorModel('重复数据')
+            )
+        }
+    }).catch(err => {
+        console.error(req.path + ' ' + err);
+        res.json(
+            new ErrorModel(err)
+        )
+    });
+})
 router.post('/saveBill', function (req, res, next) {
     console.log(req.body);
     let info = req.body;
@@ -113,8 +148,8 @@ router.post('/saveBill', function (req, res, next) {
     billInfo.fp_gsr = info.fp_gsr;
     billInfo.fp_gsbm = info.fp_gsbm;
     billInfo.fp_bz = info.fp_bz;
-
-    BillIsHave({ code: billInfo.invoiceNumber }).then(fpInfo => {
+    billInfo.uid = info.uid;
+    BillIsHave({ code: billInfo.invoiceDataCode, number: billInfo.invoiceNumber }).then(fpInfo => {
         if (fpInfo.id) {
             // 更新操作
             updateMainBill(fpInfo.id, billInfo).then(updateRow => {
@@ -124,7 +159,7 @@ router.post('/saveBill', function (req, res, next) {
                     )
                 } else {
                     res.json(
-                        new SuccessModel('重复数据')
+                        new ErrorModel('重复数据')
                     )
                 }
             }).catch(err => {
@@ -137,7 +172,9 @@ router.post('/saveBill', function (req, res, next) {
         } else {
             getDwxx({ dwbm: billInfo.fp_gsdw }).then(checkData => {
                 console.log('------------------------', checkData, billInfo);
-                if (checkData.check_dwmc == 1 && checkData.dmmc !== billInfo.purchaserName) {
+
+                if (checkData.check_dwmc == 1 && checkData.dwmc !== billInfo.purchaserName) {
+                    console.log(checkData.dwmc, billInfo.purchaserName);
                     // 验证发票抬头
                     return res.json(
                         new ErrorModel('发票抬头与公司名称不一致')
@@ -209,49 +246,82 @@ router.get('/getToken', function (req, res, next) {
 // 验证是否存在
 router.post('/getBillInfo', function (req, res, next) {
     console.log('请求', req.body);
+    if (!req.body || !req.body.code || !req.body.number) {
+        return res.json(
+            new ErrorModel('二维码内容不全，请使用票面参数查询')
+        )
+    }
     BillIsHave(req.body).then(fpInfo => {
-        console.log(fpInfo);
+        console.log('是否存在', fpInfo);
         if (fpInfo.id) {
             getBillDetail(fpInfo).then(info => {
                 console.log(info);
                 fpInfo.fp_detail = info;
                 console.log(fpInfo);
-                res.json(
+                return res.json(
                     new SuccessModel(fpInfo)
                 )
             }).catch(err => {
                 console.error(req.path + ' ' + err);
-                res.json(
+                return res.json(
                     new ErrorModel(err)
                 )
             })
         } else {
             console.error(req.path + ' 不存在');
-            res.json(
+            return res.json(
                 new ErrorModel('不存在')
             )
         }
     }).catch(err => {
         console.error(req.path + ' ' + err);
-        res.json(
+        return res.json(
             new ErrorModel(err)
         )
     })
 });
 // 查询发票列表
-
 router.post('/getBillList', function (req, res, next) {
     if (req.body.dwbm) {
-        getBillList(req.body).then(data => {
-            return res.json(
-                new SuccessModel(data)
-            )
+        getBillListTotal(req.body).then(totalData => {     //获取总数
+            console.log(1111, totalData.total);
+            if (totalData.total > 0) {
+                getAllBillData(req.body).then(allData => {   //获取总的数据
+                    console.log('--------all',allData);
+                    getBillList(req.body).then(data => {     //分页显示数据
+                        console.log(data);
+                        result = Object.assign({ data: data }, totalData,{allData:allData})
+                        console.log(result);
+                        return res.json(
+                            new SuccessModel(result)
+                        )
+                    }).catch(err => {
+                        console.error(req.path + ' ' + err);
+                        return res.json(
+                            new ErrorModel(err)
+                        )
+                    })
+                }).catch(err => {
+                    console.error(err);
+                    return res.json(
+                        new ErrorModel(err)
+                    )
+                })
+
+
+            } else {
+                return res.json(
+                    new SuccessModel([])
+                )
+            }
+
         }).catch(err => {
             console.error(req.path + ' ' + err);
             return res.json(
                 new ErrorModel(err)
             )
         })
+
     } else {
         console.error(req.path + ' 参数缺失');
         return res.json(

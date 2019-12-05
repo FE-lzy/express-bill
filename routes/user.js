@@ -1,13 +1,11 @@
 var express = require('express')
 var router = express.Router();
 const { resetPwd, login, getUserToken, userInfo, setToken } = require('../controller/user')
-const { getLsToken } = require('../controller/ls')
 const { SuccessModel, ErrorModel } = require('../model/resModel')
-
+const { getLsToken } = require('../controller/ls')
 router.post('/login', function (req, res, next) {
     const { username, password } = req.body;
     const result = login(username, password)
-
     return result.then(data => {
 
         if (data.username) {
