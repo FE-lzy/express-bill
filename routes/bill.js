@@ -218,8 +218,6 @@ router.post('/saveBill', function (req, res, next) {
 
 
 });
-
-
 router.get('/getToken', function (req, res, next) {
     console.log(req.body);
 
@@ -242,7 +240,6 @@ router.get('/getToken', function (req, res, next) {
     });
 
 });
-
 // 验证是否存在
 router.post('/getBillInfo', function (req, res, next) {
     console.log('请求', req.body);
