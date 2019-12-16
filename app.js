@@ -45,6 +45,10 @@ if (ENV !== 'production') {
     stream: writeSteam
   }))
 }
+app.get('/upload/*', function (req, res) {
+  res.sendFile(__dirname + "/" + req.url);
+  console.log("Request for " + req.url + " received.");
+})
 var signkey = 'mes_qdhd_mobile_xhykjyxgs';
 // 解析token获取用户信息
 app.use(function (req, res, next) {
@@ -66,7 +70,7 @@ app.use(function (req, res, next) {
 app.use(expressJwt({
   secret: 'mes_qdhd_mobile_xhykjyxgs'
 }).unless({
-  path: ['/', '/user/login', '/scan/update']//除了这个地址，其他的URL都需要验证
+  path: ['/', '/user/login', '/scan/update', '/favicon.ico']//除了这个地址，其他的URL都需要验证
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

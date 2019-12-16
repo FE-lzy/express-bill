@@ -12,7 +12,10 @@ var storage = multer.diskStorage({
     },
     filename: function (req, file, cb) {
         // 将保存文件名设置为 时间戳 + 文件原始名，比如 151342376785-123.jpg
-        cb(null, Date.now() + "-" + file.originalname);
+        // console.log(file.originalname.split('.'));
+        let fileArr = file.originalname.split('.')
+        console.log(fileArr[fileArr.length - 1]);
+        cb(null, Date.now() + "-" + Math.floor(Math.random() * 1000) + '.' + fileArr[fileArr.length - 1]);
     }
 });
 
@@ -48,37 +51,33 @@ router.post('/upload', upload.single('file'), function (req, res, next) {
             let access_token = result.access_token;
             let fileName = file.path;
             fileName = fileName.replace(/\\/g, "/");
-            console.log(fileName.replace(/\\/g, "/"))
-            let imageUrl = __dirname.replace(/\\/g,"/") + '/../' + fileName;
-            console.log(imageUrl);
+            console.log('fileName', fileName.replace(/\\/g, "/"))
+            // console.log('__dirname', __dirname);
+            let imageUrl = __dirname.replace(/\\/g, "/") + '/../' + fileName;
             requestData = {
                 image: fs.readFileSync(imageUrl).toString("base64")
             }
-            // console.log(JSON.stringify(requestData));
             urlApi += '?access_token=' + access_token
-            request({
-                url: urlApi,
-                method: "POST",
-                json: true,
-                headers: {
-                    
-                    "Content-Type": "application/x-www-form-urlencoded",
-                },
-                body: requestData
-            }, function (error, response, body) {
-                if (!error && response.statusCode == 200) {
-                    console.log(JSON.parse(body));
-                    // let baidu_token = JSON.parse(body);
-                } else {
-                    // reject(error)
-                }
-            })
+            // console.log(urlApi);
+            request.post(urlApi, { form: { image: decodeURIComponent(fs.readFileSync(imageUrl).toString("base64")), detectorId: 0 } },
+                function (err, httpResponse, body) {
+                    if (err) {
+                        return res.json(
+                            new ErrorModel(err)
+                        )
+                    }
+                    let result = JSON.parse(body);
+                    if (result.error_code == 0) {
+                        return res.send(
+                            new SuccessModel({ data: result.data, image: fileName })
+                        )
+                    } else {
+                        return res.send(
+                            new ErrorModel({ error_code: result.error_code })
+                        )
+                    }
+                })
         }
-        // 获取token
-        // return res.json(
-        //     new SuccessModel({ name: file.originalname, url: file.path })
-        // )
-
     })
 
 });
