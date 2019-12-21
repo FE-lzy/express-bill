@@ -14,7 +14,6 @@ var storage = multer.diskStorage({
         // 将保存文件名设置为 时间戳 + 文件原始名，比如 151342376785-123.jpg
         // console.log(file.originalname.split('.'));
         let fileArr = file.originalname.split('.')
-        console.log(fileArr[fileArr.length - 1]);
         cb(null, Date.now() + "-" + Math.floor(Math.random() * 1000) + '.' + fileArr[fileArr.length - 1]);
     }
 });
@@ -44,21 +43,17 @@ router.post('/upload', upload.single('file'), function (req, res, next) {
     // console.log('文件大小：%s', file.size);
     // console.log('文件保存路径：%s', file.path);
     // console.log(__dirname + file.path);
-    console.log('2323', file.originalname);
-    getBaiduToken().then(result => {
-        // console.log(result);
-        if (!result.error) {
-            let access_token = result.access_token;
+    getBaiduToken().then(access_token => {
+        console.log('token ',access_token);
             let fileName = file.path;
             fileName = fileName.replace(/\\/g, "/");
-            console.log('fileName', fileName.replace(/\\/g, "/"))
             // console.log('__dirname', __dirname);
             let imageUrl = __dirname.replace(/\\/g, "/") + '/../' + fileName;
             requestData = {
                 image: fs.readFileSync(imageUrl).toString("base64")
             }
             urlApi += '?access_token=' + access_token
-            // console.log(urlApi);
+            console.log(urlApi);
             request.post(urlApi, { form: { image: decodeURIComponent(fs.readFileSync(imageUrl).toString("base64")), detectorId: 0 } },
                 function (err, httpResponse, body) {
                     if (err) {
@@ -77,7 +72,7 @@ router.post('/upload', upload.single('file'), function (req, res, next) {
                         )
                     }
                 })
-        }
+        
     })
 
 });

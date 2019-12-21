@@ -70,7 +70,7 @@ app.use(function (req, res, next) {
 app.use(expressJwt({
   secret: 'mes_qdhd_mobile_xhykjyxgs'
 }).unless({
-  path: ['/', '/user/login', '/scan/update', '/favicon.ico']//除了这个地址，其他的URL都需要验证
+  path: ['/', '/user/login', '/scan/upload', '/favicon.ico']//除了这个地址，其他的URL都需要验证
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
