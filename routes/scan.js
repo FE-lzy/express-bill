@@ -44,35 +44,36 @@ router.post('/upload', upload.single('file'), function (req, res, next) {
     // console.log('文件保存路径：%s', file.path);
     // console.log(__dirname + file.path);
     getBaiduToken().then(access_token => {
-        console.log('token ',access_token);
-            let fileName = file.path;
-            fileName = fileName.replace(/\\/g, "/");
-            // console.log('__dirname', __dirname);
-            let imageUrl = __dirname.replace(/\\/g, "/") + '/../' + fileName;
-            requestData = {
-                image: fs.readFileSync(imageUrl).toString("base64")
-            }
-            urlApi += '?access_token=' + access_token
-            console.log(urlApi);
-            request.post(urlApi, { form: { image: decodeURIComponent(fs.readFileSync(imageUrl).toString("base64")), detectorId: 0 } },
-                function (err, httpResponse, body) {
-                    if (err) {
-                        return res.json(
-                            new ErrorModel(err)
-                        )
-                    }
-                    let result = JSON.parse(body);
-                    if (result.error_code == 0) {
-                        return res.send(
-                            new SuccessModel({ data: result.data, image: fileName })
-                        )
-                    } else {
-                        return res.send(
-                            new ErrorModel({ error_code: result.error_code })
-                        )
-                    }
-                })
-        
+        console.log('token ', access_token);
+        let fileName = file.path;
+        fileName = fileName.replace(/\\/g, "/");
+        // console.log('__dirname', __dirname);
+        let imageUrl = __dirname.replace(/\\/g, "/") + '/../' + fileName;
+        requestData = {
+            image: fs.readFileSync(imageUrl).toString("base64")
+        }
+        urlApi += '?access_token=' + access_token
+        console.log(urlApi);
+        request.post(urlApi, { form: { image: decodeURIComponent(fs.readFileSync(imageUrl).toString("base64")), detectorId: 0 } },
+            function (err, httpResponse, body) {
+                if (err) {
+                    return res.json(
+                        new ErrorModel(err)
+                    )
+                }
+                let result = JSON.parse(body);
+                if (result.error_code == 0) {
+                    console.log(result.data)
+                    return res.send(
+                        new SuccessModel({ data: result.data, image: fileName })
+                    )
+                } else {
+                    return res.send(
+                        new ErrorModel({ error_code: result.error_code })
+                    )
+                }
+            })
+
     })
 
 });
